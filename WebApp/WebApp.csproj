@@ -78,7 +78,10 @@
     <Content Include="Manage\assets\vendor\linearicons\fonts\Linearicons-Free.ttf" />
     <Content Include="Manage\assets\vendor\linearicons\fonts\Linearicons-Free.woff" />
     <Content Include="Manage\assets\vendor\linearicons\fonts\Linearicons-Free.woff2" />
+    <Content Include="Manage\Logout.aspx" />
+    <Content Include="Manage\Temp.aspx" />
     <Content Include="Manage\Web.config" />
+    <Content Include="Manage\Manage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -154,6 +157,27 @@
     </Compile>
     <Compile Include="Manage\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Manage.Master.cs">
+      <DependentUpon>Manage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Manage.Master.designer.cs">
+      <DependentUpon>Manage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Temp.aspx.cs">
+      <DependentUpon>Temp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Temp.aspx.designer.cs">
+      <DependentUpon>Temp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -8,23 +8,18 @@ using System.Web.UI.WebControls;
 
 namespace WebApp.Manage
 {
-    public partial class Login : Page
+    public partial class Site1 : System.Web.UI.MasterPage
     {
-
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.litUserName.Text = HttpContext.Current.User.Identity.Name;
         }
 
-        protected void btnLogin_Click(object sender, EventArgs e)
+        protected void btnLogout_Click(object sender, EventArgs e)
         {
-            string userName = "lily";
-            string password = "123";
+            FormsAuthentication.SignOut();
 
-            if (1 == 1)
-            {
-                FormsAuthentication.RedirectFromLoginPage(userName, true);
-            }
+            Response.Redirect("login.aspx");
 
         }
     }
