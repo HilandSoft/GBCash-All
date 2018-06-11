@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApp</RootNamespace>
-    <AssemblyName>WebApp</AssemblyName>
+    <RootNamespace>Lina.WebApp</RootNamespace>
+    <AssemblyName>Lina.WebApp</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -40,6 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -80,8 +83,8 @@
     <Content Include="Manage\assets\vendor\linearicons\fonts\Linearicons-Free.woff2" />
     <Content Include="Manage\Logout.aspx" />
     <Content Include="Manage\Temp.aspx" />
-    <Content Include="Manage\Web.config" />
     <Content Include="Manage\Manage.Master" />
+    <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -141,7 +144,10 @@
     <Content Include="Manage\assets\vendor\toastr\toastr.min.js" />
     <Content Include="Manage\Index.aspx" />
     <Content Include="Manage\Login.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Test.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Manage\Index.aspx.cs">
@@ -180,6 +186,39 @@
       <DependentUpon>Temp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\hiland\SRC\HiLand.Utility4\HiLand.Utility4.csproj">
+      <Project>{dcec4525-16e2-4a20-a816-e775e063e187}</Project>
+      <Name>HiLand.Utility4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\hiland\SRC\HiLand.Utility\HiLand.Utility.csproj">
+      <Project>{d7d5a5aa-c68e-48c6-a768-b76d33cc04fa}</Project>
+      <Name>HiLand.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{38c5970f-df1b-4915-90a3-d574a1e998fc}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GBC.Business\GBC.Business.csproj">
+      <Project>{80b453c4-e34a-4bd3-a0bc-d7291bcb9448}</Project>
+      <Name>GBC.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GBC.DB\GBC.DB.csproj">
+      <Project>{8a533319-e3ba-442c-9f51-14de4423a6d7}</Project>
+      <Name>GBC.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Structure\GBC.Structure.csproj">
+      <Project>{8b4e7402-c389-41d2-9857-6cb1fa4790a6}</Project>
+      <Name>GBC.Structure</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

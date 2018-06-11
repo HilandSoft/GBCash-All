@@ -24,6 +24,8 @@ namespace WebApp.Manage
             if (1 == 1)
             {
                 FormsAuthentication.RedirectFromLoginPage(userName, true);
+                //FormsAuthentication.SetAuthCookie(userName, true);
+                //Response.Redirect("index.aspx");
             }
 
         }
