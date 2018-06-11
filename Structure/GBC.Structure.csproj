@@ -39,7 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="EnumsOP.cs" />
+    <Compile Include="HousePaymentCircles.cs" />
+    <Compile Include="LbankDT.cs" />
+    <Compile Include="LemploymentDT.cs" />
+    <Compile Include="LiniloanDT.cs" />
+    <Compile Include="LpersonDT.cs" />
+    <Compile Include="LresidentDT.cs" />
+    <Compile Include="OtherLenderCircles.cs" />
+    <Compile Include="PaidPeriodTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

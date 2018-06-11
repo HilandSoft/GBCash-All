@@ -30,8 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Web.UI.WebControls">
+      <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,8 +44,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AustralianStateDropDownList.cs" />
+    <Compile Include="BuildTree.cs" />
+    <Compile Include="Cipher.cs" />
+    <Compile Include="CommonBaseBusiness.cs" />
+    <Compile Include="CommonBaseDB.cs" />
+    <Compile Include="CommonBaseLib.cs" />
+    <Compile Include="CommonBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonOperateEnum.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="CookieHelper.cs" />
+    <Compile Include="Database\DBOperate.cs" />
+    <Compile Include="Database\DBOperatorFactory.cs" />
+    <Compile Include="Database\ODBCDBOperate.cs" />
+    <Compile Include="Database\OleDBOperate.cs" />
+    <Compile Include="Database\SqlDBOperate.cs" />
+    <Compile Include="DataGridTable.cs" />
+    <Compile Include="DataGridUtils.cs" />
+    <Compile Include="DataProdect.cs" />
+    <Compile Include="DateUtils.cs" />
+    <Compile Include="DBAccess.cs" />
+    <Compile Include="ExcelUitl.cs" />
+    <Compile Include="FileUpload.cs" />
+    <Compile Include="FileUtils.cs" />
+    <Compile Include="PerDropDownList.cs" />
+    <Compile Include="PermissionCheckBoxList.cs" />
+    <Compile Include="PerRadioButtonList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestHelper.cs" />
+    <Compile Include="Serialization\ExtendedAttributes.cs" />
+    <Compile Include="Serialization\ExtendedAttributesHelper.cs" />
+    <Compile Include="Serialization\IExtendedAttributes.cs" />
+    <Compile Include="Serialization\Serializer.cs" />
+    <Compile Include="Serialization\SerializerData.cs" />
+    <Compile Include="SQLAccess.cs" />
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="SSLHelper\SSLSwitchConfig.cs" />
+    <Compile Include="SSLHelper\SSLSwitchEntity.cs" />
+    <Compile Include="SSLHelper\SSLSwitchHandler.cs" />
+    <Compile Include="SSLHelper\SSLSwitchModule.cs" />
+    <Compile Include="StringHelper.cs" />
+    <Compile Include="StringUtils.cs" />
+    <Compile Include="TemplateEngine.cs" />
+    <Compile Include="TickUtils.cs" />
+    <Compile Include="TrueFalseDropDownList.cs" />
+    <Compile Include="Utils\BBCodeTransforms.cs" />
+    <Compile Include="Utils\HtmlUtils.cs" />
+    <Compile Include="Utils\MimeMap.cs" />
+    <Compile Include="Utils\SafeDateTime.cs" />
+    <Compile Include="Utils\SourceCodeTransforms.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
+    <Compile Include="Utils\ValueHelper.cs" />
+    <Compile Include="Utils\WebDirectory.cs" />
+    <Compile Include="Utils\WebUtils.cs" />
+    <Compile Include="WebCache.cs" />
+    <Compile Include="WebCustomControl1.cs" />
+    <Compile Include="WebUtils.cs" />
+    <Compile Include="yingnetmail.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Res\DataGridTable.bmp" />
+    <Content Include="Res\FileUpload.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\Thumbs.db" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

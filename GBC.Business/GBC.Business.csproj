@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,8 +40,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BaseBusiness.cs" />
+    <Compile Include="BaseConfManager.cs" />
+    <Compile Include="BaseLib.cs" />
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonLogic\AnnualPercentageRate.cs" />
+    <Compile Include="CommonLogic\CommonInformation.cs" />
+    <Compile Include="CommonLogic\LongTermSchedule.cs" />
+    <Compile Include="CommonLogic\PayDaySchedule.cs" />
+    <Compile Include="CSFollowupCenterBN.cs" />
+    <Compile Include="CSProcessCenterBN.cs" />
+    <Compile Include="CSUserBN.cs" />
+    <Compile Include="CSUserLoanInfoCheckBN.cs" />
+    <Compile Include="CSUserPermissionBN.cs" />
+    <Compile Include="EmploybackupBN.cs" />
+    <Compile Include="EmployedBN.cs" />
+    <Compile Include="HuibackupBN.cs" />
+    <Compile Include="HuiyuanBN.cs" />
+    <Compile Include="InfoBN.cs" />
+    <Compile Include="InfoTypeTree.cs" />
+    <Compile Include="LbankBN.cs" />
+    <Compile Include="LemploymentBN.cs" />
+    <Compile Include="LiniloanBN.cs" />
+    <Compile Include="LMisc.cs" />
+    <Compile Include="LongteBN.cs" />
+    <Compile Include="LongtpBN.cs" />
+    <Compile Include="LpersonBN.cs" />
+    <Compile Include="LresidentBN.cs" />
+    <Compile Include="ManageBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageBasePage2.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberLoadNoteBN.cs" />
+    <Compile Include="ProductBN.cs" />
+    <Compile Include="ProductTypeBN.cs" />
+    <Compile Include="ProductTypeTree.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduleBN.cs" />
+    <Compile Include="StorageConn.cs" />
+    <Compile Include="SystemInfoBN.cs" />
+    <Compile Include="WebAppConfig.cs" />
+    <Compile Include="WebConfigManager.cs" />
+    <Compile Include="YingInfoBN.cs" />
+    <Compile Include="YingInfoTypeBN.cs" />
+    <Compile Include="YingSystemModuleBN.cs" />
+    <Compile Include="YingSystemUserBN.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\hiland\SRC\HiLand.Utility4\HiLand.Utility4.csproj">
