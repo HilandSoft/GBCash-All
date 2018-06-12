@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -91,10 +92,6 @@
     <Compile Include="YingSystemUserBN.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\hiland\SRC\HiLand.Utility4\HiLand.Utility4.csproj">
-      <Project>{dcec4525-16e2-4a20-a816-e775e063e187}</Project>
-      <Name>HiLand.Utility4</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\hiland\SRC\HiLand.Utility\HiLand.Utility.csproj">
       <Project>{d7d5a5aa-c68e-48c6-a768-b76d33cc04fa}</Project>
       <Name>HiLand.Utility</Name>

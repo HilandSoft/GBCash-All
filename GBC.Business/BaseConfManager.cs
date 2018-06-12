@@ -1,6 +1,7 @@
 ﻿namespace YingNet.WeiXing.Business
 {
     using System;
+    using System.Configuration;
 
     public class BaseConfManager : WebConfigManager
     {
@@ -13,33 +14,34 @@
 
         public static string GetConnectionStr()
         {
-            return ("server=" + GetDBServer() + ";database=" + GetDBName() + ";user id=" + GetDBUser() + ";pwd=" + GetDBPwd());
+            return ConfigurationManager.ConnectionStrings["gbcashConn"].ConnectionString;
+            //return ("server=" + GetDBServer() + ";database=" + GetDBName() + ";user id=" + GetDBUser() + ";pwd=" + GetDBPwd());
         }
 
-        public static string GetDBName()
-        {
-            return webConf.GetValue("DBName");
-        }
+        //public static string GetDBName()
+        //{
+        //    return webConf.GetValue("DBName");
+        //}
 
-        public static string GetDBPwd()
-        {
-            return webConf.GetValue("DBPwd");
-        }
+        //public static string GetDBPwd()
+        //{
+        //    return webConf.GetValue("DBPwd");
+        //}
 
-        public static string GetDBServer()
-        {
-            return webConf.GetValue("DBServer");
-        }
+        //public static string GetDBServer()
+        //{
+        //    return webConf.GetValue("DBServer");
+        //}
 
-        public static string GetDBType()
-        {
-            return webConf.GetValue("DBType");
-        }
+        //public static string GetDBType()
+        //{
+        //    return webConf.GetValue("DBType");
+        //}
 
-        public static string GetDBUser()
-        {
-            return webConf.GetValue("DBUser");
-        }
+        //public static string GetDBUser()
+        //{
+        //    return webConf.GetValue("DBUser");
+        //}
 
         public static string GetDiskName()
         {

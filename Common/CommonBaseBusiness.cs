@@ -16,22 +16,26 @@ using System.Web.UI.WebControls;
 
 using YingNet.Common.Database;
 
-namespace YingNet.Common {
+namespace YingNet.Common
+{
     /// <summary>
     /// 一般项目的商业逻辑层基础类
     /// </summary>
-    public class CommonBaseBusiness:IDisposable {
+    public class CommonBaseBusiness : IDisposable
+    {
         //新建DBOperate对象
-        protected DBOperate curDBOperater= null;
-        private bool selfOp= false; //解然添加 判断是否为本对象内创建的DBOperater,便于释放
+        protected DBOperate curDBOperater = null;
+        private bool selfOp = false; //解然添加 判断是否为本对象内创建的DBOperater,便于释放
 
 
-        public CommonBaseBusiness(DBOperate DBOper) {
+        public CommonBaseBusiness(DBOperate DBOper)
+        {
             this.curDBOperater = DBOper;
-            if(this.curDBOperater.baseConnection.State==ConnectionState.Closed) {
+            if (this.curDBOperater.baseConnection.State == ConnectionState.Closed)
+            {
                 this.curDBOperater.Open();
             }
-            this.selfOp= false;
+            this.selfOp = false;
         }
 
         /// <summary>
@@ -42,10 +46,11 @@ namespace YingNet.Common {
         /// <param name="strDBUser"></param>
         /// <param name="strDBPwd"></param>
         /// <param name="iDBType"></param>
-        public CommonBaseBusiness (string strDBServer,string strDBName, string strDBUser, string strDBPwd, int iDBType) {
+        public CommonBaseBusiness(string strDBServer, string strDBName, string strDBUser, string strDBPwd, int iDBType)
+        {
             curDBOperater = DBOperatorFactory.GetDBOperator(strDBServer, strDBName, strDBUser, strDBPwd, iDBType);
             curDBOperater.Open();
-            this.selfOp= true;
+            this.selfOp = true;
         }
 
         public CommonBaseBusiness(string connectString)
@@ -55,37 +60,45 @@ namespace YingNet.Common {
             this.selfOp = true;
         }
 
-        public void BeginTran() {
+        public void BeginTran()
+        {
             this.curDBOperater.BeginTran();
         }
 
-        public void CommitTran() {
+        public void CommitTran()
+        {
             this.curDBOperater.CommitTran();
         }
 
-        public void RollBackTran() {
+        public void RollBackTran()
+        {
             this.curDBOperater.RollBackTran();
         }
 
-        public void Close() {
+        public void Close()
+        {
             this.curDBOperater.Close();
         }
 
         #region IDisposable 成员
 
-        public void Dispose() {
+        public void Dispose()
+        {
             this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
-        protected void Dispose(bool disposing) {
-            if(disposing==false) {
+        protected void Dispose(bool disposing)
+        {
+            if (disposing == false)
+            {
                 return;
             }
 
-            if(this.selfOp== true&& this.curDBOperater!= null) {
+            if (this.selfOp == true && this.curDBOperater != null)
+            {
                 this.curDBOperater.Dispose();
-                this.curDBOperater= null;
+                this.curDBOperater = null;
             }
         }
 
@@ -96,7 +109,8 @@ namespace YingNet.Common {
         /// </summary>
         /// <param name="dg">datagrid</param>
         /// <param name="dt">datatable</param>
-        public static void SetPage (DataGrid dg, DataTable dt) {
+        public static void SetPage(DataGrid dg, DataTable dt)
+        {
             DataGridUtils.SetPage(dg, dt);
         }
 
@@ -105,7 +119,8 @@ namespace YingNet.Common {
         /// </summary>
         /// <param name="dg"></param>
         /// <param name="list"></param>
-        public static void SetPage (DataGrid dg, IList list) {
+        public static void SetPage(DataGrid dg, IList list)
+        {
             DataGridUtils.SetPage(dg, list);
         }
 
@@ -114,21 +129,33 @@ namespace YingNet.Common {
         /// <summary>
         /// 设置 and 过滤条件
         /// </summary>
-        public string Filter {
-            get {
-                if ((m_filter == null) || (m_filter.Equals(""))) {
+        public string Filter
+        {
+            get
+            {
+                if ((m_filter == null) || (m_filter.Equals("")))
+                {
                     return null;
-                } else {
+                }
+                else
+                {
                     return m_filter;
                 }
             }
-            set {
-                if (value == null) {//置null
+            set
+            {
+                if (value == null)
+                {//置null
                     m_filter = null;
-                } else if (!value.Equals("")) {
-                    if((m_filter == null) || (m_filter.Equals(""))) {
+                }
+                else if (!value.Equals(""))
+                {
+                    if ((m_filter == null) || (m_filter.Equals("")))
+                    {
                         m_filter = value;
-                    } else {
+                    }
+                    else
+                    {
                         m_filter += " and " + value;
                     }
                 }
@@ -138,14 +165,22 @@ namespace YingNet.Common {
         /// <summary>
         /// 设置 or 过滤条件
         /// </summary>
-        public string OrFilter {
-            set {
-                if (value == null) {//置null
+        public string OrFilter
+        {
+            set
+            {
+                if (value == null)
+                {//置null
                     m_filter = null;
-                } else if (!value.Equals("")) {
-                    if((m_filter == null) || (m_filter.Equals(""))) {
+                }
+                else if (!value.Equals(""))
+                {
+                    if ((m_filter == null) || (m_filter.Equals("")))
+                    {
                         m_filter = value;
-                    } else {
+                    }
+                    else
+                    {
                         m_filter += " or " + value;
                     }
                 }
@@ -155,14 +190,22 @@ namespace YingNet.Common {
         /// <summary>
         /// 设置原始过滤条件
         /// </summary>
-        public string RawFilter {
-            set {
-                if (value == null) {//置null
+        public string RawFilter
+        {
+            set
+            {
+                if (value == null)
+                {//置null
                     m_filter = null;
-                } else if (!value.Equals("")) {
-                    if((m_filter == null) || (m_filter.Equals(""))) {
+                }
+                else if (!value.Equals(""))
+                {
+                    if ((m_filter == null) || (m_filter.Equals("")))
+                    {
                         m_filter = value;
-                    } else {
+                    }
+                    else
+                    {
                         m_filter += " " + value;
                     }
                 }
@@ -173,15 +216,21 @@ namespace YingNet.Common {
         /// <summary>
         /// 设置 group 条件
         /// </summary>
-        public string Group {
-            get {
-                if ((m_group == null) || (m_group.Equals(""))) {
+        public string Group
+        {
+            get
+            {
+                if ((m_group == null) || (m_group.Equals("")))
+                {
                     return null;
-                } else {
+                }
+                else
+                {
                     return m_group;
                 }
             }
-            set {
+            set
+            {
                 m_group = value;
             }
         }
@@ -190,15 +239,21 @@ namespace YingNet.Common {
         /// <summary>
         /// 排序条件
         /// </summary>
-        public string Order {
-            get {
-                if ((m_order == null) || (m_order.Equals(""))) {
+        public string Order
+        {
+            get
+            {
+                if ((m_order == null) || (m_order.Equals("")))
+                {
                     return null;
-                } else {
+                }
+                else
+                {
                     return m_order;
                 }
             }
-            set {
+            set
+            {
                 m_order = value;
             }
         }
@@ -207,24 +262,30 @@ namespace YingNet.Common {
         /// <summary>
         /// 数据库字段列表
         /// </summary>
-        public string DBFieldList { 
-            get {
-                return m_dbFieldList; 
+        public string DBFieldList
+        {
+            get
+            {
+                return m_dbFieldList;
             }
-            set {
+            set
+            {
                 m_dbFieldList = value;
             }
         }
-        
+
         private string m_dbTable = null;
         /// <summary>
         /// 数据库表名
         /// </summary>
-        public string DBTable { 
-            get {
-                return m_dbTable; 
+        public string DBTable
+        {
+            get
+            {
+                return m_dbTable;
             }
-            set {
+            set
+            {
                 m_dbTable = value;
             }
         }
@@ -233,29 +294,33 @@ namespace YingNet.Common {
         /// 返回数据列表
         /// </summary>
         /// <returns></returns>
-        protected DataTable CommonGetList () {
+        protected DataTable CommonGetList()
+        {
             string sql = "select " + DBFieldList + " from " + DBTable;
             //有过滤条件
-            if (Filter != null) {
+            if (Filter != null)
+            {
                 sql += " where " + Filter;
             }
             //分组条件
-            if (Group != null) {
+            if (Group != null)
+            {
                 sql += " group by " + Group;
             }
             //排序条件
-            if (Order != null) {
+            if (Order != null)
+            {
                 sql += " order by " + Order;
             }
 
             DataTable result = curDBOperater.ExecQueryForDataTable(sql);
-            
+
             return result;
         }
 
-        protected DataTable GetListWithSP(string spName,IDataParameter[] para)
+        protected DataTable GetListWithSP(string spName, IDataParameter[] para)
         {
-            DataTable result = curDBOperater.ExecProcForDataTable(spName,para);
+            DataTable result = curDBOperater.ExecProcForDataTable(spName, para);
             return result;
         }
 
@@ -267,8 +332,10 @@ namespace YingNet.Common {
         /// <summary>
         /// 保存当前状态,包括fieldlist,tablename,filter,order,group
         /// </summary>
-        public void PushStatus () {
-            if (stack == null) {
+        public void PushStatus()
+        {
+            if (stack == null)
+            {
                 stack = new Stack();
             }
             stack.Push(DBFieldList);
@@ -281,7 +348,8 @@ namespace YingNet.Common {
         /// <summary>
         /// 清除当前状态,包括fieldlist,tablename,filter,order,group
         /// </summary>
-        public void CleanStatus () {
+        public void CleanStatus()
+        {
             DBFieldList = null;
             DBTable = null;
             Filter = null;
@@ -292,37 +360,54 @@ namespace YingNet.Common {
         /// <summary>
         /// 恢复上一状态,,包括fieldlist,tablename,filter,order,group
         /// </summary>
-        public void PopStatus () {
-            if (stack != null) {
+        public void PopStatus()
+        {
+            if (stack != null)
+            {
                 object obj = null;
                 obj = stack.Pop();
-                if (obj != null) {
+                if (obj != null)
+                {
                     m_group = obj.ToString();
-                } else {
+                }
+                else
+                {
                     m_group = null;
                 }
                 obj = stack.Pop();
-                if (obj != null) {
+                if (obj != null)
+                {
                     m_order = obj.ToString();
-                } else {
+                }
+                else
+                {
                     m_order = null;
                 }
                 obj = stack.Pop();
-                if (obj != null) {
+                if (obj != null)
+                {
                     m_filter = obj.ToString();
-                } else {
+                }
+                else
+                {
                     m_filter = null;
                 }
                 obj = stack.Pop();
-                if (obj != null) {
+                if (obj != null)
+                {
                     m_dbTable = obj.ToString();
-                } else {
+                }
+                else
+                {
                     m_dbTable = null;
                 }
                 obj = stack.Pop();
-                if (obj != null) {
+                if (obj != null)
+                {
                     m_dbFieldList = obj.ToString();
-                } else {
+                }
+                else
+                {
                     m_dbFieldList = null;
                 }
             }
@@ -334,11 +419,14 @@ namespace YingNet.Common {
         /// <summary>
         /// 错误代码
         /// </summary>
-        public int Code { 
-            get {
-                return m_code; 
+        public int Code
+        {
+            get
+            {
+                return m_code;
             }
-            set {
+            set
+            {
                 m_code = value;
             }
         }
@@ -347,11 +435,14 @@ namespace YingNet.Common {
         /// <summary>
         /// 消息
         /// </summary>
-        public string Msg { 
-            get {
-                return m_msg; 
+        public string Msg
+        {
+            get
+            {
+                return m_msg;
             }
-            set {
+            set
+            {
                 m_msg = value;
             }
         }

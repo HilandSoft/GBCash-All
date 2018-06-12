@@ -1,4 +1,5 @@
 using System;
+using System.Configuration;
 
 namespace YingNet.Common
 {
@@ -15,7 +16,7 @@ namespace YingNet.Common
 			{
 				if( m_strDataSource == null )
 				{
-					m_strDataSource = System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"] ;
+					m_strDataSource = ConfigurationManager.ConnectionStrings["gbcashConn"].ConnectionString ;
 				}
 				return m_strDataSource;
 			}
@@ -33,7 +34,7 @@ namespace YingNet.Common
 		{
 			get
 			{
-				string temp= System.Configuration.ConfigurationSettings.AppSettings["DateRecordFormat"] ;
+				string temp= ConfigurationManager.AppSettings["DateRecordFormat"] ;
 				if(temp!=null && temp!=string.Empty)
 				{
 					dateRecordFormat= temp;
@@ -51,7 +52,7 @@ namespace YingNet.Common
 		{
 			get
 			{
-				string temp= System.Configuration.ConfigurationSettings.AppSettings["DateDisplayFormat"] ;
+				string temp= ConfigurationManager.AppSettings["DateDisplayFormat"] ;
 				if(temp!=null && temp!=string.Empty)
 				{
 					dateDisplayFormat= temp;
@@ -68,7 +69,7 @@ namespace YingNet.Common
 		/// <returns></returns>
 		public static string AppSetting(string settingName)
 		{
-			string temp= System.Configuration.ConfigurationSettings.AppSettings[settingName] ;
+			string temp= ConfigurationManager.AppSettings[settingName] ;
 			return temp;
 		}
 

@@ -7,11 +7,12 @@
     {
         public string GetValue(string strKeyName)
         {
-            return ConfigurationSettings.AppSettings[strKeyName];
+            return ConfigurationManager.AppSettings[strKeyName];
         }
 
         public void SetValue(string strKeyName, string strValue)
         {
+            //nothing;
         }
     }
 }

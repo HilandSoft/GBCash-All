@@ -25,13 +25,13 @@
         public const string SESSION_USER_Permission = "User.Permission";
         public const string SESSION_USER_Type = "User.Type";
 
-        public BaseBusiness() : base(BaseConfManager.GetDBServer(), BaseConfManager.GetDBName(), BaseConfManager.GetDBUser(), BaseConfManager.GetDBPwd(), int.Parse(BaseConfManager.GetDBType()))
+        public BaseBusiness() : base(BaseConfManager.GetConnectionStr())
         {
             this.page = null;
-            this.page = (Page) HttpContext.Current.Handler;
+            this.page = (Page)HttpContext.Current.Handler;
         }
 
-        public BaseBusiness(Page page) : base(BaseConfManager.GetDBServer(), BaseConfManager.GetDBName(), BaseConfManager.GetDBUser(), BaseConfManager.GetDBPwd(), int.Parse(BaseConfManager.GetDBType()))
+        public BaseBusiness(Page page) : base(BaseConfManager.GetConnectionStr())
         {
             this.page = null;
             this.page = page;
@@ -39,8 +39,8 @@
 
         public BaseBusiness(DBOperate dbOper) : base(dbOper)
         {
-            this.page = null;
-            this.page = this.page;
+            //this.page = null;
+            //this.page = this.page;
         }
 
         public BaseBusiness(Page page, DBOperate dbOper) : base(dbOper)
@@ -57,7 +57,7 @@
 
         public static DBOperate GetDBOperate()
         {
-            return DBOperatorFactory.GetDBOperator(BaseConfManager.GetDBServer(), BaseConfManager.GetDBName(), BaseConfManager.GetDBUser(), BaseConfManager.GetDBPwd(), int.Parse(BaseConfManager.GetDBType()));
+            return DBOperatorFactory.GetDBOperator(BaseConfManager.GetConnectionStr());
         }
 
         public static void SetPage(DataGrid dg, DataTable dt)
