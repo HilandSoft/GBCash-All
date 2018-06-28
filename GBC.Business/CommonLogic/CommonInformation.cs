@@ -12,9 +12,9 @@
                 int num = 2;
                 try
                 {
-                    if ((ConfigurationSettings.AppSettings["CurrentVersion"] != null) && (ConfigurationSettings.AppSettings["CurrentVersion"] != string.Empty))
+                    if ((ConfigurationManager.AppSettings["CurrentVersion"] != null) && (ConfigurationManager.AppSettings["CurrentVersion"] != string.Empty))
                     {
-                        num = Convert.ToInt32(ConfigurationSettings.AppSettings["CurrentVersion"]);
+                        num = Convert.ToInt32(ConfigurationManager.AppSettings["CurrentVersion"]);
                     }
                 }
                 catch

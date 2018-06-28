@@ -47,6 +47,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -680,6 +683,7 @@
     <Content Include="Manage\assets\vendor\linearicons\fonts\Linearicons-Free.woff" />
     <Content Include="Manage\assets\vendor\linearicons\fonts\Linearicons-Free.woff2" />
     <Content Include="Manage\Logout.aspx" />
+    <Content Include="Manage\MemberList.aspx" />
     <Content Include="Manage\Temp.aspx" />
     <Content Include="Manage\Manage.Master" />
     <Content Include="MemberLogin.aspx" />
@@ -711,7 +715,10 @@
     <Content Include="Information\Credit-Guide.pdf" />
     <Content Include="Information\Dispute-Resolution-Guide.pdf" />
     <Content Include="Information\Form3A.doc" />
-    <None Include="packages.config" />
+    <Content Include="API\Configs.ashx" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -837,6 +844,9 @@
     <Compile Include="agreement2.aspx.cs">
       <DependentUpon>agreement2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="API\Configs.ashx.cs">
+      <DependentUpon>Configs.ashx</DependentUpon>
     </Compile>
     <Compile Include="bottom.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -1081,6 +1091,13 @@
     </Compile>
     <Compile Include="Manage\Manage.Master.designer.cs">
       <DependentUpon>Manage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\MemberList.aspx.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\MemberList.aspx.designer.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage\Temp.aspx.cs">
       <DependentUpon>Temp.aspx</DependentUpon>
