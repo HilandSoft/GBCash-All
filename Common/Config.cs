@@ -16,7 +16,7 @@ namespace YingNet.Common
 			{
 				if( m_strDataSource == null )
 				{
-					m_strDataSource = ConfigurationManager.ConnectionStrings["gbcashConn"].ConnectionString ;
+					m_strDataSource = ConfigurationManager.ConnectionStrings["mainConnection"].ConnectionString ;
 				}
 				return m_strDataSource;
 			}

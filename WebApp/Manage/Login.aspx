@@ -41,18 +41,13 @@
                             <form class="form-auth-small" runat="server">
                                 <div class="form-group">
                                     <label for="signin-email" class="control-label sr-only">Email</label>
-                                    <input type="email" class="form-control" id="signin-email" value="" placeholder="Email" />
+                                    <input type="text" class="form-control" runat="server" id="signinUsername" value="" placeholder="UserName" />
                                 </div>
                                 <div class="form-group">
                                     <label for="signin-password" class="control-label sr-only">Password</label>
-                                    <input type="password" class="form-control" id="signin-password" value="" placeholder="Password" />
+                                    <input type="password" class="form-control" runat="server"  id="signinPassword" value="" placeholder="Password" />
                                 </div>
-                                <div class="form-group clearfix">
-                                    <label class="fancy-checkbox element-left">
-                                        <input type="checkbox" />
-                                        <span>Remember me</span>
-                                    </label>
-                                </div>
+                                
                                 <asp:Button ID="btnLogin" runat="server" class="btn btn-primary btn-lg btn-block" Text="LOGIN" OnClick="btnLogin_Click" />
                                 <div class="bottom">
                                 </div>

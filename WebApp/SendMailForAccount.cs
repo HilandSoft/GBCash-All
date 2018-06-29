@@ -80,18 +80,18 @@
 //                            builder.Append("Golden Bridge Cash Solution");
 //                            MailMessage message = new MailMessage();
 //                            message.BodyFormat = MailFormat.Html;
-//                            message.From = ConfigurationSettings.AppSettings["mailFrom"];
+//                            message.From = ConfigurationManager.AppSettings["mailFrom"];
 //                            message.To = str2;
 //                            message.Subject = "Password Retrieval";
 //                            message.Body = builder.ToString();
 //                            message.Fields["http://schemas.microsoft.com/cdo/configuration/sendusing"] = 2;
-//                            message.Fields["http://schemas.microsoft.com/cdo/configuration/smtpaccountname"] = ConfigurationSettings.AppSettings["mailAccount"];
-//                            message.Fields["http://schemas.microsoft.com/cdo/configuration/sendusername"] = ConfigurationSettings.AppSettings["mailAccount"];
-//                            message.Fields["http://schemas.microsoft.com/cdo/configuration/sendpassword"] = ConfigurationSettings.AppSettings["mailPassword"];
+//                            message.Fields["http://schemas.microsoft.com/cdo/configuration/smtpaccountname"] = ConfigurationManager.AppSettings["mailAccount"];
+//                            message.Fields["http://schemas.microsoft.com/cdo/configuration/sendusername"] = ConfigurationManager.AppSettings["mailAccount"];
+//                            message.Fields["http://schemas.microsoft.com/cdo/configuration/sendpassword"] = ConfigurationManager.AppSettings["mailPassword"];
 //                            message.Fields["http://schemas.microsoft.com/cdo/configuration/smtpauthenticate"] = 1;
-//                            message.Fields["http://schemas.microsoft.com/cdo/configuration/smtpserverport"] = ConfigurationSettings.AppSettings["mailPort"];
-//                            message.Fields["http://schemas.microsoft.com/cdo/configuration/smtpusessl"] = ConfigurationSettings.AppSettings["mailSSL"];
-//                            SmtpMail.SmtpServer = ConfigurationSettings.AppSettings["mailSMTP"];
+//                            message.Fields["http://schemas.microsoft.com/cdo/configuration/smtpserverport"] = ConfigurationManager.AppSettings["mailPort"];
+//                            message.Fields["http://schemas.microsoft.com/cdo/configuration/smtpusessl"] = ConfigurationManager.AppSettings["mailSSL"];
+//                            SmtpMail.SmtpServer = ConfigurationManager.AppSettings["mailSMTP"];
 //                            SmtpMail.Send(message);
 //                            base.Response.Write("<script>alert('Your password has been sent to you via email!');parent.location='../index.htm';</script>");
 //                        }

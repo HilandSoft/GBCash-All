@@ -128,7 +128,7 @@ namespace Lina.WebApp.Manage
                     else
                     {
                         str4Note = "Attention";
-                        str4Note = string.Format("<a dealed='Attention' href='MemberLoadNotes.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4Note);
+                        str4Note = string.Format("<a dealed='Attention' class='Attention' href='MemberLoadNotes.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4Note);
                     }
 
                     if (((dataItem.Row["followUpHistory"] == null) || (dataItem.Row["followUpHistory"] is DBNull)) || (dataItem.Row["followUpHistory"].ToString() == string.Empty))
@@ -139,7 +139,7 @@ namespace Lina.WebApp.Manage
                     else
                     {
                         str4FollowHistory = "Attention";
-                        str4FollowHistory = string.Format("<a dealed='Attention' href='MemberLoadFollowUpHistory.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4FollowHistory);
+                        str4FollowHistory = string.Format("<a dealed='Attention' class='Attention' href='MemberLoadFollowUpHistory.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4FollowHistory);
                     }
 
                     string str4Score = string.Empty;

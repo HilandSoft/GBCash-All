@@ -38,7 +38,7 @@
             {
                 if (m_CNProductPath == null)
                 {
-                    m_CNProductPath = ConfigurationSettings.AppSettings["CNProductPath"];
+                    m_CNProductPath = ConfigurationManager.AppSettings["CNProductPath"];
                     if (m_CNProductPath == null)
                     {
                         m_CNProductPath = "DefCNProductPicPath";
@@ -54,7 +54,7 @@
             {
                 if (m_ENProductPath == null)
                 {
-                    m_ENProductPath = ConfigurationSettings.AppSettings["ENProductPath"];
+                    m_ENProductPath = ConfigurationManager.AppSettings["ENProductPath"];
                     if (m_ENProductPath == null)
                     {
                         m_ENProductPath = "DefENProductPicPath";
@@ -70,7 +70,7 @@
             {
                 if (m_NewsPath == null)
                 {
-                    m_NewsPath = ConfigurationSettings.AppSettings["NewsPath"];
+                    m_NewsPath = ConfigurationManager.AppSettings["NewsPath"];
                     if (m_NewsPath == null)
                     {
                         m_NewsPath = "NewsPath";
@@ -86,7 +86,7 @@
             {
                 if (m_VideoFilePath == null)
                 {
-                    m_VideoFilePath = ConfigurationSettings.AppSettings["VideoFilePath"];
+                    m_VideoFilePath = ConfigurationManager.AppSettings["VideoFilePath"];
                     if (m_VideoFilePath == null)
                     {
                         m_VideoFilePath = "VideoFilePath";
@@ -102,7 +102,7 @@
             {
                 if (m_WebAppTitle == null)
                 {
-                    m_WebAppTitle = ConfigurationSettings.AppSettings["WebAppTitle"];
+                    m_WebAppTitle = ConfigurationManager.AppSettings["WebAppTitle"];
                     if (m_WebAppTitle == null)
                     {
                         m_WebAppTitle = "YingNetWebAppTitle By Jibf";

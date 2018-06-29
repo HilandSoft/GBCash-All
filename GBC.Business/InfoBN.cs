@@ -2,6 +2,7 @@
 {
     using System;
     using System.Data;
+    using System.Web;
     using System.Web.UI;
     using YingNet.WeiXing.DB;
     using YingNet.WeiXing.DB.Data;
@@ -55,6 +56,20 @@
         public void QueryValid(string str)
         {
             base.Filter = "isvalid =" + str + "";
+        }
+
+        /// <summary>
+        /// 根据状态获取用户列表
+        /// </summary>
+        /// <param name="validValue">当为1的时候表示此条用户信息最近有更新过</param>
+        /// <returns></returns>
+        public static DataTable GetQueryValid(int validValue) {
+            Page page= HttpContext.Current.Handler as Page;
+            InfoBN obn = new InfoBN(page);
+            obn.Filter = " regtime>='6/7/2008'";
+            obn.QueryValid(validValue.ToString());
+            DataTable list = obn.GetList();
+            return list;
         }
     }
 }

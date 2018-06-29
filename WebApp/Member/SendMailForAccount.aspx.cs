@@ -106,19 +106,19 @@ namespace YingNet.WeiXing.WebApp
 					
 					MailMessage mm= new MailMessage();
 					mm.BodyFormat=System.Web.Mail.MailFormat.Html;
-					mm.From=ConfigurationSettings.AppSettings["mailFrom"];
+					mm.From=ConfigurationManager.AppSettings["mailFrom"];
 					mm.To= gotenUserAccount;
 					mm.Subject="Password Retrieval";
 					mm.Body=sbBody.ToString();
 					mm.Fields["http://schemas.microsoft.com/cdo/configuration/sendusing"]= 2;
-					mm.Fields["http://schemas.microsoft.com/cdo/configuration/smtpaccountname"] = ConfigurationSettings.AppSettings["mailAccount"];
-					mm.Fields["http://schemas.microsoft.com/cdo/configuration/sendusername"] = ConfigurationSettings.AppSettings["mailAccount"];//验证账号：发送者邮箱账号
-					mm.Fields["http://schemas.microsoft.com/cdo/configuration/sendpassword"] = ConfigurationSettings.AppSettings["mailPassword"]; //验证密码：发送者邮箱密码
+					mm.Fields["http://schemas.microsoft.com/cdo/configuration/smtpaccountname"] = ConfigurationManager.AppSettings["mailAccount"];
+					mm.Fields["http://schemas.microsoft.com/cdo/configuration/sendusername"] = ConfigurationManager.AppSettings["mailAccount"];//验证账号：发送者邮箱账号
+					mm.Fields["http://schemas.microsoft.com/cdo/configuration/sendpassword"] = ConfigurationManager.AppSettings["mailPassword"]; //验证密码：发送者邮箱密码
 					mm.Fields["http://schemas.microsoft.com/cdo/configuration/smtpauthenticate"] = 1; //验证级别0,1,2
-					mm.Fields["http://schemas.microsoft.com/cdo/configuration/smtpserverport"]= ConfigurationSettings.AppSettings["mailPort"];
-					mm.Fields["http://schemas.microsoft.com/cdo/configuration/smtpusessl"]= ConfigurationSettings.AppSettings["mailSSL"];
+					mm.Fields["http://schemas.microsoft.com/cdo/configuration/smtpserverport"]= ConfigurationManager.AppSettings["mailPort"];
+					mm.Fields["http://schemas.microsoft.com/cdo/configuration/smtpusessl"]= ConfigurationManager.AppSettings["mailSSL"];
 			
-					System.Web.Mail.SmtpMail.SmtpServer=ConfigurationSettings.AppSettings["mailSMTP"];
+					System.Web.Mail.SmtpMail.SmtpServer=ConfigurationManager.AppSettings["mailSMTP"];
 					System.Web.Mail.SmtpMail.Send(mm);
 					Response.Write("<script>alert('Your password has been sent to you via email!');parent.location='../index.htm';</script>");
 				}

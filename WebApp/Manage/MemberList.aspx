@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manage/Manage.Master" AutoEventWireup="true" CodeBehind="MemberList.aspx.cs" Inherits="Lina.WebApp.Manage.MemberList" %>
+
 <%@ Register Assembly="YingNet.Common" Namespace="YingNet.Common" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="csslib/yingnet.css" type="text/css" rel="stylesheet">
@@ -6,27 +7,27 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="col-md-12">
         <table width="99%" cellpadding="0" cellspacing="0" border="0">
-							<tr>
-								<td align="center" valign="top">
-									<asp:DropDownList id="ddlColumn" runat="server">
-										<asp:ListItem Value="0">Please Select</asp:ListItem>
-										<asp:ListItem Value="1">First Name</asp:ListItem>
-										<asp:ListItem Value="8">Last Name</asp:ListItem>
-										<asp:ListItem Value="2">Member ID</asp:ListItem>
-										<asp:ListItem Value="3">Time</asp:ListItem>
-										<asp:ListItem Value="4">Active</asp:ListItem>
-                                        <asp:ListItem Value="5">New</asp:ListItem>
-                                        <asp:ListItem Value="6">Rejected</asp:ListItem>
-                                        <asp:ListItem Value="7">Uncompleted</asp:ListItem>
-                                        <asp:ListItem Value="18">WorkPlace</asp:ListItem>
-									</asp:DropDownList>&nbsp;
-									<asp:TextBox id="txKey" runat="server"></asp:TextBox>
-									<asp:Button id="btnQuery" runat="server" Text="Query"></asp:Button>
-									<asp:Label id="Label1" runat="server">Please enter the date format as DD/MM/YYYY</asp:Label>
-									<asp:TextBox id="txCondition" runat="server" Width="0" Visible="False"></asp:TextBox>&nbsp;
-									<asp:Button id="btnDelete" runat="server" Text="Delete" OnClientClick="return deleteit(this.form)"></asp:Button></td>
-							</tr>
-						</table>
+            <tr>
+                <td align="center" valign="top">
+                    <asp:DropDownList ID="ddlColumn" runat="server">
+                        <asp:ListItem Value="0">Please Select</asp:ListItem>
+                        <asp:ListItem Value="1">First Name</asp:ListItem>
+                        <asp:ListItem Value="8">Last Name</asp:ListItem>
+                        <asp:ListItem Value="2">Member ID</asp:ListItem>
+                        <asp:ListItem Value="3">Time</asp:ListItem>
+                        <asp:ListItem Value="4">Active</asp:ListItem>
+                        <asp:ListItem Value="5">New</asp:ListItem>
+                        <asp:ListItem Value="6">Rejected</asp:ListItem>
+                        <asp:ListItem Value="7">Uncompleted</asp:ListItem>
+                        <asp:ListItem Value="18">WorkPlace</asp:ListItem>
+                    </asp:DropDownList>&nbsp;
+									<asp:TextBox ID="txKey" runat="server"></asp:TextBox>
+                    <asp:Button ID="btnQuery" runat="server" Text="Query"></asp:Button>
+                    <asp:Label ID="Label1" runat="server">Please enter the date format as DD/MM/YYYY</asp:Label>
+                    <asp:TextBox ID="txCondition" runat="server" Width="0" Visible="False"></asp:TextBox>&nbsp;
+									<asp:Button ID="btnDelete" runat="server" Text="Delete" OnClientClick="return deleteit(this.form)"></asp:Button></td>
+            </tr>
+        </table>
         <cc1:DataGridTable ID="DataGridTable1" runat="server" IsAllowPaging="True" AutoGenerateColumns="False"
             class="table table-hover table-striped" AllowPaging="True" EnableViewState="False" MaxRecord="0" IsShowFoot="True" PageCSS="scrollButton" CssClass="table table-hover table-striped" GridLines="None">
             <PagerStyle Visible="False" HorizontalAlign="Left" ForeColor="#003399" BackColor="#99CCCC" CssClass="gridPager"
@@ -35,7 +36,7 @@
             <EditItemStyle CssClass="gridEditItem"></EditItemStyle>
             <FooterStyle ForeColor="#003399" CssClass="gridFooter" BackColor="#99CCCC"></FooterStyle>
             <SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" CssClass="gridSelectedItem" BackColor="#009999"></SelectedItemStyle>
-            <ItemStyle ForeColor="#003399" CssClass="gridItem" BackColor="White"></ItemStyle>
+            <ItemStyle CssClass="gridItem"></ItemStyle>
             <HeaderStyle Font-Bold="True" CssClass="gridHeader"></HeaderStyle>
             <Columns>
                 <asp:BoundColumn Visible="False" DataField="id"></asp:BoundColumn>
@@ -204,10 +205,10 @@
             return result;
         }
     </script>
-    <script src="../jslib/jquery-1.2.6.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $("a[@dealed]").addClass("Attention");
-        })
+            $("#sidebar-nav a").removeClass();
+            $("#nav_a_memberlist").addClass("active");
+        });
     </script>
 </asp:Content>

@@ -7,81 +7,90 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace WebApp.Manage {
+namespace Lina.WebApp.Manage {
     
     
-    public partial class Site1 {
+    public partial class Agreement {
         
         /// <summary>
-        /// head 控件。
+        /// Hidden1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden Hidden1;
         
         /// <summary>
-        /// litNewApllyCount4All 控件。
+        /// BorrowerName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litNewApllyCount4All;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText BorrowerName;
         
         /// <summary>
-        /// litNewApllyCount4GBCash 控件。
+        /// DriverLicense 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litNewApllyCount4GBCash;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText DriverLicense;
         
         /// <summary>
-        /// litNewApllyCount4Secured 控件。
+        /// HomeAddress1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litNewApllyCount4Secured;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText HomeAddress1;
         
         /// <summary>
-        /// litNewApllyCount4Pawn 控件。
+        /// HomeAddress2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litNewApllyCount4Pawn;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText HomeAddress2;
         
         /// <summary>
-        /// litUserName 控件。
+        /// ContactW 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litUserName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactW;
         
         /// <summary>
-        /// form1 控件。
+        /// ContactH 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactH;
         
         /// <summary>
-        /// ContentPlaceHolder1 控件。
+        /// ContactC 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactC;
+        
+        /// <summary>
+        /// LinkButton1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
     }
 }

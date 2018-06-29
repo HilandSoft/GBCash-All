@@ -14,15 +14,18 @@
     <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
     <link rel="stylesheet" href="assets/vendor/chartist/css/chartist-custom.css">
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
-    <link rel="stylesheet" href="assets/css/demo.css">
+    <link rel="stylesheet" href="assets/css/main.css?20180628">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <!-- ICONS -->
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
-
+    <style media="print" type="text/css">
+        .noprint {
+            visibility: hidden
+        }
+    </style>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -53,35 +56,22 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                 <i class="lnr lnr-alarm"></i>
-                                <span class="badge bg-danger">5</span>
+                                <span class="badge bg-danger" style="right:28px"><asp:Literal ID="litNewApllyCount4All" runat="server"></asp:Literal></span><i class="icon-submenu lnr lnr-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu notifications">
-                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
-                                <li><a href="#" class="more">See all notifications</a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>GBCash<span class="badge bg-danger" style="right:28px"><asp:Literal ID="litNewApllyCount4GBCash" runat="server" Text="0"></asp:Literal></span></a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Secured<span class="badge bg-danger" style="right:28px"><asp:Literal ID="litNewApllyCount4Secured" runat="server" Text="0"></asp:Literal></span></a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>Pawn<span class="badge bg-danger" style="right:28px"><asp:Literal ID="litNewApllyCount4Pawn" runat="server" Text="0"></asp:Literal></span></a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i><span>Help</span><i class="icon-submenu lnr lnr-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Basic Use</a></li>
-                                <li><a href="#">Working With Data</a></li>
-                                <li><a href="#">Security</a></li>
-                                <li><a href="#">Troubleshooting</a></li>
-                            </ul>
-                        </li>
+                        
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="assets/img/user.png" class="img-circle" alt="Avatar">
                                 <span>
                                     <asp:Literal ID="litUserName" runat="server"></asp:Literal></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><i class="lnr lnr-user"></i><span>My Profile</span></a></li>
-                                <li><a href="#"><i class="lnr lnr-envelope"></i><span>Message</span></a></li>
-                                <li><a href="#"><i class="lnr lnr-cog"></i><span>Settings</span></a></li>
+                                <li><a href="ChangePassword.aspx"><i class="lnr lnr-cog"></i><span>ChangePassword</span></a></li>
                                 <li><a href="logout.aspx"><i class="lnr lnr-exit"></i><span>Logout</span></a></li>
                             </ul>
                         </li>
@@ -100,28 +90,15 @@
         </nav>
         <!-- END NAVBAR -->
         <!-- LEFT SIDEBAR -->
-        <div id="sidebar-nav" class="sidebar">
+        <div id="sidebar-nav" class="sidebar noprint">
             <div class="sidebar-scroll">
                 <nav>
                     <ul class="nav">
-                        <li><a href="index.html" class="active"><i class="lnr lnr-home"></i><span>Dashboard</span></a></li>
-                        <li><a href="MemberList.aspx" class=""><i class="lnr lnr-code"></i><span>Member List</span></a></li>
-                        <li><a href="charts.html" class=""><i class="lnr lnr-chart-bars"></i><span>Charts</span></a></li>
-                        <li><a href="panels.html" class=""><i class="lnr lnr-cog"></i><span>Panels</span></a></li>
-                        <li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i><span>Notifications</span></a></li>
-                        <li>
-                            <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i><span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-                            <div id="subPages" class="collapse ">
-                                <ul class="nav">
-                                    <li><a href="page-profile.html" class="">Profile</a></li>
-                                    <li><a href="page-login.html" class="">Login</a></li>
-                                    <li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="tables.html" class=""><i class="lnr lnr-dice"></i><span>Tables</span></a></li>
-                        <li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i><span>Typography</span></a></li>
-                        <li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i><span>Icons</span></a></li>
+                        <li><a href="Index.aspx" id="nav_a_index" class="active"><i class="lnr lnr-home"></i><span>Dashboard</span></a></li>
+                        <li><a href="MemberList.aspx" id="nav_a_memberlist" class=""><i class="lnr lnr-code"></i><span>Member List</span></a></li>
+                        <li><a href="AgreementInput.aspx" id="nav_a_agreement" class=""><i class="lnr lnr-chart-bars"></i><span>Agreement</span></a></li>
+                        <li><a href="ReNew.aspx" id="nav_a_memberrenew" class=""><i class="lnr lnr-cog"></i><span>Member Renew</span></a></li>
+                        <li><a href="NewApplyTip.aspx" id="nav_a_newapplytip" class=""><i class="lnr lnr-dice"></i><span>New Apply Tip</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -147,14 +124,13 @@
         <footer>
             <div class="container-fluid">
                 <p class="copyright">Copyright &copy; 2018.GBCash All rights reserved.</p>
-
             </div>
         </footer>
     </div>
 
     <!-- END WRAPPER -->
     <!-- Javascript -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
+
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>

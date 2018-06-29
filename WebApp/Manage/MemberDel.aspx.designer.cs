@@ -7,36 +7,45 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace WebApp.Manage {
+namespace Lina.WebApp.Manage {
     
     
-    public partial class Login {
+    public partial class MemberDel {
         
         /// <summary>
-        /// signinUsername 控件。
+        /// TextBox1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText signinUsername;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// signinPassword 控件。
+        /// txtParamstr 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword signinPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtParamstr;
         
         /// <summary>
-        /// btnLogin 控件。
+        /// LabMsg 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        protected global::System.Web.UI.WebControls.Label LabMsg;
+        
+        /// <summary>
+        /// returnmain 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputButton returnmain;
     }
 }

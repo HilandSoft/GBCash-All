@@ -662,6 +662,8 @@
     <Content Include="Long\top.asp" />
     <Content Include="Long\uLeft.ascx" />
     <Content Include="Long\WebForm1.aspx" />
+    <Content Include="Manage\Agreement.aspx" />
+    <Content Include="Manage\AgreementInput.aspx" />
     <Content Include="Manage\assets\css\demo.css.map" />
     <Content Include="Manage\assets\css\main.css.map" />
     <Content Include="Manage\assets\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
@@ -682,8 +684,21 @@
     <Content Include="Manage\assets\vendor\linearicons\fonts\Linearicons-Free.ttf" />
     <Content Include="Manage\assets\vendor\linearicons\fonts\Linearicons-Free.woff" />
     <Content Include="Manage\assets\vendor\linearicons\fonts\Linearicons-Free.woff2" />
+    <Content Include="Manage\ChangePassword.aspx" />
+    <Content Include="Manage\Gbe.aspx" />
+    <Content Include="Manage\LoanApprove.aspx" />
+    <Content Include="Manage\LoanComplete.aspx" />
+    <Content Include="Manage\LoanDel.aspx" />
+    <Content Include="Manage\LoanDetail.aspx" />
+    <Content Include="Manage\LoanOperate.aspx" />
+    <Content Include="Manage\LoanPay.aspx" />
+    <Content Include="Manage\LoanReject.aspx" />
     <Content Include="Manage\Logout.aspx" />
+    <Content Include="Manage\MemberDel.aspx" />
     <Content Include="Manage\MemberList.aspx" />
+    <Content Include="Manage\NewApplyTip.aspx" />
+    <Content Include="Manage\OpenOperate.aspx" />
+    <Content Include="Manage\Pawn\Temp.aspx" />
     <Content Include="Manage\Temp.aspx" />
     <Content Include="Manage\Manage.Master" />
     <Content Include="MemberLogin.aspx" />
@@ -697,6 +712,7 @@
     <Content Include="newcu_warning.htm" />
     <Content Include="payday-loans.htm" />
     <Content Include="priv.htm" />
+    <Content Include="Renew.aspx" />
     <Content Include="SmallAmountCredit.htm" />
     <Content Include="sslTest.aspx" />
     <Content Include="step1.aspx" />
@@ -716,6 +732,8 @@
     <Content Include="Information\Dispute-Resolution-Guide.pdf" />
     <Content Include="Information\Form3A.doc" />
     <Content Include="API\Configs.ashx" />
+    <Content Include="Manage\Pawn\Web.config" />
+    <Content Include="Manage\Secured\Web.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1064,12 +1082,89 @@
     <Compile Include="ltcalculator.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Manage\Agreement.aspx.cs">
+      <DependentUpon>Agreement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Agreement.aspx.designer.cs">
+      <DependentUpon>Agreement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\AgreementInput.aspx.cs">
+      <DependentUpon>AgreementInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\AgreementInput.aspx.designer.cs">
+      <DependentUpon>AgreementInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Gbe.aspx.cs">
+      <DependentUpon>Gbe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Gbe.aspx.designer.cs">
+      <DependentUpon>Gbe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Manage\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Manage\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\LoanApprove.aspx.cs">
+      <DependentUpon>LoanApprove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\LoanApprove.aspx.designer.cs">
+      <DependentUpon>LoanApprove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\LoanComplete.aspx.cs">
+      <DependentUpon>LoanComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\LoanComplete.aspx.designer.cs">
+      <DependentUpon>LoanComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\LoanDel.aspx.cs">
+      <DependentUpon>LoanDel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\LoanDel.aspx.designer.cs">
+      <DependentUpon>LoanDel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\LoanDetail.aspx.cs">
+      <DependentUpon>LoanDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\LoanDetail.aspx.designer.cs">
+      <DependentUpon>LoanDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\LoanOperate.aspx.cs">
+      <DependentUpon>LoanOperate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\LoanOperate.aspx.designer.cs">
+      <DependentUpon>LoanOperate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\LoanPay.aspx.cs">
+      <DependentUpon>LoanPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\LoanPay.aspx.designer.cs">
+      <DependentUpon>LoanPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\LoanReject.aspx.cs">
+      <DependentUpon>LoanReject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\LoanReject.aspx.designer.cs">
+      <DependentUpon>LoanReject.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -1092,12 +1187,40 @@
     <Compile Include="Manage\Manage.Master.designer.cs">
       <DependentUpon>Manage.Master</DependentUpon>
     </Compile>
+    <Compile Include="Manage\MemberDel.aspx.cs">
+      <DependentUpon>MemberDel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\MemberDel.aspx.designer.cs">
+      <DependentUpon>MemberDel.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Manage\MemberList.aspx.cs">
       <DependentUpon>MemberList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Manage\MemberList.aspx.designer.cs">
       <DependentUpon>MemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\NewApplyTip.aspx.cs">
+      <DependentUpon>NewApplyTip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\NewApplyTip.aspx.designer.cs">
+      <DependentUpon>NewApplyTip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\OpenOperate.aspx.cs">
+      <DependentUpon>OpenOperate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\OpenOperate.aspx.designer.cs">
+      <DependentUpon>OpenOperate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Pawn\Temp.aspx.cs">
+      <DependentUpon>Temp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Pawn\Temp.aspx.designer.cs">
+      <DependentUpon>Temp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage\Temp.aspx.cs">
       <DependentUpon>Temp.aspx</DependentUpon>
@@ -1243,6 +1366,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renew.aspx.cs">
+      <DependentUpon>Renew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Renew.aspx.designer.cs">
+      <DependentUpon>Renew.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SendMailForAccount.cs" />
     <Compile Include="sslTest.aspx.cs">
       <DependentUpon>sslTest.aspx</DependentUpon>
