@@ -45,8 +45,6 @@ namespace Lina.WebApp.Manage
                 dt = nbn.GetListJoinEmployment();
             }
             CommonBasePage.SetPage(this.DataGridTable1, dt);
-            //base.AddValue("pageno", Convert.ToString((int)(this.DataGridTable1.CurrentPageIndex + 1)));
-            //this.txtParamstr.Text = base.PackPart(base.ParamValue);
         }
 
         private void DataGridTable1_ItemDataBound(object sender, DataGridItemEventArgs e)
@@ -123,23 +121,23 @@ namespace Lina.WebApp.Manage
                     if (((dataItem.Row["Note"] == null) || (dataItem.Row["Note"] is DBNull)) || (dataItem.Row["Note"].ToString() == string.Empty))
                     {
                         str4Note = "Empty";
-                        str4Note = string.Format("<a href='MemberLoadNotes.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4Note);
+                        str4Note = string.Format("<a href='MemberLoanNotes.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4Note);
                     }
                     else
                     {
                         str4Note = "Attention";
-                        str4Note = string.Format("<a dealed='Attention' class='Attention' href='MemberLoadNotes.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4Note);
+                        str4Note = string.Format("<a dealed='Attention' class='Attention' href='MemberLoanNotes.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4Note);
                     }
 
                     if (((dataItem.Row["followUpHistory"] == null) || (dataItem.Row["followUpHistory"] is DBNull)) || (dataItem.Row["followUpHistory"].ToString() == string.Empty))
                     {
                         str4FollowHistory = "Empty";
-                        str4FollowHistory = string.Format("<a href='MemberLoadFollowUpHistory.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4FollowHistory);
+                        str4FollowHistory = string.Format("<a href='MemberLoanFollowUpHistory.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4FollowHistory);
                     }
                     else
                     {
                         str4FollowHistory = "Attention";
-                        str4FollowHistory = string.Format("<a dealed='Attention' class='Attention' href='MemberLoadFollowUpHistory.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4FollowHistory);
+                        str4FollowHistory = string.Format("<a dealed='Attention' class='Attention' href='MemberLoanFollowUpHistory.aspx?id={0}'>{1}</a>", dataItem.Row["id"], str4FollowHistory);
                     }
 
                     string str4Score = string.Empty;

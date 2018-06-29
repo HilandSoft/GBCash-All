@@ -686,6 +686,8 @@
     <Content Include="Manage\assets\vendor\linearicons\fonts\Linearicons-Free.woff2" />
     <Content Include="Manage\ChangePassword.aspx" />
     <Content Include="Manage\Gbe.aspx" />
+    <Content Include="Manage\InforDetail.aspx" />
+    <Content Include="Manage\InforHistory.aspx" />
     <Content Include="Manage\LoanApprove.aspx" />
     <Content Include="Manage\LoanComplete.aspx" />
     <Content Include="Manage\LoanDel.aspx" />
@@ -695,10 +697,18 @@
     <Content Include="Manage\LoanReject.aspx" />
     <Content Include="Manage\Logout.aspx" />
     <Content Include="Manage\MemberDel.aspx" />
+    <Content Include="Manage\MemberDetail.aspx" />
+    <Content Include="Manage\MemberDetailEdit.aspx" />
+    <Content Include="Manage\MemberHistory.aspx" />
     <Content Include="Manage\MemberList.aspx" />
+    <Content Include="Manage\MemberLoanFollowUpHistory.aspx" />
+    <Content Include="Manage\MemberLoanNotes.aspx" />
+    <Content Include="Manage\MemberScore.aspx" />
     <Content Include="Manage\NewApplyTip.aspx" />
     <Content Include="Manage\OpenOperate.aspx" />
     <Content Include="Manage\Pawn\Temp.aspx" />
+    <Content Include="Manage\SendToFollowupCenter.aspx" />
+    <Content Include="Manage\SendToProcessCenter.aspx" />
     <Content Include="Manage\Temp.aspx" />
     <Content Include="Manage\Manage.Master" />
     <Content Include="MemberLogin.aspx" />
@@ -1117,6 +1127,20 @@
     <Compile Include="Manage\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Manage\InforDetail.aspx.cs">
+      <DependentUpon>InforDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\InforDetail.aspx.designer.cs">
+      <DependentUpon>InforDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\InforHistory.aspx.cs">
+      <DependentUpon>InforHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\InforHistory.aspx.designer.cs">
+      <DependentUpon>InforHistory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Manage\LoanApprove.aspx.cs">
       <DependentUpon>LoanApprove.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1194,12 +1218,54 @@
     <Compile Include="Manage\MemberDel.aspx.designer.cs">
       <DependentUpon>MemberDel.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Manage\MemberDetail.aspx.cs">
+      <DependentUpon>MemberDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\MemberDetail.aspx.designer.cs">
+      <DependentUpon>MemberDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\MemberDetailEdit.aspx.cs">
+      <DependentUpon>MemberDetailEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\MemberDetailEdit.aspx.designer.cs">
+      <DependentUpon>MemberDetailEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\MemberHistory.aspx.cs">
+      <DependentUpon>MemberHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\MemberHistory.aspx.designer.cs">
+      <DependentUpon>MemberHistory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Manage\MemberList.aspx.cs">
       <DependentUpon>MemberList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Manage\MemberList.aspx.designer.cs">
       <DependentUpon>MemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\MemberLoanFollowUpHistory.aspx.cs">
+      <DependentUpon>MemberLoanFollowUpHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\MemberLoanFollowUpHistory.aspx.designer.cs">
+      <DependentUpon>MemberLoanFollowUpHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\MemberLoanNotes.aspx.cs">
+      <DependentUpon>MemberLoanNotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\MemberLoanNotes.aspx.designer.cs">
+      <DependentUpon>MemberLoanNotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\MemberScore.aspx.cs">
+      <DependentUpon>MemberScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\MemberScore.aspx.designer.cs">
+      <DependentUpon>MemberScore.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage\NewApplyTip.aspx.cs">
       <DependentUpon>NewApplyTip.aspx</DependentUpon>
@@ -1221,6 +1287,20 @@
     </Compile>
     <Compile Include="Manage\Pawn\Temp.aspx.designer.cs">
       <DependentUpon>Temp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\SendToFollowupCenter.aspx.cs">
+      <DependentUpon>SendToFollowupCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\SendToFollowupCenter.aspx.designer.cs">
+      <DependentUpon>SendToFollowupCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\SendToProcessCenter.aspx.cs">
+      <DependentUpon>SendToProcessCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\SendToProcessCenter.aspx.designer.cs">
+      <DependentUpon>SendToProcessCenter.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage\Temp.aspx.cs">
       <DependentUpon>Temp.aspx</DependentUpon>
