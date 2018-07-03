@@ -26,5 +26,10 @@
             </Columns>
         </cc1:DataGridTable>
     </div>
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar-nav a").removeClass();
+            $("#nav_a_newapplytip").addClass("active");
+        });
+    </script>
 </asp:Content>

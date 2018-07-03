@@ -707,6 +707,7 @@
     <Content Include="Manage\NewApplyTip.aspx" />
     <Content Include="Manage\OpenOperate.aspx" />
     <Content Include="Manage\Pawn\Temp.aspx" />
+    <Content Include="Manage\ReNew.aspx" />
     <Content Include="Manage\SendToFollowupCenter.aspx" />
     <Content Include="Manage\SendToProcessCenter.aspx" />
     <Content Include="Manage\Temp.aspx" />
@@ -1296,6 +1297,13 @@
     </Compile>
     <Compile Include="Manage\Pawn\Temp.aspx.designer.cs">
       <DependentUpon>Temp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ReNew.aspx.cs">
+      <DependentUpon>ReNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ReNew.aspx.designer.cs">
+      <DependentUpon>ReNew.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage\Secured\API\Tips.ashx.cs">
       <DependentUpon>Tips.ashx</DependentUpon>
