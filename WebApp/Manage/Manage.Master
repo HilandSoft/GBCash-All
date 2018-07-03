@@ -56,15 +56,16 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                 <i class="lnr lnr-alarm"></i>
-                                <span class="badge bg-danger" style="right:28px"><asp:Literal ID="litNewApllyCount4All" runat="server"></asp:Literal></span><i class="icon-submenu lnr lnr-chevron-down"></i>
+                                <span class="badge bg-danger" style="right: 28px" id="spnTipAll">
+                                    <asp:Literal ID="litNewApllyCount4All" runat="server"></asp:Literal></span><i class="icon-submenu lnr lnr-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu notifications">
-                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>GBCash<span class="badge bg-danger" style="right:28px"><asp:Literal ID="litNewApllyCount4GBCash" runat="server" Text="0"></asp:Literal></span></a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Secured<span class="badge bg-danger" style="right:28px"><asp:Literal ID="litNewApllyCount4Secured" runat="server" Text="0"></asp:Literal></span></a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>Pawn<span class="badge bg-danger" style="right:28px"><asp:Literal ID="litNewApllyCount4Pawn" runat="server" Text="0"></asp:Literal></span></a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>GBCash<span class="badge bg-danger" style="right: 28px" id="spnTipGBCash"><asp:Literal ID="litNewApllyCount4GBCash" runat="server" Text="0"></asp:Literal></span></a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Secured<span class="badge bg-danger" style="right: 28px"  id="spnTipSecured"><asp:Literal ID="litNewApllyCount4Secured" runat="server" Text="0"></asp:Literal></span></a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>Pawn<span class="badge bg-danger" style="right: 28px"  id="spnTipPawn"><asp:Literal ID="litNewApllyCount4Pawn" runat="server" Text="0"></asp:Literal></span></a></li>
                             </ul>
                         </li>
-                        
+
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="assets/img/user.png" class="img-circle" alt="Avatar">
@@ -130,6 +131,82 @@
 
     <!-- END WRAPPER -->
     <!-- Javascript -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+                url: 'Pawn/API/Tips.ashx',
+                dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
+                success: function (data, textStatus, jqXHR) {
+                    number4Pawn = Number(data);
+                    if (number4Pawn != NaN && number4Pawn > 0) {
+                        $("#spnTipPawn").text(data);
+
+                        number4All = number4Pawn;
+
+                        number4Secured = Number($("#spnTipSecured").text());
+                        if (number4Secured != NaN && number4Secured > 0) {
+                            number4All += number4Secured;
+                        }
+
+                        number4GBCash = Number($("#spnTipGBCash").text());
+                        if (number4GBCash != NaN && number4GBCash > 0) {
+                            number4All += number4GBCash;
+                        }
+
+                        $("#spnTipAll").text(number4All);
+                    }
+                }
+            });
+
+            $.ajax({
+                url: 'GBCash/API/Tips.ashx',
+                dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
+                success: function (data, textStatus, jqXHR) {
+                    number4GBCash = Number(data);
+                    if (number4GBCash != NaN && number4GBCash > 0) {
+                        $("#spnTipGBCash").text(data);
+                        number4All = number4GBCash;
+
+                        number4Secured = Number($("#spnTipSecured").text());
+                        if (number4Secured != NaN && number4Secured > 0) {
+                            number4All += number4Secured;
+                        }
+
+                        number4Pawn = Number($("#spnTipPawn").text());
+                        if (number4Pawn != NaN && number4Pawn > 0) {
+                            number4All += number4Pawn;
+                        }
+
+                        $("#spnTipAll").text(number4All);
+                    }
+                }
+            });
+
+            $.ajax({
+                url: 'Secured/API/Tips.ashx',
+                dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
+                success: function (data, textStatus, jqXHR) {
+                    number4Secured = Number(data);
+                    if (number4Secured != NaN && number4Secured > 0) {
+                        $("#spnTipSecured").text(data);
+                        number4All = number4Secured;
+
+                        number4GBCash = Number($("#spnTipGBCash").text());
+                        if (number4GBCash != NaN && number4GBCash > 0) {
+                            number4All += number4GBCash;
+                        }
+
+                        number4Pawn = Number($("#spnTipPawn").text());
+                        if (number4Pawn != NaN && number4Pawn > 0) {
+                            number4All += number4Pawn;
+                        }
+
+                        $("#spnTipAll").text(number4All);
+                    }
+                }
+            });
+        });
+    </script>
 
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>

@@ -28,24 +28,29 @@ namespace WebApp.Manage
             this.litUserName.Text = adminName;
 
 
-            int unDealedInfoCount4GBCash = 0;
-            int unDealedInfoCount4Secured = 0;
-            int unDealedInfoCount4Pawn = 0;
-            int unDealedInfoCount4All = 0;
+            //以下提醒數據通過前台頁面jquery動態獲取
 
-            DataTable list = InfoBN.GetQueryValid(1);            
-            if (list!=null) {
-                unDealedInfoCount4GBCash = list.Rows.Count;
-            }
+            //int unDealedInfoCount4GBCash = 0;
+            //int unDealedInfoCount4Secured = 0;
+            //int unDealedInfoCount4Pawn = 0;
+            //int unDealedInfoCount4All = 0;
 
-            unDealedInfoCount4All = unDealedInfoCount4GBCash + unDealedInfoCount4Secured + unDealedInfoCount4Pawn;
-            if (unDealedInfoCount4All > 0) {
-                this.litNewApllyCount4All.Text = unDealedInfoCount4All.ToString();
-            }
+            //DataTable list = InfoBN.GetQueryValid(1);            
+            //if (list!=null) {
+            //    unDealedInfoCount4GBCash = list.Rows.Count;
+            //}
 
-            this.litNewApllyCount4GBCash.Text = unDealedInfoCount4GBCash.ToString();
-            this.litNewApllyCount4Pawn.Text = unDealedInfoCount4Pawn.ToString();
-            this.litNewApllyCount4Secured.Text = unDealedInfoCount4Secured.ToString();
+            //unDealedInfoCount4Pawn= 
+
+
+            //unDealedInfoCount4All = unDealedInfoCount4GBCash + unDealedInfoCount4Secured + unDealedInfoCount4Pawn;
+            //if (unDealedInfoCount4All > 0) {
+            //    this.litNewApllyCount4All.Text = unDealedInfoCount4All.ToString();
+            //}
+
+            //this.litNewApllyCount4GBCash.Text = unDealedInfoCount4GBCash.ToString();
+            //this.litNewApllyCount4Pawn.Text = unDealedInfoCount4Pawn.ToString();
+            //this.litNewApllyCount4Secured.Text = unDealedInfoCount4Secured.ToString();
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

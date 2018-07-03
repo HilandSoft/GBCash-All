@@ -744,6 +744,9 @@
     <Content Include="API\Configs.ashx" />
     <Content Include="Manage\Pawn\Web.config" />
     <Content Include="Manage\Secured\Web.config" />
+    <Content Include="Manage\Pawn\API\Tips.ashx" />
+    <Content Include="Manage\GBCash\API\Tips.ashx" />
+    <Content Include="Manage\Secured\API\Tips.ashx" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1113,6 +1116,9 @@
     <Compile Include="Manage\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Manage\GBCash\API\Tips.ashx.cs">
+      <DependentUpon>Tips.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Manage\Gbe.aspx.cs">
       <DependentUpon>Gbe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1281,12 +1287,18 @@
     <Compile Include="Manage\OpenOperate.aspx.designer.cs">
       <DependentUpon>OpenOperate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Manage\Pawn\API\Tips.ashx.cs">
+      <DependentUpon>Tips.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Manage\Pawn\Temp.aspx.cs">
       <DependentUpon>Temp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Manage\Pawn\Temp.aspx.designer.cs">
       <DependentUpon>Temp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Secured\API\Tips.ashx.cs">
+      <DependentUpon>Tips.ashx</DependentUpon>
     </Compile>
     <Compile Include="Manage\SendToFollowupCenter.aspx.cs">
       <DependentUpon>SendToFollowupCenter.aspx</DependentUpon>
