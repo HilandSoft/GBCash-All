@@ -3,19 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table height="100%" cellSpacing="0" cellPadding="0" width="100%" bgColor="#fefefe" border="0">
-				<tr>
-					<td vAlign="top"><cc1:datagridtable id="DataGridTable1" runat="server" BorderStyle="None" BorderWidth="1px" CellPadding="4"
-							PageSize="12" BorderColor="#3366CC" BackColor="White" Width="100%" PageCSS="scrollButton" IsShowFoot="True"
-							MaxRecord="0" EnableViewState="False" AllowPaging="True" CssClass="tableGrid" AutoGenerateColumns="False" IsAllowPaging="True">
+   <h3 class="page-title">Employeed History</h3>
+    <cc1:datagridtable id="DataGridTable1" runat="server" BorderStyle="None" class="table table-hover table-striped" PageCSS="scrollButton" IsShowFoot="True" GridLines="None"
+							MaxRecord="0"  EnableViewState="False" AllowPaging="True" CssClass="table table-hover table-striped" AutoGenerateColumns="False" IsAllowPaging="True">
 							<PagerStyle Visible="False" HorizontalAlign="Left" ForeColor="#003399" BackColor="#99CCCC" CssClass="gridPager"
 								Mode="NumericPages"></PagerStyle>
 							<AlternatingItemStyle CssClass="gridAltItem"></AlternatingItemStyle>
 							<EditItemStyle CssClass="gridEditItem"></EditItemStyle>
 							<FooterStyle ForeColor="#003399" CssClass="gridFooter" BackColor="#66CCFF"></FooterStyle>
-							<SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" CssClass="gridSelectedItem" BackColor="#009999"></SelectedItemStyle>
-							<ItemStyle ForeColor="#003399" CssClass="gridItem" BackColor="White"></ItemStyle>
-							<HeaderStyle Font-Bold="True" ForeColor="#CCCCFF" CssClass="gridHeader" BackColor="#00FF33"></HeaderStyle>
+							<SelectedItemStyle Font-Bold="True" CssClass="gridSelectedItem" ></SelectedItemStyle>
+							<ItemStyle  CssClass="gridItem" ></ItemStyle>
+							<HeaderStyle Font-Bold="True"  CssClass="gridHeader" ></HeaderStyle>
 							<Columns>
 								<asp:BoundColumn DataField="huiSid" HeaderText="Number"></asp:BoundColumn>
 								<asp:BoundColumn DataField="huiName" HeaderText="Username"></asp:BoundColumn>
@@ -31,7 +29,5 @@
 						<br>
 						<div align="center"><A href="MemberList.aspx">Return</A>
 						</div>
-					</td>
-				</tr>
-			</table>
+					
 </asp:Content>

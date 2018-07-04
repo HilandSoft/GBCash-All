@@ -321,8 +321,8 @@
 								<TD>Installment
 									<%= i+1 %>
 								</TD>
-								<TD><FONT face="宋体"><%=payDates4Schedule[i].ToString("dd/MM/yyyy")%></FONT></TD>
-								<TD><FONT face="宋体"><%=payAmountPerTime4Schedule.ToString("0.00")%></FONT></TD>
+								<TD><%=payDates4Schedule[i].ToString("dd/MM/yyyy")%></TD>
+								<TD><%=payAmountPerTime4Schedule.ToString("0.00")%></TD>
 							</TR>
 							<%}%>
 							<TR>

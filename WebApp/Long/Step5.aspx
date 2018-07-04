@@ -1,4 +1,4 @@
-<%@ Register TagPrefix="uc1" TagName="CircleDropDownList" Src="../Include/CircleDropDownList.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="CircleDropDownList" Src="../Include/CircleDropDownList.ascx" %>
 <%@ Page language="c#" Codebehind="Step5.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Long.Step5" %>
 <%@ Register TagPrefix="uc1" TagName="head" Src="head.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="bottom" Src="bottom.ascx" %>
@@ -552,7 +552,7 @@
 														</TR>
 														<TR>
 															<TD>Please select the term of the loan:</TD>
-															<TD height="25"><%=sdlterms%><FONT face="宋体"></FONT></TD>
+															<TD height="25"><%=sdlterms%></TD>
 														</TR>
 														<TR>
 															<TD colSpan="2" height="25">
@@ -1525,7 +1525,7 @@
 											<TR>
 												<TD colSpan="2" height="25">
 													<DIV align="center"><INPUT id="bnEdit4" type="submit" value="Edit>>>" name="Submit42" runat="server">&nbsp;
-														<FONT face="宋体">&nbsp;&nbsp;</FONT>
+														&nbsp;&nbsp;
 														<asp:Button id="bnApption" runat="server" Text="Next>>>"></asp:Button><INPUT id="Hidden1" type="hidden" size="3" name="Hidden1" runat="server"><INPUT id="Hidden2" type="hidden" size="3" name="Hidden1" runat="server"><INPUT id="Hidden3" type="hidden" size="3" name="Hidden1" runat="server"></DIV>
 												</TD>
 											</TR>
@@ -1605,7 +1605,7 @@
 											</TR>
 											<TR>
 												<TD colSpan="2" height="30">
-													<DIV align="center"><INPUT id="bnBank" type="submit" value=" Save " name="Submit4" runat="server"><FONT face="宋体">&nbsp;&nbsp;</FONT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													<DIV align="center"><INPUT id="bnBank" type="submit" value=" Save " name="Submit4" runat="server">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 														<INPUT onclick="history.go(-1);" type="button" value="Return"></DIV>
 												</TD>
 											</TR>

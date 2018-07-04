@@ -104,8 +104,8 @@
 				<tr>
 					<td vAlign="top">Fax:</td>
 					<td vAlign="top" colSpan="3"><%=txFax%>
-						<FONT face="宋体"><INPUT id="Hidden1" style="WIDTH: 8px; HEIGHT: 19px" type="hidden" size="1" name="Hidden1"
-								runat="server"> </FONT>
+						<INPUT id="Hidden1" style="WIDTH: 8px; HEIGHT: 19px" type="hidden" size="1" name="Hidden1"
+								runat="server">
 					</td>
 				</tr>
 				<tr>

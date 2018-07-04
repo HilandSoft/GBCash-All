@@ -1,4 +1,4 @@
-<%@ Register TagPrefix="uc1" TagName="bottom" Src="bottom.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="bottom" Src="bottom.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="head" Src="head.ascx" %>
 <%@ Page language="c#" Codebehind="Step3.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Long.Step3" %>
 <%@ Register TagPrefix="uc1" TagName="CircleDropDownList" Src="../Include/CircleDropDownList.ascx" %>
@@ -338,7 +338,7 @@
 								</td>
 							</tr>
 						</table>
-						<FONT face="宋体">
+						
 							<asp:Panel id="Panel1" runat="server" Visible="False">
 								<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
 									<TR>
@@ -367,7 +367,7 @@
 											<asp:TextBox id="txEnd" runat="server" Width="150"></asp:TextBox></TD>
 									</TR>
 								</TABLE>
-							</asp:Panel></FONT>
+							</asp:Panel>
 					</td>
 				</tr>
 				<tr>

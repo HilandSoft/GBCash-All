@@ -10,7 +10,7 @@
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
 		<form id="Form1" method="post" runat="server">
-			<FONT face="ËÎÌו"></FONT>
+			
 		</form>
 	</body>
 </HTML>

@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
+    <title>GBCash</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -25,6 +26,7 @@
     </style>
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
+        
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -56,9 +58,9 @@
                                     <asp:Literal ID="litNewApllyCount4All" runat="server"></asp:Literal></span><i class="icon-submenu lnr lnr-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu notifications">
-                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>GBCash<span class="badge bg-danger" style="right: 28px" id="spnTipGBCash"><asp:Literal ID="litNewApllyCount4GBCash" runat="server" Text="0"></asp:Literal></span></a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Secured<span class="badge bg-danger" style="right: 28px"  id="spnTipSecured"><asp:Literal ID="litNewApllyCount4Secured" runat="server" Text="0"></asp:Literal></span></a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>Pawn<span class="badge bg-danger" style="right: 28px"  id="spnTipPawn"><asp:Literal ID="litNewApllyCount4Pawn" runat="server" Text="0"></asp:Literal></span></a></li>
+                                <li><a href="NewApplyTip.aspx" class="notification-item"><span class="dot bg-success"></span>GBCash<span class="badge bg-danger" style="right: 28px" id="spnTipGBCash"><asp:Literal ID="litNewApllyCount4GBCash" runat="server" Text="0"></asp:Literal></span></a></li>
+                                <li><a href="Secured/NewApplyTip.aspx" class="notification-item"><span class="dot bg-warning"></span>Secured<span class="badge bg-danger" style="right: 28px"  id="spnTipSecured"><asp:Literal ID="litNewApllyCount4Secured" runat="server" Text="0"></asp:Literal></span></a></li>
+                                <li><a href="Pawn/NewApplyTip.aspx" class="notification-item"><span class="dot bg-danger"></span>Pawn<span class="badge bg-danger" style="right: 28px"  id="spnTipPawn"><asp:Literal ID="litNewApllyCount4Pawn" runat="server" Text="0"></asp:Literal></span></a></li>
                             </ul>
                         </li>
 
@@ -106,11 +108,9 @@
             <!-- MAIN CONTENT -->
             <div class="main-content">
                 <div class="container-fluid">
-
                     <form id="form1" runat="server">
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                         </asp:ContentPlaceHolder>
-
                     </form>
                 </div>
             </div>
@@ -204,7 +204,6 @@
         });
     </script>
 
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-   
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>   
 </body>
 </html>

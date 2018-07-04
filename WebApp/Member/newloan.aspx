@@ -1,4 +1,4 @@
-<%@ Register TagPrefix="uc1" TagName="MemberLeft" Src="MemberLeft.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="MemberLeft" Src="MemberLeft.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="MemberTop" Src="MemberTop.ascx" %>
 <%@ Page language="c#" Codebehind="newloan.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Member.newloan" %>
 <%@ Register TagPrefix="uc1" TagName="CircleDropDownList" Src="../Include/CircleDropDownList.ascx" %>
@@ -110,7 +110,7 @@
 							<td vAlign="top"><asp:panel id="Panel2" runat="server" Visible="False" Width="472px" Height="120px">
 									<TABLE cellSpacing="1" cellPadding="1" width="510" border="0">
 										<TR>
-											<TD><FONT face="宋体"></FONT><FONT face="宋体"></FONT><BR>
+											<TD><BR>
 												<BR>
 												<P>Please make sure your details are up to date.
 													<asp:linkbutton id="LinkButton1" runat="server">Click here </asp:linkbutton>to 
@@ -161,7 +161,7 @@
 							<td><asp:panel id="Panel1" runat="server" Visible="False" Width="500px">
 									<TABLE cellSpacing="0" cellPadding="0" width="500" border="0">
 										<TR>
-											<TD><FONT face="宋体"></FONT><BR>
+											<TD><BR>
 												Review your information listed below; click the <STRONG>Edit </STRONG>button 
 												above each item to change the information. Be sure to click&nbsp;<STRONG>Save </STRONG>
 												when you're done.
@@ -171,7 +171,7 @@
 											<TD>
 												<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="504" border="0">
 													<TR>
-														<TD height="39"><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><BR>
+														<TD height="39"><BR>
 															<STRONG>Member 
 																Information&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 																<A href="detailnew.aspx">Edit</A> </STRONG>
@@ -195,7 +195,7 @@
 																</TR>
 																<TR>
 																	<TD width="133">Date of Birth:</TD>
-																	<TD width="118"><%=txDate%><FONT face="宋体"></FONT></TD>
+																	<TD width="118"><%=txDate%></TD>
 																	<TD width="91">E-Mail:
 																	</TD>
 																	<TD><%=txEmail%></TD>
@@ -204,7 +204,7 @@
 																	<TD width="133">Driver Licence Number:</TD>
 																	<TD width="118"><%=txDriver%></TD>
 																	<TD width="91">State Issued:</TD>
-																	<TD><%=txIssue%><FONT face="宋体"></FONT></TD>
+																	<TD><%=txIssue%></TD>
 																</TR>
 															</TABLE>
 														</TD>
@@ -367,8 +367,8 @@
 																	<TD><%=Rnum2%></TD>
 																</TR>
 																<TR>
-																	<TD><%=Rname3%><FONT face="宋体"></FONT></TD>
-																	<TD><%=Rship3%><FONT face="宋体"></FONT></TD>
+																	<TD><%=Rname3%></TD>
+																	<TD><%=Rship3%></TD>
 																	<TD><%=Rnum3%></TD>
 																</TR>
 															</TABLE>
@@ -390,12 +390,12 @@
 										<TR>
 											<TD width="137">Name:
 											</TD>
-											<TD width="363"><%=huiName%><FONT face="宋体"></FONT></TD>
+											<TD width="363"><%=huiName%></TD>
 										</TR>
 										<TR>
 											<TD>Customer Number:
 											</TD>
-											<TD><%=CustomerNum%><FONT face="宋体"></FONT></TD>
+											<TD><%=CustomerNum%></TD>
 										</TR>
 										<TR>
 											<TD>When are you paid:
@@ -409,8 +409,8 @@
 										</TR>
 										<TR>
 											<TD>Next Payday:</TD>
-											<TD><FONT face="宋体">DD <INPUT id="nPayDd" size="4" name="textfield292436" runat="server">
-													MM <INPUT id="nPayMm" size="4" name="textfield2924324" runat="server"> YYYY <INPUT id="nPayYy" size="4" name="textfield2924334" runat="server"><FONT face="宋体" color="#990000">*</FONT></FONT></TD>
+											<TD>DD <INPUT id="nPayDd" size="4" name="textfield292436" runat="server">
+													MM <INPUT id="nPayMm" size="4" name="textfield2924324" runat="server"> YYYY <INPUT id="nPayYy" size="4" name="textfield2924334" runat="server">*</TD>
 										</TR>
 										<TR>
 											<TD colSpan="2">&nbsp;</TD>
@@ -595,8 +595,8 @@
 																	<TD>Installment
 																		<%= i+1 %>
 																	</TD>
-																	<TD><FONT face="宋体"><%=payDates4Schedule[i].ToString("dd/MM/yyyy")%></FONT></TD>
-																	<TD><FONT face="宋体"><%=payAmountPerTime4Schedule.ToString("0.00")%></FONT></TD>
+																	<TD><%=payDates4Schedule[i].ToString("dd/MM/yyyy")%></TD>
+																	<TD><%=payAmountPerTime4Schedule.ToString("0.00")%></TD>
 																</TR>
 																<%}%>
 															</TABLE>
@@ -648,8 +648,8 @@
 												<asp:TextBox id="txFullname" runat="server" Width="192px"></asp:TextBox></TD>
 										</TR>
 										<TR>
-											<TD align="center" colSpan="2"><INPUT id="Button2" type="button" value="I agree, Submit" name="Button2" runat="server"><FONT face="宋体">&nbsp;&nbsp; 
-													&nbsp; </FONT><INPUT type="reset" value="Reset"></TD>
+											<TD align="center" colSpan="2"><INPUT id="Button2" type="button" value="I agree, Submit" name="Button2" runat="server">&nbsp;&nbsp; 
+													&nbsp; <INPUT type="reset" value="Reset"></TD>
 										</TR>
 									</TABLE>
 								</asp:panel></td>

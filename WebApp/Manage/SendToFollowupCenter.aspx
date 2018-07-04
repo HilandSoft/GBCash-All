@@ -22,13 +22,13 @@ window.history.back();
 				</tr>
 				<tr>
 					<td colspan="2">
-						<div id="Div1" style="OVERFLOW-Y: auto;SCROLLBAR-FACE-COLOR: #dee3e7;OVERFLOW-X: auto;SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;WIDTH: 100%;SCROLLBAR-SHADOW-COLOR: #dee3e7;SCROLLBAR-3DLIGHT-COLOR: #d1d7dc;SCROLLBAR-ARROW-COLOR: #006699;SCROLLBAR-TRACK-COLOR: #efefef;SCROLLBAR-DARKSHADOW-COLOR: #98aab1;HEIGHT: 100%"><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT><FONT face="宋体"></FONT>
+						<div id="Div1" style="OVERFLOW-Y: auto;SCROLLBAR-FACE-COLOR: #dee3e7;OVERFLOW-X: auto;SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;WIDTH: 100%;SCROLLBAR-SHADOW-COLOR: #dee3e7;SCROLLBAR-3DLIGHT-COLOR: #d1d7dc;SCROLLBAR-ARROW-COLOR: #006699;SCROLLBAR-TRACK-COLOR: #efefef;SCROLLBAR-DARKSHADOW-COLOR: #98aab1;HEIGHT: 100%">
 							<br>
 							<br>
 							<br>
 							<table width="300" align="center" border="1" cellpadding="2" cellspacing="0">
 								<tr>
-									<td height="24" bgcolor="#336699">&nbsp;&nbsp;<FONT face="宋体">Send to FollowupCenter</FONT>&nbsp;
+									<td height="24" bgcolor="#336699">&nbsp;&nbsp;Send to FollowupCenter&nbsp;
 										<asp:TextBox id="TextBox1" runat="server" Visible="False"></asp:TextBox><asp:TextBox id="txtParamstr" runat="server" Width="0px" Height="0px"></asp:TextBox></td>
 								</tr>
 								<tr>

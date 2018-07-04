@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="Index2.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Long.Index2" %>
+﻿<%@ Page language="c#" Codebehind="Index2.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Long.Index2" %>
 <%@ Register TagPrefix="uc1" TagName="bottom" Src="bottom.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="head" Src="head.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
@@ -64,7 +64,7 @@
 							</tr>
 							<tr>
 								<td height="25" align="center"><INPUT id="bnSubmit" type="button" size="22" value="ApplyNow" name="Button1" runat="server">
-									<FONT face="宋体">&nbsp; </FONT><INPUT style="WIDTH: 51px; HEIGHT: 24px" type="reset" value="Reset"></td>
+									&nbsp;<INPUT style="WIDTH: 51px; HEIGHT: 24px" type="reset" value="Reset"></td>
 							</tr>
 							<tr>
 								<td height="25">&nbsp;</td>

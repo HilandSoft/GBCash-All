@@ -15,8 +15,8 @@
 		<form id="Form1" method="post" runat="server">
 			<table width="750" border="0" align="center" cellpadding="0" cellspacing="0" height="100%">
 				<tr>
-					<td colspan="2" style="HEIGHT: 27px"><FONT face="ËÎÌו">
-							<uc1:top1 id="Top11" runat="server"></uc1:top1></FONT>
+					<td colspan="2" style="HEIGHT: 27px">
+							<uc1:top1 id="Top11" runat="server"></uc1:top1>
 					</td>
 				</tr>
 				<tr>

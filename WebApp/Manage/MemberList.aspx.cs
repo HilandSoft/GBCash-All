@@ -189,8 +189,8 @@ namespace Lina.WebApp.Manage
                         num++;
                     }
                 }
-                //this.Page.RegisterStartupScript("", "<script language=javascript>alert('" + num.ToString().Trim() + "items are deleted in total');window.location='MemberList.aspx';</script>");
-                this.ClientScript.RegisterStartupScript(this.GetType(),"alertMessage", "<script language=javascript>alert('" + num.ToString().Trim() + "items are deleted in total');window.location='MemberList.aspx';</script>");
+                this.Page.RegisterStartupScript("", "<script language=javascript>alert('" + num.ToString().Trim() + "items are deleted in total');window.location='MemberList.aspx';</script>");
+                //this.ClientScript.RegisterStartupScript(this.GetType(),"alertMessage", "<script language=javascript>alert('" + num.ToString().Trim() + "items are deleted in total');window.location='MemberList.aspx';</script>");
             }
         }
 

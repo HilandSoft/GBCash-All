@@ -700,6 +700,7 @@
     <Content Include="Manage\MemberDetail.aspx" />
     <Content Include="Manage\MemberDetailEdit.aspx" />
     <Content Include="Manage\MemberHistory.aspx" />
+    <Content Include="Manage\MemberHistoryDetail.aspx" />
     <Content Include="Manage\MemberList.aspx" />
     <Content Include="Manage\MemberLoanFollowUpHistory.aspx" />
     <Content Include="Manage\MemberLoanNotes.aspx" />
@@ -1245,6 +1246,13 @@
     </Compile>
     <Compile Include="Manage\MemberHistory.aspx.designer.cs">
       <DependentUpon>MemberHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\MemberHistoryDetail.aspx.cs">
+      <DependentUpon>MemberHistoryDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\MemberHistoryDetail.aspx.designer.cs">
+      <DependentUpon>MemberHistoryDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage\MemberList.aspx.cs">
       <DependentUpon>MemberList.aspx</DependentUpon>
