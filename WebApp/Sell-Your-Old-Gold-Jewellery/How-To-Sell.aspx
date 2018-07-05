@@ -1,4 +1,4 @@
-﻿<%@ page language="C#" autoeventwireup="true" inherits="Sell_Your_Old_Gold_Jewellery_How_To_Sell, App_Web_megxcffm" enableviewstatemac="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="How-To-Sell.aspx.cs" Inherits="GoldJewellery.How_To_Sell"  enableviewstatemac="false" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

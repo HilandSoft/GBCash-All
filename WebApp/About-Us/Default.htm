@@ -206,33 +206,11 @@
     <!--end footer-->
     <script type="text/javascript">
         $(document).ready(function () {
-            $.ajax({
-                type: "post",
-                url: "../api/configs.ashx",
-                data: { "configName": 'securedDomain' },
-                success: function (data) {
-                    var targetUrl = 'http://pawn.gbcash.com.au/';
-                    $("li a[href^='" + targetUrl + "']").each(function () {
-                        var hrefString = this['href'];
-                        hrefString = hrefString.replace(targetUrl, data);
-                        this['href'] = hrefString;
-                    });
-                }
-            });
-            $.ajax({
-                type: "post",
-                url: "../api/configs.ashx",
-                data: { "configName": 'securedDomain' },
-                success: function (data) {
-                    var targetUrl = 'http://secured.gbcash.com.au/';
-                    $("li a[href^='" + targetUrl + "']").each(function () {
-                        var hrefString = this['href'];
-                        hrefString = hrefString.replace(targetUrl, data);
-                        this['href'] = hrefString;
-                    });
-                }
-            });
-        })
+
+
+
+            
+        });
     </script>
 </body>
 </html>

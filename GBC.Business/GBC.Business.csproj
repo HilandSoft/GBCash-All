@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HiLand.Utility, Version=1.0.6759.28460, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\HiLand.Utility.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -92,10 +96,6 @@
     <Compile Include="YingSystemUserBN.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\hiland\SRC\HiLand.Utility\HiLand.Utility.csproj">
-      <Project>{d7d5a5aa-c68e-48c6-a768-b76d33cc04fa}</Project>
-      <Name>HiLand.Utility</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{38c5970f-df1b-4915-90a3-d574a1e998fc}</Project>
       <Name>Common</Name>

@@ -1,4 +1,4 @@
-<HTML>
+﻿<HTML>
 	<HEAD>
 		<title>Golden Bridge Cash Solution</title>
 		<LINK href="../css/css.css" type="text/css" rel="stylesheet">
@@ -14,7 +14,7 @@
 			<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
 				<tr>
 					<td>
-						<uc1:head id="Head1" runat="server"></uc1:head>
+						
 					</td>
 				</tr>
 			</table>
@@ -77,7 +77,7 @@ Please read the <a href="../Information/Credit-Guide.doc">Credit Guide</a> befor
 					</td>
 				</tr>
 				<tr>
-					<td colspan="3"><uc1:bottom id="Bottom1" runat="server"></uc1:bottom></td>
+					<td colspan="3"></td>
 				</tr>
 			</table>
 		</form>

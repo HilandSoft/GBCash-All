@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HiLand.Utility, Version=1.0.6759.28397, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\HiLand.Utility.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -92,7 +96,6 @@
     <Content Include="css\css.css" />
     <Content Include="css\css1.css" />
     <Content Include="default.htm" />
-    <Content Include="docum.php" />
     <Content Include="faq.htm" />
     <Content Include="faq1.htm" />
     <Content Include="faq2.htm" />
@@ -252,6 +255,7 @@
     <Content Include="images\b-back2.gif" />
     <Content Include="images\ball.gif" />
     <Content Include="images\banner-bg.png" />
+    <Content Include="images\banner.jpg" />
     <Content Include="images\bar.gif" />
     <Content Include="images\bl2.gif" />
     <Content Include="images\br2.gif" />
@@ -407,8 +411,6 @@
     <Content Include="images\usb-g-new1.gif" />
     <Content Include="images\warning.gif" />
     <Content Include="Include\CircleDropDownList.ascx" />
-    <Content Include="index.htm" />
-    <Content Include="index.html" />
     <Content Include="info.aspx" />
     <Content Include="Information\Newsletter.htm" />
     <Content Include="Information\Relevant-Links.htm" />
@@ -428,6 +430,7 @@
     <Content Include="jslib\cal_pop.js" />
     <Content Include="jslib\checkform.js" />
     <Content Include="jslib\commCheck.js" />
+    <Content Include="jslib\customActions.js" />
     <Content Include="jslib\datagrid.js" />
     <Content Include="jslib\formValidator.js" />
     <Content Include="jslib\formValidatorRegex.js" />
@@ -470,6 +473,8 @@
     <Content Include="jslib\jquery-cluetip\lib\themeswitchertool.js" />
     <Content Include="jslib\jquery.validate-1.4.js" />
     <Content Include="jslib\swfobject.js" />
+    <Content Include="jslib\tablesaw-init.js" />
+    <Content Include="jslib\tablesaw.jquery.js" />
     <Content Include="log.php" />
     <Content Include="login.htm" />
     <Content Include="Long\1.htm" />
@@ -752,6 +757,8 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\PublishProfiles\File System Profile.pubxml" />
+    <None Include="Properties\PublishProfiles\FTP4Smartasp Profile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1473,6 +1480,10 @@
       <DependentUpon>top6.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Pawn-Loans\Acceptable-Collateral.aspx.cs">
+      <DependentUpon>Acceptable-Collateral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renew.aspx.cs">
       <DependentUpon>Renew.aspx</DependentUpon>
@@ -1480,6 +1491,26 @@
     </Compile>
     <Compile Include="Renew.aspx.designer.cs">
       <DependentUpon>Renew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sell-Your-Old-Gold-Jewellery\How-To-Sell.aspx.cs">
+      <DependentUpon>How-To-Sell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sell-Your-Old-Gold-Jewellery\Thankyou.aspx.cs">
+      <DependentUpon>Thankyou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sell-Your-Old-Gold-Jewellery\Today-Prices.aspx.cs">
+      <DependentUpon>Today-Prices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sell-Your-Old-Gold-Jewellery\Visit-Us-In-Person.aspx.cs">
+      <DependentUpon>Visit-Us-In-Person.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sell-Your-Old-Gold-Jewellery\What-We-Buy.aspx.cs">
+      <DependentUpon>What-We-Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SendMailForAccount.cs" />
     <Compile Include="sslTest.aspx.cs">
@@ -1547,10 +1578,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\hiland\SRC\HiLand.Utility\HiLand.Utility.csproj">
-      <Project>{d7d5a5aa-c68e-48c6-a768-b76d33cc04fa}</Project>
-      <Name>HiLand.Utility</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{38c5970f-df1b-4915-90a3-d574a1e998fc}</Project>
       <Name>Common</Name>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using HiLand.Utility.Setting;
 
 namespace Lina.WebApp.API
@@ -16,7 +13,7 @@ namespace Lina.WebApp.API
         {
             context.Response.ContentType = "text/plain";
             string configName = HttpContext.Current.Request.Params["configName"];
-            string configValue= Config.GetAppSetting(configName);
+            string configValue = Config.GetAppSetting(configName);
             context.Response.Write(configValue);
         }
 

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
+﻿using System.Data;
 using System.Web;
-using HiLand.Utility.DataBase;
 using YingNet.WeiXing.Business;
 
 namespace Lina.WebApp.Manage.Pawn.API
