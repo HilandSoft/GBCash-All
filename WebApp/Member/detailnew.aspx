@@ -1,4 +1,4 @@
-<%@ Register TagPrefix="uc1" TagName="top1" Src="top1.ascx" %>
+ï»¿<%@ Register TagPrefix="uc1" TagName="top1" Src="top1.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="leftmenu" Src="leftmenu.ascx" %>
 <%@ Page language="c#" Codebehind="detailnew.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Member.detailnew" %>
 <%@ Register TagPrefix="uc1" TagName="top4" Src="top4.ascx" %>
@@ -12,8 +12,8 @@
 		<form id="Form1" method="post" runat="server">
 			<table width="750" border="0" align="center" cellpadding="0" cellspacing="0" height="100%">
 				<tr>
-					<td colspan="2" style="HEIGHT: 27px"><FONT face="ËÎÌå">
-							<uc1:top4 id="Top41" runat="server"></uc1:top4></FONT>
+					<td colspan="2" style="HEIGHT: 27px">
+							<uc1:top4 id="Top41" runat="server"></uc1:top4>
 					</td>
 				</tr>
 				<tr>
@@ -36,7 +36,7 @@
 										<TR>
 											<TD style="WIDTH: 167px" width="167">First Name:</TD>
 											<TD style="WIDTH: 118px" width="118"><INPUT id="txFname" type="text" size="10" name="textfield26" runat="server" readOnly>
-												<FONT face="??¨¬?" color="#990000">*</FONT></TD>
+												<span style="color:#990000">*</span></TD>
 											<TD style="WIDTH: 91px" width="91">Middle Name:</TD>
 											<TD width="106">
 												<INPUT id="txMname" type="text" size="10" name="textfield262" runat="server" readOnly>
@@ -46,7 +46,7 @@
 											<TD style="WIDTH: 167px">Last Name:</TD>
 											<TD style="WIDTH: 118px">
 												<INPUT id="txLname" type="text" size="10" name="textfield27" runat="server" readOnly>
-												<FONT face="??¨¬?" color="#990000">*</FONT>
+												<span style="color:#990000">*</span>
 											</TD>
 											<TD style="WIDTH: 91px">&nbsp;</TD>
 											<TD>&nbsp;</TD>
@@ -54,11 +54,11 @@
 										<TR>
 											<TD style="WIDTH: 167px">Date of Birth:</TD>
 											<TD style="WIDTH: 118px"><INPUT id="txDate" type="text" size="10" name="textfield29" runat="server" readOnly>
-												<FONT face="??¨¬?" color="#990000">*</FONT></TD>
+												<span style="color:#990000">*</span></TD>
 											<TD style="WIDTH: 91px">E-Mail:
 											</TD>
-											<TD><INPUT id="txEmail" type="text" size="10" name="textfield28" runat="server"> <FONT face="??¨¬?" color="#990000">
-													*</FONT></TD>
+											<TD><INPUT id="txEmail" type="text" size="10" name="textfield28" runat="server"> <span style="color:#990000">
+										*</span></TD>
 										</TR>
 										<TR>
 											<TD style="WIDTH: 167px">Driver Licence Number:</TD>
@@ -83,11 +83,11 @@
 										<TR>
 											<TD>Street&nbsp;:</TD>
 											<TD colSpan="3"><INPUT id="txStreet" type="text" size="20" name="textfield2622" runat="server">
-												<FONT face="??¨¬?" color="#990000">*</FONT></TD>
+												<span style="color:#990000">*</span></TD>
 										</TR>
 										<TR>
 											<TD>Suburb:</TD>
-											<TD style="WIDTH: 80px" width="80"><INPUT id="txCity" type="text" size="9" name="textfield292" runat="server"><FONT face="??¨¬?" color="#990000">*</FONT></TD>
+											<TD style="WIDTH: 80px" width="80"><INPUT id="txCity" type="text" size="9" name="textfield292" runat="server"><span style="color:#990000">*</span></TD>
 											<TD style="WIDTH: 104px" width="104" colSpan="2">&nbsp;&nbsp; State:&nbsp;
 												<SELECT id="selState" name="select2" runat="server">
 													<OPTION value="ACT" selected>ACT</OPTION>
@@ -102,7 +102,7 @@
 										</TR>
 										<TR>
 											<TD>Postcode:</TD>
-											<TD colSpan="3"><INPUT id="txPost" type="text" size="20" name="textfield2623" runat="server"><FONT face="??¨¬?" color="#990000">*</FONT></TD>
+											<TD colSpan="3"><INPUT id="txPost" type="text" size="20" name="textfield2623" runat="server"><span style="color:#990000">*</span></TD>
 										</TR>
 										<TR>
 											<TD colSpan="4"><BR>
@@ -144,17 +144,17 @@
 										<TR>
 											<TD style="WIDTH: 198px" colSpan="2">Home Phone Number:</TD>
 											<TD colSpan="2"><INPUT id="txTel" type="text" size="10" name="textfield282" runat="server">
-												<FONT face="??¨¬?" color="#990000">*</FONT></TD>
+												<span style="color:#990000">*</span></TD>
 										</TR>
 										<TR>
 											<TD style="WIDTH: 198px" colSpan="2">Mobile:</TD>
 											<TD colSpan="2"><INPUT id="txMobile" type="text" size="10" name="textfield282" runat="server">
-												<FONT face="??¨¬?" color="#990000"></FONT>
+												
 											</TD>
 										</TR>
 										<TR>
 											<TD style="WIDTH: 198px" colSpan="2">Fax:</TD>
-											<TD colSpan="2"><INPUT id="txFax" type="text" size="10" name="textfield282" runat="server"><FONT face="??¨¬?" color="#990000"></FONT></TD>
+											<TD colSpan="2"><INPUT id="txFax" type="text" size="10" name="textfield282" runat="server"></TD>
 										</TR>
 										<TR>
 											<TD colSpan="2">&nbsp;</TD>
@@ -163,10 +163,10 @@
 								</TD>
 							</TR>
 							<TR>
-								<TD><FONT face="ËÎÌå">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									</FONT><INPUT id="Submit1" type="submit" value="Save" name="Submit" runat="server"><FONT face="ËÎÌå">&nbsp;&nbsp;&nbsp;
-									</FONT><INPUT type="reset" value="Reset" name="Submit2"><FONT face="ËÎÌå">&nbsp; <A href="newloan.aspx">
-											return</A></FONT></TD>
+								<TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<INPUT id="Submit1" type="submit" value="Save" name="Submit" runat="server">&nbsp;&nbsp;&nbsp;
+									<INPUT type="reset" value="Reset" name="Submit2">&nbsp; <A href="newloan.aspx">
+											return</A></TD>
 							</TR>
 							<TR>
 								<TD>&nbsp;</TD>

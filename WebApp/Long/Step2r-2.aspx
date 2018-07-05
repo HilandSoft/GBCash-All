@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="Step2r.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Long.Step2r" %>
+﻿<%@ Page language="c#" Codebehind="Step2r.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Long.Step2r" %>
 <%@ Register TagPrefix="uc1" TagName="head" Src="head.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="bottom" Src="bottom.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
@@ -219,15 +219,15 @@
 							<TR>
 								<TD height="30">Street:</TD>
 								<TD><INPUT id="txStreet" type="text" style="WIDTH:150px" name="textfield22322522" runat="server">
-									<FONT color="#ff0000">*</FONT></TD>
+									<span style="color:#ff0000">*</span></TD>
 								<TD width="15%">Suburb :</TD>
 								<TD><INPUT id="txSuburb" type="text" style="WIDTH:150px" name="textfield223225224" runat="server">
-									<FONT color="#ff0000">*</FONT></TD>
+									<span style="color:#ff0000">*</span></TD>
 							</TR>
 							<TR>
 								<TD height="30">State :</TD>
 								<TD><INPUT id="txState" type="text" style="WIDTH:150px" name="textfield223225223" runat="server">
-									<FONT color="#ff0000">*</FONT></TD>
+									<span style="color:#ff0000">*</span></TD>
 								<TD>Postcode :</TD>
 							  <TD><INPUT id="txPost" type="text" style="WIDTH:150px" name="textfield223225224" runat="server">
 								  <FONT color="#ff0000">* </FONT><span class="style1"> Note: Loans are currently not available to the residents in WA. </span></TD>
@@ -290,12 +290,12 @@
 										<TR>
 											<TD width="30%" height="30">Name of Landlord or Real Estate Agent :</TD>
 											<TD><INPUT id="txlandlord" type="text" style="WIDTH:150px" name="textfield2232252" runat="server">
-												<FONT color="#ff0000">*</FONT></TD>
+												<span style="color:#ff0000">*</span></TD>
 										</TR>
 										<TR>
 											<TD height="30">Telephone Area Code and Number :</TD>
 											<TD><INPUT id="txareatel" type="text" style="WIDTH:150px" name="textfield2232253" runat="server">
-												<FONT color="#ff0000">*</FONT></TD>
+												<span style="color:#ff0000">*</span></TD>
 										</TR>
 										<TR>
 											<TD colSpan="2" height="30">
@@ -326,18 +326,18 @@
 																	<TR>
 																		<TD height="30">Street number :</TD>
 																		<TD><INPUT id="txStreet1" style="WIDTH: 150px" type="text" name="textfield22322522" runat="server">
-																			<FONT color="#ff0000">*</FONT></TD>
+																			<span style="color:#ff0000">*</span></TD>
 																		<TD>Suburb :</TD>
 																		<TD><INPUT id="txSuburb1" style="WIDTH: 150px" type="text" name="textfield223225224" runat="server">
-																			<FONT color="#ff0000">*</FONT></TD>
+																			<span style="color:#ff0000">*</span></TD>
 																	</TR>
 																	<TR>
 																		<TD height="30">State :</TD>
 																		<TD><INPUT id="txState1" style="WIDTH: 150px" type="text" name="textfield223225223" runat="server">
-																			<FONT color="#ff0000">*</FONT></TD>
+																			<span style="color:#ff0000">*</span></TD>
 																		<TD>Postcode :</TD>
 																		<TD><INPUT id="txPost1" style="WIDTH: 150px" type="text" name="textfield223225224" runat="server">
-																			<FONT color="#ff0000">*</FONT></TD>
+																			<span style="color:#ff0000">*</span></TD>
 																	</TR>
 																	<TR>
 																		<TD align="center" colSpan="4">

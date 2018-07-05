@@ -19,13 +19,15 @@
 					<div class="table__row">
 						<div class="table__label">Loan requested amount:</div>
 						<div class="table__data">
-							$ <INPUT style="WIDTH: 150px" id="txLoan" name="textfield292422" runat="server"> .00 <FONT color="#ff0000">*</FONT>
+							$ <INPUT style="WIDTH: 150px" id="txLoan" name="textfield292422" runat="server"> .00 <span style="color:#ff0000">
+										*</span>
 						</div>
 					</div>
 					<div class="table__row">
 						<div class="table__label">Your take home pay:</div>
 						<div class="table__data">
-							$ <INPUT id="txIncome" style="WIDTH:150px" name="textfield2924222" runat="server"> .00 <FONT color="#ff0000">*</FONT>
+							$ <INPUT id="txIncome" style="WIDTH:150px" name="textfield2924222" runat="server"> .00 <span style="color:#ff0000">
+										*</span>
 						</div>
 					</div>
 					<div class="table__row">

@@ -120,7 +120,7 @@
 					<TD width="751">
 						<table height="684" cellSpacing="0" cellPadding="0" width="750" align="center" border="0">
 							<tr>
-								<td colSpan="2" height="27"><FONT face=""><uc1:top4 id="Top41" runat="server"></uc1:top4></FONT></td>
+								<td colSpan="2" height="27"><uc1:top4 id="Top41" runat="server"></uc1:top4></td>
 							</tr>
 							<tr>
 								<td vAlign="top" align="left" width="195" bgColor="#e8e6df"><uc1:leftmenu id="Leftmenu1" runat="server"></uc1:leftmenu></td>
@@ -149,12 +149,12 @@
 													<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
 														<TR>
 															<TD>Your Occupation:</TD>
-															<TD colSpan="3"><FONT face="???"></FONT></TD>
+															<TD colSpan="3"></TD>
 														</TR>
 														<TR>
 															<TD>Employer:</TD>
-															<TD colSpan="3"><INPUT id="txEmployer" type="text" size="20" name="textfield2922" runat="server"><FONT face="???" color="#990000">*
-																</FONT>
+															<TD colSpan="3"><INPUT id="txEmployer" type="text" size="20" name="textfield2922" runat="server">*
+																
 															</TD>
 														</TR>
 														<TR>
@@ -252,8 +252,8 @@
 													<TABLE id="Table2" cellSpacing="0" cellPadding="0" width="100%" border="0">
 														<TR>
 															<TD width="127">Type of benefit:</TD>
-															<TD colSpan="3"><INPUT id="txType" type="text" size="15" name="textfield2925" runat="server"><FONT face="???" color="#990000">*
-																</FONT>
+															<TD colSpan="3"><INPUT id="txType" type="text" size="15" name="textfield2925" runat="server">*
+																
 															</TD>
 														</TR>
 														<TR>

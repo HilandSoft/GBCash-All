@@ -155,7 +155,8 @@
 								<div class="table__label">
 									<div class="hlDiv"><div class="span" style="display:inline-block;vertical-align:top;">First Name:</div>
 									<input id="txFname" readOnly size="15" name="textfield26" runat="server">
-									<FONT color="#990000" face="???">*</FONT>
+									<span style="color:#990000">
+										*</span>
 								</div></div>
 								<div class="table__data">
 									<div class="hlDiv"><div class="span" style="display:inline-block;vertical-align:top;">Middle Name:</div>
@@ -165,8 +166,8 @@
 							<div class="table__row">
 								<div class="table__label">
 									<div class="hlDiv"><div class="span" style="display:inline-block;vertical-align:top;">Last Name:</div>
-									<input id="txLname" readOnly size="15" name="textfield27" runat="server"> <FONT color="#990000" face="???">
-										*</FONT>
+									<input id="txLname" readOnly size="15" name="textfield27" runat="server"> <span style="color:#990000">
+										*</span>
 								</div></div>
 								<div class="table__data">
 									<div class="hlDiv"><div class="span" style="display:inline-block;vertical-align:top;">Customer No:</div>
@@ -176,23 +177,23 @@
 							<div class="table__row">
 								<div class="table__label">
 									<div class="hlDiv"><div class="span" style="display:inline-block;vertical-align:top;">Date of Birth:</div>
-									<input id="txDate" readOnly size="15" name="textfield29" runat="server"> <FONT color="#990000" face="???">
-										*</FONT>
+									<input id="txDate" readOnly size="15" name="textfield29" runat="server"> <span style="color:#990000">
+										*</span>
 								</div></div>
 								<div class="table__data">
 									<div class="hlDiv"><div class="span" style="display:inline-block;vertical-align:top;">E-Mail:</div>
-									<input id="txEmail" size="15" name="textfield28" runat="server"> <FONT color="#990000" face="???">
-										*</FONT>
+									<input id="txEmail" size="15" name="textfield28" runat="server"> <span style="color:#990000">
+										*</span>
 								</div></div>
 							</div>
 							<div class="table__row">
 								<div class="table__label">
 									<div class="hlDiv"><div class="span" style="display:inline-block;vertical-align:top;">Driver Licence Number:</div>
-									<INPUT id="txDriver" size="15" name="textfield28" runat="server"> <FONT face="???"></FONT>
+									<INPUT id="txDriver" size="15" name="textfield28" runat="server"> 
 								</div></div>
 								<div class="table__data">
 									<div class="hlDiv"><div class="span" style="display:inline-block;vertical-align:top;">State Issued:</div>
-									<INPUT id="txIssue" size="15" name="textfield29" runat="server"> <FONT face="???"></FONT>
+									<INPUT id="txIssue" size="15" name="textfield29" runat="server"> 
 								</div></div>
 							</div>
 						</div>
@@ -206,14 +207,15 @@
 							<div class="table__row">
 								<div class="table__label">Street:</div>
 								<div class="table__data">
-									<input id="txStreet" name="textfield2622" runat="server"> <FONT color="#990000" face="???">
-										*</FONT>
+									<input id="txStreet" name="textfield2622" runat="server"> <span style="color:#990000">
+										*</span>
 								</div>
 							</div>
 							<div class="table__row">
 								<div class="table__label">Suburb:</div>
 								<div class="table__data">
-									<input id="txCity" size="9" name="textfield292" runat="server"> <FONT color="#990000" face="???">*</FONT>
+									<input id="txCity" size="9" name="textfield292" runat="server"> <span style="color:#990000">
+										*</span>
 								</div>
 							</div>
 							<div class="table__row">
@@ -234,7 +236,8 @@
 							<div class="table__row">
 								<div class="table__label">Postcode:</div>
 								<div class="table__data">
-									<input id="txPost" name="textfield2623" runat="server"> <FONT color="#990000" face="???">*</FONT>
+									<input id="txPost" name="textfield2623" runat="server"> <span style="color:#990000">
+										*</span>
 								</div>
 							</div>
 						</div>
@@ -277,21 +280,20 @@
 							<div class="table__row">
 								<div class="table__label">Home Phone Number:</div>
 								<div class="table__data">
-									<input id="txTel" size="10" name="textfield282" runat="server"> <FONT color="#990000" face="???">
-										*</FONT>
+									<input id="txTel" size="10" name="textfield282" runat="server"> <span style="color:#990000">
+										*</span>
 								</div>
 							</div>
 							<div class="table__row">
 								<div class="table__label">Mobile:</div>
 								<div class="table__data">
-									<input id="txMobile" size="10" name="textfield282" runat="server"> <FONT color="#990000" face="???">
-									</FONT>
+									<input id="txMobile" size="10" name="textfield282" runat="server"> 
 								</div>
 							</div>
 							<div class="table__row">
 								<div class="table__label">Fax:</div>
 								<div class="table__data">
-									<input id="txFax" size="10" name="textfield282" runat="server"> <FONT color="#990000" face="???"></FONT>
+									<input id="txFax" size="10" name="textfield282" runat="server"> 
 								</div>
 							</div>
 						</div>
@@ -307,26 +309,28 @@
 								<div class="table__row">
 									<div class="table__label">Your Occupation:</div>
 									<div class="table__data">
-										<FONT face="???"></FONT>
+										
 									</div>
 								</div>
 								<div class="table__row">
 									<div class="table__label">Employer:</div>
 									<div class="table__data">
-										<INPUT id="txEmployer" name="textfield2922" runat="server"> <FONT color="#990000" face="???">*
-										</FONT>
+										<INPUT id="txEmployer" name="textfield2922" runat="server"> <span style="color:#990000">
+										*</span>
 									</div>
 								</div>
 								<div class="table__row">
 									<div class="table__label">Employer's Address:</div>
 									<div class="table__data">
-										<INPUT id="txAddress" name="textfield2923" runat="server"> <FONT color="#990000" face="???">*</FONT>
+										<INPUT id="txAddress" name="textfield2923" runat="server"> <span style="color:#990000">
+										*</span>
 									</div>
 								</div>
 								<div class="table__row">
 									<div class="table__label">Employer Phone:</div>
 									<div class="table__data">
-										<INPUT id="txPhone" name="textfield2924" runat="server"> <FONT color="#990000" face="???">*</FONT>
+										<INPUT id="txPhone" name="textfield2924" runat="server"> <span style="color:#990000">
+										*</span>
 									</div>
 								</div>
 								<div class="table__row">
@@ -373,7 +377,8 @@
 								<div class="table__row">
 									<div class="table__label">Take home pay after taxes:</div>
 									<div class="table__data">
-										<INPUT id="txIncome" name="textfield29242" runat="server"> <FONT color="#990000" face="???">*</FONT>
+										<INPUT id="txIncome" name="textfield29242" runat="server"> <span style="color:#990000">
+										*</span>
 									</div>
 								</div>
 								<div class="table__row">
@@ -418,20 +423,22 @@
 								<div class="table__row">
 									<div class="table__label">Type of benefit:</div>
 									<div class="table__data">
-										<INPUT id="txType" size="15" name="textfield2925" runat="server"> <FONT color="#990000" face="???">*
-										</FONT>
+										<INPUT id="txType" size="15" name="textfield2925" runat="server"> <span style="color:#990000">
+										*</span>
 									</div>
 								</div>
 								<div class="table__row">
 									<div class="table__label">Centrelink Office:</div>
 									<div class="table__data">
-										<INPUT id="txOffice" size="15" name="textfield29222" runat="server"> <FONT color="#990000" face="???">*</FONT>
+										<INPUT id="txOffice" size="15" name="textfield29222" runat="server"> <span style="color:#990000">
+										*</span>
 									</div>
 								</div>
 								<div class="table__row">
 									<div class="table__label">Contact Name:</div>
 									<div class="table__data">
-										<INPUT id="txContact" size="15" name="textfield29232" runat="server"> <FONT color="#990000" face="???">*</FONT>
+										<INPUT id="txContact" size="15" name="textfield29232" runat="server"> <span style="color:#990000">
+										*</span>
 									</div>
 								</div>
 								<div class="table__row">
@@ -472,7 +479,8 @@
 								<div class="table__row">
 									<div class="table__label">Take Home Benefit:</div>
 									<div class="table__data">
-										<INPUT id="txBenefit" size="15" name="textfield2924222" runat="server"> <FONT color="#990000" face="???">*</FONT>
+										<INPUT id="txBenefit" size="15" name="textfield2924222" runat="server"> <span style="color:#990000">
+										*</span>
 									</div>
 								</div>
 								<div class="table__row">
@@ -495,8 +503,8 @@
 								</div>	
 								</asp:panel>
 								<div class="table__row table__submit table__submit--right">
-									<INPUT id="Submit1" value="Save" type="submit" name="Submit" runat="server"> <FONT face="">&nbsp;&nbsp;&nbsp;
-												</FONT><INPUT value="Reset" type="reset" name="Submit2">
+									<INPUT id="Submit1" value="Save" type="submit" name="Submit" runat="server"> &nbsp;&nbsp;&nbsp;
+												<INPUT value="Reset" type="reset" name="Submit2">
 								</div>
 						</div>	
 					</div>	

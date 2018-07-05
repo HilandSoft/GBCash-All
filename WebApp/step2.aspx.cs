@@ -82,7 +82,7 @@
                     dt.TMonths = Convert.ToInt32(this.txMonth.Value);
                     dt.HTel = this.txTel.Value;
                     dt.Mobile = this.txMobile.Value;
-                    dt.Param1 = this.txFax.Value;
+                    dt.Param1 = "";//this.txFax.Value;
                     dt.Username = this.txUser.Value;
                     dt.Password = this.txPass.Value;
                     dt.IsValid = 9;

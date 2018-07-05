@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="step1.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.step1" %>
+﻿<%@ Page language="c#" Codebehind="step1.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.step1" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -35,8 +35,8 @@
 							Information Statement</a>, <a target="_blank" href="Information/Form3A.doc">Form 3A</a>, <a target="_blank" href="Information/Credit-Guide.doc">Credit Guide</a>?</asp:ListItem>
 					</asp:checkboxlist>
 				</p>
-				<p style="text-align:center;"><INPUT id="bnSubmit" type="button" value="ApplyNow" name="Button1" runat="server"><FONT face="">&nbsp;
-					</FONT><INPUT type="reset" value="Reset"></p>
+				<p style="text-align:center;"><INPUT id="bnSubmit" type="button" value="ApplyNow" name="Button1" runat="server">&nbsp;
+					<INPUT type="reset" value="Reset"></p>
 				<p>Please call <a href="tel:1300 137 906">1300 137 906</a> or email <a href="mailto:apply@gbcash.com.au">apply@gbcash.com.au</a>
 					if you have any problems/questions filling in this form</p>
 			</div>

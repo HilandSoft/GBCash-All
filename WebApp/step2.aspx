@@ -186,13 +186,13 @@
 								<asp:ListItem Value="Ms">Ms</asp:ListItem>
 								<asp:ListItem Value="Dr">Dr</asp:ListItem>
 							</asp:DropDownList>
-							<FONT face="����" color="#990000">*</FONT>
+							<span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
 						<div class="table__label">First Name:</div>
 						<div class="table__data">
-							<input id="txFname" type="text" size="20" name="textfield26" runat="server"><FONT face="����" color="#990000">*</FONT>
+							<input id="txFname" type="text" size="20" name="textfield26" runat="server"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
@@ -204,19 +204,19 @@
 					<div class="table__row">
 						<div class="table__label">Last Name:</div>
 						<div class="table__data">
-							<input id="txLname" type="text" size="20" name="textfield27" runat="server"><FONT face="����" color="#990000">*</FONT>
+							<input id="txLname" type="text" size="20" name="textfield27" runat="server"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
 						<div class="table__label">Date of Birth (DD/MM/YYYY):</div>
 						<div class="table__data table__data-date">
-							<INPUT id="txDated" type="text" size="2" name="txDated" runat="server"> /<INPUT id="txDatem" type="text" size="2" name="Text1" runat="server"> /<INPUT id="txDatey" type="text" size="4" name="Text2" runat="server"><FONT face="����" color="#990000">*</FONT>
+							<INPUT id="txDated" type="text" size="2" name="txDated" runat="server"> /<INPUT id="txDatem" type="text" size="2" name="Text1" runat="server"> /<INPUT id="txDatey" type="text" size="4" name="Text2" runat="server"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
 						<div class="table__label">E-Mail:</div>
 						<div class="table__data">
-							<input id="txEmail" type="text" size="20" name="textfield28" runat="server"><FONT face="����" color="#990000">*</FONT>
+							<input id="txEmail" type="text" size="20" name="textfield28" runat="server"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
@@ -234,19 +234,19 @@
 					<div class="table__row">
 						<div class="table__label">Street No.</div>
 						<div class="table__data">
-							<input id="txResident" type="text" size="20" name="textfield262" runat="server"><FONT face="����" color="#990000">*</FONT>
+							<input id="txResident" type="text" size="20" name="textfield262" runat="server"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
 						<div class="table__label">Street Name:</div>
 						<div class="table__data">
-							<input id="txStreet" type="text" size="20" name="textfield2622" runat="server"><FONT face="����" color="#990000">*</FONT>
+							<input id="txStreet" type="text" size="20" name="textfield2622" runat="server"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
 						<div class="table__label">Suburb:</div>
 						<div class="table__data">
-							<input id="txCity" type="text" size="20" name="textfield292" runat="server"><FONT face="����" color="#990000">*</FONT>
+							<input id="txCity" type="text" size="20" name="textfield292" runat="server"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
@@ -267,7 +267,7 @@
 					<div class="table__row">
 						<div class="table__label">Postcode:</div>
 						<div class="table__data">
-							<input id="txPost" type="text" size="20" name="textfield2623" runat="server"><FONT face="����" color="#990000">*</FONT>
+							<input id="txPost" type="text" size="20" name="textfield2623" runat="server"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
@@ -308,21 +308,15 @@
 					<div class="table__row">
 						<div class="table__label">Home Phone Number:</div>
 						<div class="table__data">
-							<input id="txTel" type="text" size="20" name="textfield282" runat="server"><FONT face="����" color="#990000">*</FONT>
+							<input id="txTel" type="text" size="20" name="textfield282" runat="server"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
 						<div class="table__label">Mobile:</div>
 						<div class="table__data">
-							<input id="txMobile" type="text" size="20" name="textfield282" runat="server"><FONT face="����" color="#990000">&nbsp;</FONT>
+							<input id="txMobile" type="text" size="20" name="textfield282" runat="server">&nbsp;
 						</div>
-					</div>
-					<div class="table__row">
-						<div class="table__label">Fax:</div>
-						<div class="table__data">
-							<input id="txFax" type="text" size="20" name="textfield282" runat="server"><FONT face="����" color="#990000">&nbsp;</FONT>
-						</div>
-					</div>
+					</div>					
 				</div>
 				<div class="table__section">
 					<div class="table__title">Login Information</div>
@@ -330,19 +324,19 @@
 					<div class="table__row">
 						<div class="table__label">Username:</div>
 						<div class="table__data">
-							<input id="txUser" type="text" size="20" name="textfield210" runat="server" autocapitalize="off"><FONT face="����" color="#990000">*</FONT>
+							<input id="txUser" type="text" size="20" name="textfield210" runat="server" autocapitalize="off"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
 						<div class="table__label">Password:</div>
 						<div class="table__data">
-							<input id="txPass" type="password" size="20" name="textfield211" runat="server" autocapitalize="off"><FONT face="����" color="#990000">*</FONT>
+							<input id="txPass" type="password" size="20" name="textfield211" runat="server" autocapitalize="off"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row">
 						<div class="table__label">Confirm Password:</div>
 						<div class="table__data">
-							<input id="txConfirm" type="password"  size="20" name="textfield211" runat="server" autocapitalize="off"><FONT face="����" color="#990000">*</FONT>
+							<input id="txConfirm" type="password"  size="20" name="textfield211" runat="server" autocapitalize="off"><span style="color:#990000">*</span>
 						</div>
 					</div>
 					<div class="table__row table__submit table__submit--right">

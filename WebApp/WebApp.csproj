@@ -410,6 +410,7 @@
     <Content Include="images\warning.gif" />
     <Content Include="Include\CircleDropDownList.ascx" />
     <Content Include="info.aspx" />
+    <Content Include="information2.htm" />
     <Content Include="Information\Newsletter.htm" />
     <Content Include="Information\Relevant-Links.htm" />
     <Content Include="javascriptN\hoverIntent.js" />

@@ -1,4 +1,4 @@
-<%@ Page SmartNavigation="true" language="c#" Codebehind="Step2.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Long.Step2" %>
+﻿<%@ Page SmartNavigation="true" language="c#" Codebehind="Step2.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Long.Step2" %>
 <%@ Register TagPrefix="uc1" TagName="head" Src="head.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="bottom" Src="bottom.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
@@ -295,14 +295,14 @@
 							<TR>
 								<TD height="30">First Name :</TD>
 								<TD><INPUT id="txfname" type="text" style="WIDTH:150px" name="textfield2" runat="server">
-									<FONT color="#ff0000">*</FONT></TD>
+									<span style="color:#ff0000">*</span></TD>
 								<TD height="30">Middle Name :</TD>
 								<TD><INPUT id="txmname" type="text" style="WIDTH:150px" name="textfield22" runat="server"></TD>
 							</TR>
 							<TR>
 								<TD height="30">Surname :</TD>
 								<TD><INPUT id="txsname" type="text" style="WIDTH:150px" name="textfield222" runat="server">
-									<FONT color="#ff0000">*</FONT></TD>
+									<span style="color:#ff0000">*</span></TD>
 								<TD height="30">&nbsp;</TD>
 								<TD>&nbsp;</TD>
 							</TR>
@@ -320,7 +320,7 @@
 								<TD colSpan="3" height="20"><INPUT id="txDated" type="text" style="WIDTH:60px" name="txDated" runat="server">
 									/ <INPUT id="txDatem" type="text" style="WIDTH:60px" name="Text1" runat="server">
 									/ <INPUT id="txDatey" type="text" style="WIDTH:150px" name="Text2" runat="server">
-									&nbsp;<FONT color="#ff0000">*</FONT>&nbsp;&nbsp;(DD/MM/YYYY)</TD>
+									&nbsp;<span style="color:#ff0000">*</span>&nbsp;&nbsp;(DD/MM/YYYY)</TD>
 							</TR>
 							<tr>
 								<td colspan="4">
@@ -329,13 +329,13 @@
 											<td height="30" width="35%">
 												Home telephone area code and number :
 											</td>
-											<td><INPUT id="txhometel" type="text" style="WIDTH:150px" name="textfield223" runat="server">&nbsp;<FONT color="#ff0000">*</FONT></td>
+											<td><INPUT id="txhometel" type="text" style="WIDTH:150px" name="textfield223" runat="server">&nbsp;<span style="color:#ff0000">*</span></td>
 										</tr>
 										<tr>
 											<td height="30" width="35%">
 												Work telephone area code and number :
 											</td>
-											<td><INPUT id="txworktel" type="text" style="WIDTH:150px" name="textfield2232" runat="server">&nbsp;<FONT color="#ff0000">*</FONT></td>
+											<td><INPUT id="txworktel" type="text" style="WIDTH:150px" name="textfield2232" runat="server">&nbsp;<span style="color:#ff0000">*</span></td>
 										</tr>
 										<tr>
 											<td height="30" width="35%">
@@ -348,7 +348,7 @@
 												Email Address :
 											</td>
 											<td><INPUT id="txEmail" type="text" style="WIDTH:150px" name="textfield223222" runat="server">
-												&nbsp;<FONT color="#ff0000">*</FONT></td>
+												&nbsp;<span style="color:#ff0000">*</span></td>
 										</tr>
 										<tr>
 											<td height="30" width="35%">
@@ -404,12 +404,12 @@
 										<tr>
 											<td height="25"><INPUT id="txReName1" type="text" style="WIDTH:150px" name="textfield292433242" runat="server"></td>
 											<td><INPUT id="selReShip1" type="text" style="WIDTH:150px" name="textfield292433243" runat="server"></td>
-											<td><INPUT id="txReNum1" type="text" style="WIDTH:150px" name="textfield292433244" runat="server">&nbsp;<FONT color="#ff0000">*</FONT></td>
+											<td><INPUT id="txReNum1" type="text" style="WIDTH:150px" name="textfield292433244" runat="server">&nbsp;<span style="color:#ff0000">*</span></td>
 										</tr>
 										<tr>
 											<td height="25"><INPUT id="txReName2" type="text" style="WIDTH:150px" name="textfield292433245" runat="server"></td>
 											<td><INPUT id="selReShip2" type="text" style="WIDTH:150px" name="textfield292433246" runat="server"></td>
-											<td><INPUT id="txReNum2" type="text" style="WIDTH:150px" name="textfield292433247" runat="server">&nbsp;<FONT color="#ff0000">*</FONT></td>
+											<td><INPUT id="txReNum2" type="text" style="WIDTH:150px" name="textfield292433247" runat="server">&nbsp;<span style="color:#ff0000">*</span></td>
 										</tr>
 										<tr>
 											<td height="25"><INPUT id="txReName3" type="text" style="WIDTH:150px" name="textfield292433248" runat="server"></td>

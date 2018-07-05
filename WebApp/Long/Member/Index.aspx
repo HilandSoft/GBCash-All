@@ -436,7 +436,7 @@
 														<TR>
 															<TD height="20"><%=stxReName3%></TD>
 															<TD><%=sselReShip3%></TD>
-															<TD><%=stxReNum3%><FONT color="#ff0000">&nbsp; </FONT>
+															<TD><%=stxReNum3%>
 															</TD>
 														</TR>
 													</TABLE>
@@ -566,14 +566,14 @@
 											<TR>
 												<TD height="30">First Name :</TD>
 												<TD><INPUT id="txfname" style="WIDTH: 150px" type="text" name="textfield2" runat="server">
-													<FONT color="#ff0000">*</FONT></TD>
+													<span style="color:#ff0000">*</span></TD>
 												<TD>Middle Name :</TD>
 												<TD><INPUT id="txmname" style="WIDTH: 150px" type="text" name="textfield22" runat="server"></TD>
 											</TR>
 											<TR>
 												<TD height="30">Surname :</TD>
 												<TD><INPUT id="txsname" style="WIDTH: 150px" type="text" name="textfield222" runat="server">
-													<FONT color="#ff0000">*</FONT></TD>
+													<span style="color:#ff0000">*</span></TD>
 												<TD>&nbsp;</TD>
 												<TD>&nbsp;</TD>
 											</TR>
@@ -591,7 +591,7 @@
 												<TD colSpan="3"><INPUT id="txDated" style="WIDTH: 60px" type="text" name="txDated" runat="server">
 													/ <INPUT id="txDatem" style="WIDTH: 60px" type="text" name="Text1" runat="server">
 													/ <INPUT id="txDatey" style="WIDTH: 150px" type="text" name="Text2" runat="server">
-													&nbsp;<FONT color="#ff0000">*</FONT>&nbsp;&nbsp;(DD/MM/YYYY)</TD>
+													&nbsp;<span style="color:#ff0000">*</span>&nbsp;&nbsp;(DD/MM/YYYY)</TD>
 											</TR>
 											<TR>
 												<TD colSpan="4">
@@ -599,12 +599,12 @@
 														<TR>
 															<TD width="35%" height="30">Home telephone area code and number :
 															</TD>
-															<TD><INPUT id="txhometel" style="WIDTH: 150px" type="text" name="textfield223" runat="server">&nbsp;<FONT color="#ff0000">*</FONT></TD>
+															<TD><INPUT id="txhometel" style="WIDTH: 150px" type="text" name="textfield223" runat="server">&nbsp;<span style="color:#ff0000">*</span></TD>
 														</TR>
 														<TR>
 															<TD width="35%" height="30">Work telephone area code and number :
 															</TD>
-															<TD><INPUT id="txworktel" style="WIDTH: 150px" type="text" name="textfield2232" runat="server">&nbsp;<FONT color="#ff0000">*</FONT></TD>
+															<TD><INPUT id="txworktel" style="WIDTH: 150px" type="text" name="textfield2232" runat="server">&nbsp;<span style="color:#ff0000">*</span></TD>
 														</TR>
 														<TR>
 															<TD width="35%" height="30">Mobile telephone number :
@@ -615,7 +615,7 @@
 															<TD width="35%" height="30">Email Address :
 															</TD>
 															<TD><INPUT id="txEmail" style="WIDTH: 150px" type="text" name="textfield223222" runat="server">
-																&nbsp;<FONT color="#ff0000">*</FONT></TD>
+																&nbsp;<span style="color:#ff0000">*</span></TD>
 														</TR>
 														<TR>
 															<TD width="35%" height="30">Driver's licence number :
@@ -666,12 +666,12 @@
 														<TR>
 															<TD height="25"><INPUT id="txReName1" style="WIDTH: 150px" type="text" name="textfield292433242" runat="server"></TD>
 															<TD><INPUT id="selReShip1" style="WIDTH: 150px" type="text" name="textfield292433243" runat="server"></TD>
-															<TD><INPUT id="txReNum1" style="WIDTH: 150px" type="text" name="textfield292433244" runat="server">&nbsp;<FONT color="#ff0000">*</FONT></TD>
+															<TD><INPUT id="txReNum1" style="WIDTH: 150px" type="text" name="textfield292433244" runat="server">&nbsp;<span style="color:#ff0000">*</span></TD>
 														</TR>
 														<TR>
 															<TD height="25"><INPUT id="txReName2" style="WIDTH: 150px" type="text" name="textfield292433245" runat="server"></TD>
 															<TD><INPUT id="selReShip2" style="WIDTH: 150px" type="text" name="textfield292433246" runat="server"></TD>
-															<TD><INPUT id="txReNum2" style="WIDTH: 150px" type="text" name="textfield292433247" runat="server">&nbsp;<FONT color="#ff0000">*</FONT></TD>
+															<TD><INPUT id="txReNum2" style="WIDTH: 150px" type="text" name="textfield292433247" runat="server">&nbsp;<span style="color:#ff0000">*</span></TD>
 														</TR>
 														<TR>
 															<TD height="25"><INPUT id="txReName3" style="WIDTH: 150px" type="text" name="textfield292433248" runat="server"></TD>
@@ -720,18 +720,18 @@
 											<TR>
 												<TD height="20">Street number</TD>
 												<TD height="20"><INPUT id="txStreet" style="WIDTH: 150px" type="text" name="textfield22322522" runat="server">
-													<FONT color="#ff0000">*</FONT></TD>
+													<span style="color:#ff0000">*</span></TD>
 												<TD height="20">Suburb</TD>
 												<TD><INPUT id="txSuburb" style="WIDTH: 150px" type="text" name="textfield223225224" runat="server">
-													<FONT color="#ff0000">*</FONT></TD>
+													<span style="color:#ff0000">*</span></TD>
 											</TR>
 											<TR>
 												<TD height="20">State</TD>
 												<TD height="20"><INPUT id="txState" style="WIDTH: 150px" type="text" name="textfield223225223" runat="server">
-													<FONT color="#ff0000">*</FONT></TD>
+													<span style="color:#ff0000">*</span></TD>
 												<TD height="20">Postcode</TD>
 												<TD><INPUT id="txPost" style="WIDTH: 150px" type="text" name="textfield223225224" runat="server">
-													<FONT color="#ff0000">*</FONT></TD>
+													<span style="color:#ff0000">*</span></TD>
 											</TR>
 											<TR>
 												<TD align="center" colSpan="4">
@@ -894,27 +894,27 @@
 															<TD width="15%" height="30">Bank Name:
 															</TD>
 															<TD><INPUT id="txBank" style="WIDTH: 150px" type="text" name="textfield2924332" runat="server">
-																<FONT color="#ff0000">*</FONT></TD>
+																<span style="color:#ff0000">*</span></TD>
 															<TD width="15%" height="30">Branch:
 															</TD>
 															<TD><INPUT id="txBranch" style="WIDTH: 150px" type="text" name="textfield29243322" runat="server">
-																<FONT color="#ff0000">*</FONT></TD>
+																<span style="color:#ff0000">*</span></TD>
 														</TR>
 														<TR>
 															<TD width="15%" height="30">Account Name:
 															</TD>
 															<TD colSpan="3"><INPUT id="txAname" style="WIDTH: 150px" type="text" name="textfield29243323" runat="server">
-																<FONT color="#ff0000">*</FONT></TD>
+																<span style="color:#ff0000">*</span></TD>
 														</TR>
 														<TR>
 															<TD width="15%" height="30">BSB:
 															</TD>
 															<TD><INPUT id="txBsb" style="WIDTH: 150px" type="text" name="textfield29243324" runat="server">
-																<FONT color="#ff0000">*</FONT></TD>
+																<span style="color:#ff0000">*</span></TD>
 															<TD width="15%" height="30">Account Number:
 															</TD>
 															<TD><INPUT id="txAnumber" style="WIDTH: 150px" type="text" name="textfield29243325" runat="server">
-																<FONT color="#ff0000">*</FONT></TD>
+																<span style="color:#ff0000">*</span></TD>
 														</TR>
 													</TABLE>
 												</TD>
@@ -923,7 +923,7 @@
 												<TD width="20%" height="24">Confirm Account Number:
 												</TD>
 												<TD height="24"><INPUT id="txCAnumber" type="text" size="18" name="textfield292433232" runat="server">
-													<FONT color="#ff0000">*</FONT></TD>
+													<span style="color:#ff0000">*</span></TD>
 											</TR>
 											<TR>
 												<TD colSpan="2" height="30">Preferred methods of contact for this loan:

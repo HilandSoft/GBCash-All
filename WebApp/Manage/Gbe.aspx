@@ -275,20 +275,17 @@
                                             <br>
                                             _________________________ </strong>
                                     </td>
-                        </td>
-                        <td>
-                            <strong><a href="#">Ezi Debit Office Use Only</a> </strong>
-                            <br>
-                            Date Received: &nbsp;Entered By:&nbsp; Reference #:&nbsp;<br>
-                            <br>
+
+                                    <td>
+                                        <strong><a href="#">Ezi Debit Office Use Only</a> </strong>
+                                        <br>
+                                        Date Received: &nbsp;Entered By:&nbsp; Reference #:&nbsp;<br>
+                                        <br>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <table cellspacing="0" cellpadding="0" width="100%" border="0">
                 </table>
             </td>
         </tr>

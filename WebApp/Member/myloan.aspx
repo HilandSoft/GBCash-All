@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="myloan.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Member.myloan" %>
+ï»¿<%@ Page language="c#" Codebehind="myloan.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Member.myloan" %>
 <%@ Register TagPrefix="uc1" TagName="top2" Src="top2.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="top1" Src="top1.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="leftmenu" Src="leftmenu.ascx" %>
@@ -12,8 +12,8 @@
 		<form id="Form1" method="post" runat="server">
 			<table width="750" border="0" align="center" cellpadding="0" cellspacing="0" height="100%">
 				<tr>
-					<td colspan="2" style="HEIGHT: 27px"><FONT face="ËÎÌå">
-							<uc1:top2 id="Top21" runat="server"></uc1:top2></FONT>
+					<td colspan="2" style="HEIGHT: 27px">
+							<uc1:top2 id="Top21" runat="server"></uc1:top2>
 					</td>
 				</tr>
 				<tr>

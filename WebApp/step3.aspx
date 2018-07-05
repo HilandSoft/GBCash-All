@@ -350,22 +350,22 @@ MARGINHEIGHT="0">
 			<div class="table__section">
 				<div class="table__row">
 					<div class="table__label">Employer: <asp:TextBox id=txhuiSid runat="server" Width="24px" Visible="False"></asp:TextBox></div>
-					<div class="table__data"><INPUT id=txEmployer size=20 name=textfield2922 runat="server"> <FONT face=���� color=#990000>*</FONT></div>
+					<div class="table__data"><INPUT id=txEmployer size=20 name=textfield2922 runat="server"> <span style="color:#990000">*</span></div>
 				</div>
 				<div class="table__row">
 					<div class="table__label">Employer's Address:</div>
 					<div class="table__data"><INPUT id=txAddress size=20 name=textfield2923 
-							runat="server"> <FONT face=���� color=#990000>*</FONT></div>
+							runat="server"> <span style="color:#990000">*</span></div>
 				</div>
 				<div class="table__row">
 					<div class="table__label">Employer Phone Number:</div>
 					<div class="table__data"><INPUT id=txPhone size=20 name=textfield2924 
-						runat="server"> <FONT face=���� color=#990000>*</FONT></div>
+						runat="server"> <span style="color:#990000">*</span></div>
 				</div>
 				<div class="table__row">
 					<div class="table__label">Job Title:</div>
 					<div class="table__data"><INPUT id=txJob size=20 name=textfield2924 
-						runat="server"> <FONT face=���� color=#990000>*</FONT></div>
+						runat="server"> <span style="color:#990000">*</span></div>
 				</div>
 				<div class="table__row">
 					<div class="table__label">Time Employed:</div>
@@ -390,8 +390,8 @@ MARGINHEIGHT="0">
 				<div class="table__row">
 					<div class="table__label">Take home pay after taxes:</div>
 					<div class="table__data table__data--payment">$ <INPUT id=txIncome size=12 name=textfield29242 
-						runat="server">.00<FONT face=���� color=#990000> <FONT face=���� 
-						color=#990000>*</FONT></FONT></div>
+						runat="server">.00<span style="color:#990000">
+										*</span></div>
 				</div>
 				<div class="table__row">
 					<div class="table__label">Per:</div>
@@ -407,7 +407,7 @@ MARGINHEIGHT="0">
 					<div class="table__data table__data-date2">DD <INPUT id=txDd1 size=2 name=textfield29243 
 						runat="server"> MM <INPUT id=txMm1 size=2 name=textfield292432 
 						runat="server"> YYYY <INPUT id=txYy1 size=4 name=textfield292433 
-						runat="server"><FONT face=���� color=#990000>*</FONT></div>
+						runat="server"><span style="color:#990000">*</span></div>
 				</div>
 			</div>
 			<div class="table__section">
@@ -456,17 +456,17 @@ MARGINHEIGHT="0">
 				<div class="table__row">
 					<div class="table__label">Type of benefit:</div>
 					<div class="table__data"><INPUT id=txType size=22 name=textfield2925 
-						runat="server"><FONT face=���� color=#990000>*</FONT></div>
+						runat="server"><span style="color:#990000">*</span></div>
 				</div>
 				<div class="table__row">
 					<div class="table__label">Centrelink Office:</div>
 					<div class="table__data"><INPUT id=txOffice size=22 name=textfield29222 
-						runat="server"><FONT face=���� color=#990000>*</FONT></div>
+						runat="server"><span style="color:#990000">*</span></div>
 				</div>
 				<div class="table__row">
 					<div class="table__label">Contact Telephone Number:</div>
 					<div class="table__data"><INPUT id=txContact size=22 name=textfield29232 
-						runat="server"><FONT face=���� color=#990000>*</FONT></div>
+						runat="server"><span style="color:#990000">*</span></div>
 				</div>
 				<div class="table__row">
 					<div class="table__label">How long on this benefit:</div>
@@ -490,11 +490,8 @@ MARGINHEIGHT="0">
 				</div>
 				<div class="table__row">
 					<div class="table__label">Take Home Benefit:</div>
-					<div class="table__data"><FONT face=���� color=#990000>$</FONT><INPUT 
-						id=txBenefit size=15 name=textfield2924222 runat="server"><FONT 
-						face=���� color=#990000>.00 <FONT face=���� 
-						color=#990000>*</FONT></FONT><FONT face=���� 
-						color=#990000></FONT></div>
+					<div class="table__data"><span style="color:#990000">$</span><INPUT 
+						id=txBenefit size=15 name=textfield2924222 runat="server"><span style="color:#990000">.00 *</span></div>
 				</div>
 				<div class="table__row">
 					<div class="table__label">Per:</div>
@@ -502,7 +499,7 @@ MARGINHEIGHT="0">
 						<asp:RadioButtonList class="table-mobile" id=RadioButtonList3 runat="server" RepeatDirection="Horizontal">
 							<asp:ListItem Value="Weekly" Selected="True">Weekly</asp:ListItem>
 							<asp:ListItem Value="F'nightly">F'nightly</asp:ListItem>
-							<asp:ListItem Value="Monthly">Monthly &lt;FONT face=&quot;����&quot; color=&quot;#990000&quot;&gt;*&lt;/FONT&gt;</asp:ListItem>
+							<asp:ListItem Value="Monthly">Monthly</asp:ListItem>
 						</asp:RadioButtonList></div>
 				</div>
 				<div class="table__row">
@@ -512,20 +509,20 @@ MARGINHEIGHT="0">
 						style="WIDTH: 40px; HEIGHT: 22px" size=1 name=textfield2924324 
 						runat="server"> YYYY <INPUT id=txYy4 
 						style="WIDTH: 56px; HEIGHT: 22px" size=4 name=textfield2924334 
-						runat="server"><FONT face=���� color=#990000>*</FONT></div>
+						runat="server"><span style="color:#990000">*</span></div>
 				</div>
 				<!--
 					<TR>
 						<TD>&nbsp;</TD>
 						<TD colSpan="3">MM <INPUT id="txMm5" type="text" size="4" name="textfield29243222" runat="server">
 							DD <INPUT id="txDd5" type="text" size="4" name="textfield2924342" runat="server">
-							YY <INPUT id="txYy5" type="text" size="4" name="textfield29243322" runat="server"><FONT face="����" color="#990000">*</FONT></TD>
+							YY <INPUT id="txYy5" type="text" size="4" name="textfield29243322" runat="server"><span style="color:#990000">*</span></TD>
 					</TR>
 					<TR>
 						<TD>&nbsp;</TD>
 						<TD colSpan="3">MM <INPUT id="txMm6" type="text" size="4" name="textfield29243232" runat="server">
 							DD <INPUT id="txDd6" type="text" size="4" name="textfield2924352" runat="server">
-							YY <INPUT id="txYy6" type="text" size="4" name="textfield29243332" runat="server"><FONT face="����" color="#990000">*</FONT></TD>
+							YY <INPUT id="txYy6" type="text" size="4" name="textfield29243332" runat="server"><span style="color:#990000">*</span></TD>
 					</TR>
 					<TR>
 						<TD align="center" colSpan="4">
@@ -544,42 +541,42 @@ MARGINHEIGHT="0">
 							<div class="table__label">Bank Name:</div>
 							<div class="table__data">
 									<INPUT id=txBank size=20 name=textfield2102 
-									runat="server"> <FONT face=���� color=#990000>*</FONT>
+									runat="server"> <span style="color:#990000">*</span>
 							</div>
 						</div>
 						<div class="table__row">
 							<div class="table__label">Branch:</div>
 							<div class="table__data">
 									<INPUT id=txBranch size=20 name=textfield210 
-									runat="server"><FONT face=���� color=#990000>*</FONT>
+									runat="server"><span style="color:#990000">*</span>
 							</div>
 						</div>
 						<div class="table__row">
 							<div class="table__label">Account Name:</div>
 							<div class="table__data">
 									<INPUT id=txAname name=textfield211 
-									runat="server"><FONT face=���� color=#990000>*</FONT>
+									runat="server"><span style="color:#990000">*</span>
 							</div>
 						</div>
 						<div class="table__row">
 							<div class="table__label">BSB:</div>
 							<div class="table__data">
-									<INPUT id=txBsb size=20 name=textfield2112 runat="server"><FONT 
-										face=���� color=#990000>*</FONT>
+									<INPUT id=txBsb size=20 name=textfield2112 runat="server"><span style="color:#990000">
+										*</span>
 							</div>
 						</div>
 						<div class="table__row">
 							<div class="table__label">Account Number:</div>
 							<div class="table__data">
 									<INPUT id=txAnumber size=20 name=textfield21122 
-									runat="server"><FONT face=���� color=#990000>*</FONT>
+									runat="server"><span style="color:#990000">*</span>
 							</div>
 						</div>
 						<div class="table__row">
 							<div class="table__label">Confirm Account Numer:</div>
 							<div class="table__data">
 									<INPUT id=txCAnumber name=textfield2113 
-									runat="server"><FONT face=���� color=#990000>*</FONT>
+									runat="server"><span style="color:#990000">*</span>
 							</div>
 						</div>
 						<div class="table__row">
@@ -641,8 +638,7 @@ MARGINHEIGHT="0">
 								<div class="table__row table__row-m-inline">
 										<p>Loan Requested:</p>
 											$ <INPUT id=txLoan 
-											style="WIDTH: 166px; HEIGHT: 22px" name=Text1 runat="server"><FONT 
-											face=���� color=#990000>*</FONT><INPUT id=Hidden1 
+											style="WIDTH: 166px; HEIGHT: 22px" name=Text1 runat="server"><span style="color:#990000">*</span><INPUT id=Hidden1 
 											style="WIDTH: 11px; HEIGHT: 22px" type=hidden size=1 name=Hidden1 
 											runat="server"> 
 										<asp:Button id=Button1 runat="server" Text="Calculate"></asp:Button>
@@ -650,7 +646,7 @@ MARGINHEIGHT="0">
 								<div class="table__row table__row-m-inline" style="DISPLAY: none">
 										<p>Loan Repayment:</p>
 											<p>
-												<FONT face=���� color=#990000>
+												
 																<asp:DropDownList id=DropDownList1 runat="server">
 																		<asp:ListItem Value="1">1 installment</asp:ListItem>
 																		<asp:ListItem Value="2">2 installments</asp:ListItem>
@@ -658,7 +654,7 @@ MARGINHEIGHT="0">
 																		<asp:ListItem Value="4">Repay on next payday</asp:ListItem>
 																</asp:DropDownList>* <INPUT id=txInstallment 
 												style="WIDTH: 16px; HEIGHT: 22px" size=1 name=Text2 runat="server" 
-												visible="false"></FONT>
+												visible="false">
 											</p>
 								</div>
 								<div class="table__row">
@@ -679,8 +675,8 @@ MARGINHEIGHT="0">
 								%>
 								<TR>
 									<TD>Installment <%= i+1 %></TD>
-									<TD><FONT face=����><%=payDates4Schedule[i].ToString("dd/MM/yyyy")%></FONT></TD>
-									<TD><FONT face=����><%=payAmountPerTime4Schedule.ToString("0.00")%></FONT></TD>
+									<TD><%=payDates4Schedule[i].ToString("dd/MM/yyyy")%></TD>
+									<TD><%=payAmountPerTime4Schedule.ToString("0.00")%></TD>
 								</TR>
 								<%}%>
 							</TABLE>
@@ -747,8 +743,7 @@ MARGINHEIGHT="0">
 								<asp:TextBox id=txFullname runat="server"></asp:TextBox>
 							</div>
 							<div class="table__row table__submit table__submit--right">
-								<INPUT id=Submit1 type=submit value="I agree, Submit" name=Submit runat="server"><FONT 
-									face=����>&nbsp;&nbsp;&nbsp; </FONT>
+								<INPUT id=Submit1 type=submit value="I agree, Submit" name=Submit runat="server">&nbsp;&nbsp;&nbsp; 
 								<INPUT type=submit value=Reset name=Submit2>
 							</div>
 						</div>

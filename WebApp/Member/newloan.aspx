@@ -422,7 +422,7 @@
 										<TR>
 											<TD>Purpose of the loan:</TD>
 											<TD>
-												<asp:TextBox id="txtLoanPurpose" runat="server" Height="22px" Width="268px"></asp:TextBox><FONT face="ËÎÌå" color="#990000">*</FONT></TD>
+												<asp:TextBox id="txtLoanPurpose" runat="server" Height="22px" Width="268px"></asp:TextBox><span style="color:#990000">*</span></TD>
 										</TR>
 										<TR>
 											<TD>Loan Requested:</TD>
@@ -521,12 +521,12 @@
 										<TR>
 											<TD>Your rent/mortgage payment:</TD>
 											<TD colSpan="3">$<INPUT id="txtHousePaymentValue" size="12" name="txtHousePaymentValue" runat="server">
-												<uc1:CircleDropDownList id="ddlHousePaymentCircle" runat="server"></uc1:CircleDropDownList><FONT face="ËÎÌå" color="#990000">*</FONT></TD>
+												<uc1:CircleDropDownList id="ddlHousePaymentCircle" runat="server"></uc1:CircleDropDownList><span style="color:#990000">*</span></TD>
 										</TR>
 										<TR>
 											<TD>Your regular repayment to other lenders:</TD>
 											<TD colSpan="3">$<INPUT id="txtOtherLenderValue" size="12" name="txtOtherLenderValue" runat="server">
-												<uc1:CircleDropDownList id="ddlOtherLenderCircle" runat="server"></uc1:CircleDropDownList><FONT face="ËÎÌå" color="#990000">*</FONT></TD>
+												<uc1:CircleDropDownList id="ddlOtherLenderCircle" runat="server"></uc1:CircleDropDownList><span style="color:#990000">*</span></TD>
 										</TR>
 										<TR>
 											<TD>

@@ -1,4 +1,4 @@
-<%@ Register TagPrefix="uc1" TagName="bottom" Src="bottom.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="bottom" Src="bottom.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="head" Src="head.ascx" %>
 <%@ Page language="c#" Codebehind="Step1.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Long.Step1" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
@@ -139,13 +139,12 @@
 							<TR>
 								<TD colSpan="2">&nbsp;
 									<asp:TextBox id="txpurpose" runat="server" TextMode="MultiLine" Width="650px" Height="150px"></asp:TextBox>
-									<FONT color="#ff0000">*</FONT></TD>
+									<span style="color:#ff0000">*</span></TD>
 							</TR>
 							<TR>
 								<TD width="40%" height="30">How much would you like to borrow?</TD>
 								<TD>$
-									<asp:TextBox id="txborrow" runat="server"></asp:TextBox>.00 <FONT color="#ff0000">* 
-										 </FONT>
+									<asp:TextBox id="txborrow" runat="server"></asp:TextBox>.00 <span style="color:#ff0000">*</span>
 								</TD>
 							</TR>
 							<TR>
@@ -163,7 +162,7 @@
 										<asp:ListItem Value="11">11 Months</asp:ListItem>
 										<asp:ListItem Value="12">12 Months</asp:ListItem>
 									</asp:DropDownList>
-									<FONT color="#ff0000">*</FONT></TD>
+									<span style="color:#ff0000">*</span></TD>
 							</TR>
 							<TR>
 								<TD colSpan="2" height="20">
