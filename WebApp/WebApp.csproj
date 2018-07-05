@@ -740,7 +740,6 @@
     <Content Include="step_instruction.aspx" />
     <Content Include="tc_verify.txt" />
     <Content Include="Warning.htm" />
-    <Content Include="_basic.htm" />
     <Content Include="Information\Credit-Guide.doc" />
     <Content Include="Information\Credit-Guide.pdf" />
     <Content Include="Information\Dispute-Resolution-Guide.pdf" />
@@ -864,7 +863,6 @@
     <Content Include="Sell-Your-Old-Gold-Jewellery\What-We-Buy.aspx" />
     <Content Include="Sell-Your-Old-Gold-Jewellery\What-We-Buy.htm" />
     <Content Include="Short-Term-Loans\Default.htm" />
-    <Content Include="Test.aspx" />
     <Content Include="UControls\RepaymentCountTypeSelector.ascx" />
     <Content Include="UControls\RepaymentCycleTypeSelector.ascx" />
     <Content Include="UControls\UAgreement.ascx" />
@@ -885,14 +883,8 @@
     <Compile Include="API\Configs.ashx.cs">
       <DependentUpon>Configs.ashx</DependentUpon>
     </Compile>
-    <Compile Include="bottom.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Calculator.aspx.cs">
       <DependentUpon>Calculator.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DocList.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="gbe.aspx.cs">
@@ -1538,16 +1530,6 @@
       <DependentUpon>step_instruction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Test.aspx.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Test.aspx.designer.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="top.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="UControls\RepaymentCountTypeSelector.ascx.cs">
       <DependentUpon>RepaymentCountTypeSelector.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1568,9 +1550,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPassChange.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
