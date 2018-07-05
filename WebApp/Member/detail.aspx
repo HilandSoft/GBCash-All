@@ -1,4 +1,4 @@
-<%@ Register TagPrefix="uc1" TagName="MemberLeft" Src="MemberLeft.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="MemberLeft" Src="MemberLeft.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="MemberTop" Src="MemberTop.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="CircleDropDownList" Src="../Include/CircleDropDownList.ascx" %>
 <%@ Page language="c#" Codebehind="detail.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Member.detail" %>
@@ -332,7 +332,7 @@
 								<div class="table__row">
 									<div class="table__label">Job Title:</div>
 									<div class="table__data">
-										<INPUT id="txJob" name="textfield2924" runat="server"> <FONT color="#990000" face="宋体">*</FONT>
+										<INPUT id="txJob" name="textfield2924" runat="server"> *
 									</div>
 								</div>
 								<div class="table__row">
@@ -390,7 +390,7 @@
 									<div class="table__label">Next payday:</div>
 									<div class="table__data table__data-date">
 										DD <INPUT id="txDd1" size="4" name="textfield29243" runat="server"> 
-											MM <INPUT id="txMm1" size="4" name="textfield292432" runat="server"> YYYY <INPUT id="txYy1" size="4" name="textfield292433" runat="server"> <FONT color="#990000" face="宋体">*</FONT>
+											MM <INPUT id="txMm1" size="4" name="textfield292432" runat="server"> YYYY <INPUT id="txYy1" size="4" name="textfield292433" runat="server"> *
 									</div>
 								</div>
 								<div class="table__row">
@@ -490,7 +490,7 @@
 									<div class="table__data table__data-date">
 										DD <INPUT style="WIDTH: 40px; HEIGHT: 22px" id="txDd4" size="1" name="textfield292436" runat="server">
 											MM <INPUT style="WIDTH: 40px; HEIGHT: 22px" id="txMm4" size="1" name="textfield2924324" runat="server">
-											YYYY <INPUT style="WIDTH: 56px; HEIGHT: 22px" id="txYy4" size="4" name="textfield2924334" runat="server"> <FONT color="#990000" face="宋体">*</FONT>
+											YYYY <INPUT style="WIDTH: 56px; HEIGHT: 22px" id="txYy4" size="4" name="textfield2924334" runat="server"> *
 									</div>
 								</div>	
 								</asp:panel>

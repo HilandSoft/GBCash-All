@@ -205,8 +205,6 @@
     <Content Include="HtmlEditor\pageproperties.htm" />
     <Content Include="HtmlEditor\showhelp.htm" />
     <Content Include="HtmlEditor\spellcheck.htm" />
-    <Content Include="HTMLPage2.htm" />
-    <Content Include="HTMLPage3.htm" />
     <Content Include="ImagesN\applybtn.gif" />
     <Content Include="ImagesN\arrow1.gif" />
     <Content Include="ImagesN\bg.jpg" />
@@ -475,7 +473,6 @@
     <Content Include="jslib\swfobject.js" />
     <Content Include="jslib\tablesaw-init.js" />
     <Content Include="jslib\tablesaw.jquery.js" />
-    <Content Include="log.php" />
     <Content Include="login.htm" />
     <Content Include="Long\1.htm" />
     <Content Include="Long\11.htm" />

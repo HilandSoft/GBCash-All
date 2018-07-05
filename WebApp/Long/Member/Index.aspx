@@ -940,7 +940,7 @@
 											</TR>
 											<TR>
 												<TD colSpan="2" height="30">
-													<DIV align="center"><INPUT id="bnBank" type="submit" value=" Save " name="Submit4" runat="server"><FONT face="宋体">&nbsp;&nbsp;</FONT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													<DIV align="center"><INPUT id="bnBank" type="submit" value=" Save " name="Submit4" runat="server">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 														<INPUT onclick="history.go(-1);" type="button" value="Return"></DIV>
 												</TD>
 											</TR>

@@ -1,4 +1,4 @@
-<%@ Register TagPrefix="uc1" TagName="CircleDropDownList" Src="../Include/CircleDropDownList.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="CircleDropDownList" Src="../Include/CircleDropDownList.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="top5" Src="top5.ascx" %>
 <%@ Page language="c#" Codebehind="employmentedit.aspx.cs" AutoEventWireup="false" Inherits="YingNet.WeiXing.WebApp.Member.employmentedit" %>
 <%@ Register TagPrefix="uc1" TagName="top4" Src="top4.ascx" %>
@@ -159,15 +159,15 @@
 														</TR>
 														<TR>
 															<TD>Employer's Address:</TD>
-															<TD colSpan="3"><INPUT id="txAddress" type="text" size="20" name="textfield2923" runat="server"><FONT face="???" color="#990000">*</FONT></TD>
+															<TD colSpan="3"><INPUT id="txAddress" type="text" size="20" name="textfield2923" runat="server">*</TD>
 														</TR>
 														<TR>
 															<TD>Employer Phone:</TD>
-															<TD colSpan="3"><INPUT id="txPhone" type="text" size="20" name="textfield2924" runat="server"><FONT face="???" color="#990000">*</FONT></TD>
+															<TD colSpan="3"><INPUT id="txPhone" type="text" size="20" name="textfield2924" runat="server">*</TD>
 														</TR>
 														<TR>
 															<TD width="153">Job Title:</TD>
-															<TD colSpan="3"><INPUT id="txJob" type="text" size="20" name="textfield2924" runat="server"><FONT face="宋体" color="#990000">*</FONT></TD>
+															<TD colSpan="3"><INPUT id="txJob" type="text" size="20" name="textfield2924" runat="server">*</TD>
 														</TR>
 														<TR>
 															<TD>Time Employed:
@@ -206,7 +206,7 @@
 														<TR>
 															<TD>Take home pay after taxes:
 															</TD>
-															<TD colSpan="3"><INPUT id="txIncome" type="text" size="20" name="textfield29242" runat="server"><FONT face="???" color="#990000">*</FONT></TD>
+															<TD colSpan="3"><INPUT id="txIncome" type="text" size="20" name="textfield29242" runat="server">*</TD>
 														</TR>
 														<TR>
 															<TD>When are you paid:
@@ -222,7 +222,7 @@
 															<TD width="153">Next payday:</TD>
 															<TD colSpan="3">DD <INPUT id="txDd1" type="text" size="4" name="textfield29243" runat="server">
 																MM <INPUT id="txMm1" type="text" size="4" name="textfield292432" runat="server">
-																YYYY <INPUT id="txYy1" type="text" size="4" name="textfield292433" runat="server"><FONT face="宋体" color="#990000">*</FONT></TD>
+																YYYY <INPUT id="txYy1" type="text" size="4" name="textfield292433" runat="server">*</TD>
 														</TR>
 														<TR>
                       <TD>Purpose of the loan:</TD>
@@ -258,11 +258,11 @@
 														</TR>
 														<TR>
 															<TD height="23">Centrelink Office:</TD>
-															<TD colSpan="3" height="23"><INPUT id="txOffice" type="text" size="15" name="textfield29222" runat="server"><FONT face="???" color="#990000">*</FONT></TD>
+															<TD colSpan="3" height="23"><INPUT id="txOffice" type="text" size="15" name="textfield29222" runat="server">*</TD>
 														</TR>
 														<TR>
 															<TD>Contact Name:</TD>
-															<TD colSpan="3"><INPUT id="txContact" type="text" size="15" name="textfield29232" runat="server"><FONT face="???" color="#990000">*</FONT></TD>
+															<TD colSpan="3"><INPUT id="txContact" type="text" size="15" name="textfield29232" runat="server">*</TD>
 														</TR>
 														<TR>
 															<TD height="22">How long on this benefit:
@@ -300,7 +300,7 @@
 														</TR>
 														<TR>
 															<TD>Take Home Benefit:</TD>
-															<TD colSpan="3"><INPUT id="txBenefit" type="text" size="15" name="textfield2924222" runat="server"><FONT face="???" color="#990000">*</FONT></TD>
+															<TD colSpan="3"><INPUT id="txBenefit" type="text" size="15" name="textfield2924222" runat="server">*</TD>
 														</TR>
 														<TR>
 															<TD>When are you paid:
@@ -317,7 +317,7 @@
 															<TD colSpan="3">DD <INPUT id="txDd4" style="WIDTH: 40px; HEIGHT: 22px" type="text" size="1" name="textfield292436"
 																	runat="server"> MM <INPUT id="txMm4" style="WIDTH: 40px; HEIGHT: 22px" type="text" size="1" name="textfield2924324"
 																	runat="server"> YYYY <INPUT id="txYy4" style="WIDTH: 56px; HEIGHT: 22px" type="text" size="4" name="textfield2924334"
-																	runat="server"><FONT face="宋体" color="#990000">*</FONT></TD>
+																	runat="server">*</TD>
 														</TR>
 														<TR>
 															<TD align="center" colSpan="4"><INPUT id="Save2" type="submit" value="Save" name="Submit" runat="server">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -293,9 +293,9 @@
 							</TR>
 							<TR>
 								<TD style="WIDTH: 143px" width="143">Loan Requested:</TD>
-								<TD colSpan="2">$<INPUT style="WIDTH: 166px; HEIGHT: 22px" id="txtLoan" name="Text1" runat="server"><FONT color="#990000" face="宋体">*
+								<TD colSpan="2">$<INPUT style="WIDTH: 166px; HEIGHT: 22px" id="txtLoan" name="Text1" runat="server">*
 										<asp:button id="btnCalculate" runat="server" Text="Calculate"></asp:button>(if 
-										change schedule,pls must Calculate first)</FONT>
+										change schedule,pls must Calculate first)
 								</TD>
 							</TR>
 							<TR>

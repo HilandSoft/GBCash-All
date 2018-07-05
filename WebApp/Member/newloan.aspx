@@ -404,7 +404,7 @@
 												<asp:radiobuttonlist id="RadioButtonList1" runat="server" Width="224px" RepeatDirection="Horizontal">
 													<asp:ListItem Value="Weekly" Selected="True">Weekly</asp:ListItem>
 													<asp:ListItem Value="F'nightly">F'nightly</asp:ListItem>
-													<asp:ListItem Value="Monthly">Monthly &lt;FONT face=&quot;宋体&quot; color=&quot;#990000&quot;&gt;*&lt;/FONT&gt;</asp:ListItem>
+													<asp:ListItem Value="Monthly">Monthly</asp:ListItem>
 												</asp:radiobuttonlist></TD>
 										</TR>
 										<TR>
@@ -426,9 +426,9 @@
 										</TR>
 										<TR>
 											<TD>Loan Requested:</TD>
-											<TD><FONT face="宋体" color="#990000">$</FONT><INPUT id="txLoan" style="WIDTH: 166px; HEIGHT: 22px" size="11" name="Text1" runat="server"><FONT face="宋体" color="#990000">*<INPUT id="Hidden1" style="WIDTH: 11px; HEIGHT: 22px" type="hidden" size="1" name="Hidden1"
+											<TD>$<INPUT id="txLoan" style="WIDTH: 166px; HEIGHT: 22px" size="11" name="Text1" runat="server">*<INPUT id="Hidden1" style="WIDTH: 11px; HEIGHT: 22px" type="hidden" size="1" name="Hidden1"
 														runat="server"><INPUT id="Hidden2" style="WIDTH: 11px; HEIGHT: 22px" type="hidden" size="1" name="Hidden1"
-														runat="server"></FONT></TD>
+														runat="server"></TD>
 										</TR>
 										<TR>
 											<TD colSpan="3">&nbsp;</TD>
