@@ -751,6 +751,7 @@
     <Content Include="Manage\Pawn\API\Tips.ashx" />
     <Content Include="Manage\GBCash\API\Tips.ashx" />
     <Content Include="Manage\Secured\API\Tips.ashx" />
+    <Content Include="Manage\GBCash\Web.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

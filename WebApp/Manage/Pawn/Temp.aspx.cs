@@ -17,7 +17,7 @@ namespace Lina.WebApp.Manage.Pawn
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            this.btnTEMP.Text= ConfigurationManager.ConnectionStrings["gbcashConn"].ConnectionString;
+            this.btnTEMP.Text= ConfigurationManager.ConnectionStrings["mainConnection"].ConnectionString;
         }
     }
 }

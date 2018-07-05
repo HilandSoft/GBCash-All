@@ -30,31 +30,13 @@ namespace WebApp.Manage
             if (list.Rows.Count > 0)
             {
                 DataRow row = list.Rows[0];
-                //HttpCookie cookie = new HttpCookie("SystemUserID");
-                //cookie.Name = "SystemUserID";
-                //cookie.Value = Convert.ToString(row["userID"]);
-                //HttpCookie cookie2 = new HttpCookie("SystemUserAccount");
-                //cookie2.Name = "SystemUserAccount";
-                //cookie2.Value = Convert.ToString(row["userName"]);
-                //HttpCookie cookie3 = new HttpCookie("SystemUserName");
-                //cookie3.Name = "SystemUserName";
-                //cookie3.Value = Convert.ToString(row["NickName"]);
-                //HttpContext.Current.Response.Cookies.Add(cookie);
-                //HttpContext.Current.Response.Cookies.Add(cookie2);
-                //HttpContext.Current.Response.Cookies.Add(cookie3);
-                //this.Session.Add("user.uid", row["userID"]);
-                //this.Session.Add("user.account", row["userName"]);
-                //this.Session.Add("user.name", row["NickName"]);
-                //this.signinUsername.Value = "";
-                //this.signinPassword.Value = "";
 
                 int userID = Convert.ToInt32(row["userID"]);
                 CSUserDT dt = rbn.Get(userID);
                 dt.LastLoginDate = SafeDateTime.LocalNow;
                 rbn.Edit(dt);
 
-                FormsAuthentication.RedirectFromLoginPage(userID.ToString(), true);
-                
+                FormsAuthentication.RedirectFromLoginPage(userID.ToString(), true);                
                 
 
                 //switch (this.ddlManagerChoose.SelectedValue)
