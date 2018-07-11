@@ -13,13 +13,14 @@
     <RootNamespace>Lina.WebApp</RootNamespace>
     <AssemblyName>Lina.WebApp</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,11 +39,33 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GBFinance.BLL">
+      <HintPath>..\Lib\GBFinance.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="GBFinance.DAL">
+      <HintPath>..\Lib\GBFinance.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="GBFinance.Entity">
+      <HintPath>..\Lib\GBFinance.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="HiLand.Framework">
+      <HintPath>..\Lib\HiLand.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="HiLand.Framework4">
+      <HintPath>..\Lib\HiLand.Framework4.dll</HintPath>
+    </Reference>
+    <Reference Include="HiLand.General">
+      <HintPath>..\Lib\HiLand.General.dll</HintPath>
+    </Reference>
     <Reference Include="HiLand.Utility, Version=1.0.6759.28397, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\HiLand.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="HiLand.Utility4">
+      <HintPath>..\Lib\HiLand.Utility4.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -51,25 +75,27 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
     </Reference>
+    <Reference Include="MvcPager">
+      <HintPath>..\Lib\MvcPager.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About-Us\Default.htm" />
@@ -106,6 +132,7 @@
     <Content Include="gbe.aspx" />
     <Content Include="getPassword.htm" />
     <Content Include="Global-Back.asax" />
+    <Content Include="Global.asax" />
     <Content Include="how-it-works\Default.htm" />
     <Content Include="how-it-works\how-to-apply.htm" />
     <Content Include="how-it-works\loan-extensions.htm" />
@@ -712,6 +739,8 @@
     <Content Include="Manage\OpenOperate.aspx" />
     <Content Include="Manage\Pawn\Temp.aspx" />
     <Content Include="Manage\ReNew.aspx" />
+    <Content Include="Manage\Secured\API\Tips.ashx" />
+    <Content Include="Manage\Secured\Web.config" />
     <Content Include="Manage\SendToFollowupCenter.aspx" />
     <Content Include="Manage\SendToProcessCenter.aspx" />
     <Content Include="Manage\Temp.aspx" />
@@ -747,10 +776,8 @@
     <Content Include="Information\Form3A.doc" />
     <Content Include="API\Configs.ashx" />
     <Content Include="Manage\Pawn\Web.config" />
-    <Content Include="Manage\Secured\Web.config" />
     <Content Include="Manage\Pawn\API\Tips.ashx" />
     <Content Include="Manage\GBCash\API\Tips.ashx" />
-    <Content Include="Manage\Secured\API\Tips.ashx" />
     <Content Include="Manage\GBCash\Web.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
@@ -895,6 +922,9 @@
     </Compile>
     <Compile Include="Global-Back.asax.cs">
       <DependentUpon>Global-Back.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HtmlEditor\DefaultFileManage.aspx.cs">
       <DependentUpon>DefaultFileManage.aspx</DependentUpon>
@@ -1581,6 +1611,7 @@
       <DependentUpon>HtmlEditor.ascx.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -1596,7 +1627,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56455</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56455/</IISUrl>
+          <IISUrl>http://localhost/gbc</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

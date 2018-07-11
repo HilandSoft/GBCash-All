@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table cellSpacing="0" cellPadding="0" width="800" border="0">
+    <table cellSpacing="0" cellPadding="0"  border="0">
 				<tr>
 					<td colSpan="2"><strong>Pay and Penalty&nbsp;</strong></td>
 				</tr>
@@ -24,7 +24,7 @@
 				</tr>
 				<tr>
 					<td align="center" colSpan="2"><br>
-						<table width="100%" cellpadding="0" cellspacing="0" border="0">
+						<table cellpadding="0" cellspacing="0" border="0">
 							<tr>
 								<td width="30%" align="center"><asp:button id="Button1" runat="server" Text="Submit"></asp:button></td>
 								<td width="30%" align="center">

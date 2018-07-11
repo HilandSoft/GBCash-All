@@ -63,13 +63,13 @@
             {
                 float numIncomeOrBenefit = Convert.ToSingle(this.txIncome.Value);
                 float numLoanAmount = Convert.ToSingle(this.txLoan.Value);
-                double payAmountPerTime = 0.0;
-                if (PayDaySchedule.CalculatePayLoan(this.Page, numIncomeOrBenefit, numLoanAmount, numInstallmentCount, false, ref payAmountPerTime, out errorString))
+                decimal[] payAmounts = new decimal[numInstallmentCount];
+                if (PayDaySchedule.CalculatePayLoan(this.Page, numIncomeOrBenefit, numLoanAmount, numInstallmentCount, false, ref payAmounts, out errorString))
                 {
                     string str2 = string.Empty;
                     for (int i = 0; i < payDates.Length; i++)
                     {
-                        str2 = str2 + string.Format("[installment{0}]/.{1}/ ${2}<br/>", i + 1, payDates[i].ToString("dd/MM/yyyy"), payAmountPerTime.ToString("0.00"));
+                        str2 = str2 + string.Format("[installment{0}].|{1}| ${2}<br/>", i + 1, payDates[i].ToString("dd/MM/yyyy"), payAmounts[i].ToString("0.00"));
                     }
                     this.litSchedule.Text = str2;
                 }

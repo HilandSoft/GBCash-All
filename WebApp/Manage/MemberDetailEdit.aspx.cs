@@ -152,13 +152,13 @@ namespace Lina.WebApp.Manage
             DateTime salaryDate = new DateTime(Convert.ToInt32(this.txtYy1.Text), Convert.ToInt32(this.txtMm1.Text), Convert.ToInt32(this.txtDd1.Text));
             int numInstallmentCount = PayDaySchedule.CalculateInstallmentCount(this.SelectedRepaymentCycleType, salaryDate, SafeDateTime.LocalNow);
             string errorString = string.Empty;
-            double payAmountPerTime = 0.0;
-            bool flag = PayDaySchedule.CalculatePayLoan(this.Page, numIncomeOrBenefit, numLoanAmount, numInstallmentCount, false, ref payAmountPerTime, out errorString);
+            decimal[] payAmounts = new decimal[numInstallmentCount];
+            bool flag = PayDaySchedule.CalculatePayLoan(this.Page, numIncomeOrBenefit, numLoanAmount, numInstallmentCount, false, ref payAmounts, out errorString);
             if (flag)
             {
-                this.payAmountPerTime4Schedule = payAmountPerTime;
+                this.payAmountPerTime4Schedule = (double)payAmounts[0];
                 this.Session["numInstallmentCount4Schedule"] = numInstallmentCount;
-                this.Session["payAmountPerTime4Schedule"] = payAmountPerTime;
+                this.Session["payAmountPerTime4Schedule"] = payAmounts[0];
                 return flag;
             }
             base.Response.Write(errorString);

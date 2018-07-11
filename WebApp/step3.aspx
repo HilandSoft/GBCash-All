@@ -676,7 +676,7 @@ MARGINHEIGHT="0">
 								<TR>
 									<TD>Installment <%= i+1 %></TD>
 									<TD><%=payDates4Schedule[i].ToString("dd/MM/yyyy")%></TD>
-									<TD><%=payAmountPerTime4Schedule.ToString("0.00")%></TD>
+									<TD><%=payAmounts4Schedule[i].ToString("0.00")%></TD>
 								</TR>
 								<%}%>
 							</TABLE>

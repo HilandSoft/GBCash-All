@@ -27,7 +27,7 @@
         protected Panel Panel3;
         protected Panel Panel4;
         protected Panel Panel5;
-        protected double payAmountPerTime4Schedule;
+        protected decimal[] payAmounts4Schedule;
         protected DateTime[] payDates4Schedule;
         protected RadioButtonList RadioButtonList1;
         protected RadioButtonList RadioButtonList2;
@@ -99,28 +99,28 @@
 
         public void CalLoan()
         {
-            float num;
+            float income;
             int userLoanType = 0;
             float numLoanAmount = Convert.ToSingle(this.txLoan.Value);
             if (this.RadioButtonList1.SelectedIndex == 0)
             {
-                num = Convert.ToSingle(this.txIncome.Value);
+                income = Convert.ToSingle(this.txIncome.Value);
                 userLoanType = 0;
             }
             else
             {
-                num = Convert.ToSingle(this.txBenefit.Value);
+                income = Convert.ToSingle(this.txBenefit.Value);
                 userLoanType = 1;
             }
             DateTime salaryDate = this.getSalaryDate();
             int numInstallmentCount = PayDaySchedule.CalculateInstallmentCount(this.GetSelectedRepaymentCycleType(userLoanType), salaryDate, SafeDateTime.LocalNow);
             string errorString = string.Empty;
-            double payAmountPerTime = 0.0;
-            if (PayDaySchedule.CalculatePayLoan(this.Page, num, numLoanAmount, numInstallmentCount, true, ref payAmountPerTime, out errorString))
+            decimal[] payAmounts = new decimal[numInstallmentCount];
+            if (PayDaySchedule.CalculatePayLoan(this.Page, income, numLoanAmount, numInstallmentCount, true, ref payAmounts, out errorString))
             {
-                this.payAmountPerTime4Schedule = payAmountPerTime;
+                this.payAmounts4Schedule =payAmounts;
                 this.Session["numInstallmentCount4Schedule"] = numInstallmentCount;
-                this.Session["payAmountPerTime4Schedule"] = payAmountPerTime;
+                this.Session["payAmounts4Schedule"] = payAmounts;
             }
             else
             {
@@ -251,7 +251,13 @@
                 dt.XDay = Convert.ToInt32(this.Session["XFirst"]);
             }
             dt.huiSid = Convert.ToInt32(this.Session["huiSid"]);
-            dt.Param1 = dt.NInstallment * Convert.ToDouble(this.Session["payAmountPerTime4Schedule"]);
+
+            decimal[] payAmounts = (decimal[])this.Session["payAmounts4Schedule"];
+            decimal payAllAmount = 0;
+            foreach (decimal item in payAmounts) {
+                payAllAmount += item;
+            }
+            dt.Param1 = (double)payAllAmount;// dt.NInstallment * Convert.ToDouble(this.Session["payAmountPerTime4Schedule"]);
             dt.Param2 = num * dt.NInstallment;
             dt.Param3 = 1;
             this.Hidden1.Value = dbn.Add2(dt).ToString();
@@ -304,19 +310,21 @@
         {
             ScheduleBN ebn = new ScheduleBN(this.Page);
             ScheduleDT dt = null;
-            double num = Convert.ToDouble(this.Session["payAmountPerTime4Schedule"]);
+            decimal[] payArray = (decimal[])(this.Session["payAmounts4Schedule"]);
             DateTime[] timeArray = (DateTime[]) this.Session["payDates4Schedule"];
             int num2 = Convert.ToInt32(this.Session["numInstallmentCount4Schedule"]);
+            double balance = 0;
             for (int i = 0; i < num2; i++)
             {
+                balance += (double)payArray[i];
                 dt = new ScheduleDT();
                 dt.Datedue = timeArray[i];
-                dt.Repaydue = num;
+                dt.Repaydue = (double)payArray[i];
                 dt.huiSid = Convert.ToInt32(this.Session["huiSid"]);
                 dt.Numberment = 1;
                 dt.Param1 = this.Hidden1.Value;
                 dt.Param2 = "0";
-                dt.Balance = num * (i + 1);
+                dt.Balance = balance;// num * (i + 1);
                 dt.RepayTime = Convert.ToDateTime("2000-1-1");
                 dt.OperateTime = Convert.ToDateTime("2000-1-1");
                 ebn.Add(dt);

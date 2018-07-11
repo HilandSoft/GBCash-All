@@ -54,7 +54,7 @@
         protected Panel Panel4;
         protected Panel PanelNoExtensionTip;
         protected Panel PanelWarning;
-        protected double payAmountPerTime4Schedule;
+        protected decimal[] payAmounts4Schedule;
         protected DateTime[] payDates4Schedule;
         protected RadioButtonList RadioButtonList1;
         protected RadioButtonList rblHasOtherSamllCredit;
@@ -213,22 +213,29 @@
             int num12 = Convert.ToInt32(list.Rows[0]["IsEmployed"]);
             int numInstallmentCount = PayDaySchedule.CalculateInstallmentCount(this.GetSelectedRepaymentCycleType(), salaryDate, SafeDateTime.LocalNow);
             string errorString = string.Empty;
-            double payAmountPerTime = 0.0;
-            bool flag = PayDaySchedule.CalculatePayLoan(this.Page, numIncomeOrBenefit, numLoanAmount, numInstallmentCount, false, ref payAmountPerTime, out errorString);
-            double num15 = 0.0;
+            decimal[] payAmounts = new decimal[numInstallmentCount];
+            bool flag = PayDaySchedule.CalculatePayLoan(this.Page, numIncomeOrBenefit, numLoanAmount, numInstallmentCount, false, ref payAmounts, out errorString);
+            decimal num15 = 0.0M;
             if (flag)
             {
-                this.payAmountPerTime4Schedule = payAmountPerTime;
+                //TODO: 每期金额需要单独处理
+                this.payAmounts4Schedule =payAmounts ;
                 this.Session["numInstallmentCount4Schedule"] = numInstallmentCount;
-                this.Session["payAmountPerTime4Schedule"] = payAmountPerTime;
-                num15 = payAmountPerTime * numInstallmentCount;
+                this.Session["payAmounts4Schedule"] = payAmounts;
+
+                decimal payAllAmount = 0;
+                foreach (decimal item in payAmounts)
+                {
+                    payAllAmount += item;
+                }
+                num15 = payAllAmount;// (double)payAmounts[0] * numInstallmentCount;
                 DateTime time2 = new DateTime(0x7d0, 1, 1);
                 if (this.Session["LastPayDate"] != null)
                 {
                     time2 = Convert.ToDateTime(this.Session["LastPayDate"]);
                 }
                 this.litAmountOfCredit.Text = numLoanAmount.ToString();
-                this.litChargeForCredit.Text = (num15 - numLoanAmount).ToString("0.00");
+                this.litChargeForCredit.Text = (num15 - (decimal)numLoanAmount).ToString("0.00");
                 this.litTotalPayable.Text = num15.ToString("0.00");
                 TimeSpan span = (TimeSpan) (time2 - SafeDateTime.LocalNow);
                 int num16 = span.Days + 1;
@@ -449,7 +456,14 @@
             dt.Frequency = Convert.ToInt32(this.Session["frequency"]);
             dt.XDay = Convert.ToInt32(this.Session["XFirst"]);
             dt.huiSid = Convert.ToInt32(this.Hidden3.Value);
-            dt.Param1 = dt.NInstallment * Convert.ToDouble(this.Session["payAmountPerTime4Schedule"]);
+
+            decimal[] payAmounts = (decimal[])this.Session["payAmounts4Schedule"];
+            decimal payAllAmount = 0;
+            foreach (decimal item in payAmounts)
+            {
+                payAllAmount += item;
+            }
+            dt.Param1 = (double)payAllAmount;// dt.NInstallment * Convert.ToDouble(this.Session["payAmountPerTime4Schedule"]);
             dt.Param2 = num * dt.NInstallment;
             dt.Param3 = count + 1;
             dt.LoanPurpose = this.txtLoanPurpose.Text;
@@ -497,19 +511,21 @@
         {
             ScheduleBN ebn = new ScheduleBN(this.Page);
             ScheduleDT dt = null;
-            double num = Convert.ToDouble(this.Session["payAmountPerTime4Schedule"]);
+            decimal[] payArray = (decimal[])this.Session["payAmounts4Schedule"];
             DateTime[] timeArray = (DateTime[]) this.Session["payDates4Schedule"];
             int num2 = Convert.ToInt32(this.Session["numInstallmentCount4Schedule"]);
+            double balance = 0;
             for (int i = 0; i < num2; i++)
             {
+                balance += (double)payArray[i];
                 dt = new ScheduleDT();
                 dt.Datedue = timeArray[i];
-                dt.Repaydue = num;
+                dt.Repaydue = (double)payArray[i];
                 dt.huiSid = Convert.ToInt32(this.Session["huiSid"]);
                 dt.Numberment = Convert.ToInt32(this.Hidden2.Value);
                 dt.Param1 = this.Hidden1.Value;
                 dt.Param2 = "0";
-                dt.Balance = num * (i + 1);
+                dt.Balance = balance;// num * (i + 1);
                 dt.RepayTime = Convert.ToDateTime("2000-1-1");
                 dt.OperateTime = Convert.ToDateTime("2000-1-1");
                 ebn.Add(dt);
