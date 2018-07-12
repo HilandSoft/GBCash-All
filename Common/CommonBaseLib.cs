@@ -11,12 +11,15 @@ using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace YingNet.Common {
+namespace YingNet.Common
+{
     /// <summary>
     /// BaseCommonLib 的摘要说明。
     /// </summary>
-    public class CommonBaseLib {
-        public CommonBaseLib() {
+    public class CommonBaseLib
+    {
+        public CommonBaseLib()
+        {
         }
 
         /// <summary>
@@ -24,20 +27,24 @@ namespace YingNet.Common {
         /// </summary>
         /// <param name="dg">datagrid</param>
         /// <param name="dt">datatable</param>
-        public static void SetPage (DataGrid dg, DataTable dt) {
+        public static void SetPage(DataGrid dg, DataTable dt)
+        {
             //最大页
             int maxPage = (int)(dt.Rows.Count + dg.PageSize - 1) / dg.PageSize;
 
-            if (maxPage == 0) {
+            if (maxPage == 0)
+            {
                 maxPage = 1;
             }
 
-            if (dg.CurrentPageIndex >= maxPage){
+            if (dg.CurrentPageIndex >= maxPage)
+            {
                 dg.CurrentPageIndex = maxPage - 1;
             }
-           
+
             //如果是DataGridTable,设置全部记录数
-            if (dg.GetType().FullName.Equals("YingNet.Common.DataGridTable")) {
+            if (dg.GetType().FullName.Equals("YingNet.Common.DataGridTable"))
+            {
                 ((DataGridTable)dg).MaxRecord = dt.Rows.Count;
             }
 
@@ -46,57 +53,69 @@ namespace YingNet.Common {
             return;
         }
 
-		/// <summary>
-		/// 设置datagrid的分页
-		/// </summary>
-		/// <param name="dg">datagrid</param>
-		/// <param name="dt">datatable</param>
-		public static void SetPage (DataGrid dg, DataView dv) 
-		{
-			//最大页
-			int maxPage = (int)(dv.Count + dg.PageSize - 1) / dg.PageSize;
+        /// <summary>
+        /// 设置datagrid的分页
+        /// </summary>
+        /// <param name="dg">datagrid</param>
+        /// <param name="dt">datatable</param>
+        public static void SetPage(DataGrid dg, DataView dv)
+        {
+            //最大页
+            int maxPage = (int)(dv.Count + dg.PageSize - 1) / dg.PageSize;
 
-			if (maxPage == 0) 
-			{
-				maxPage = 1;
-			}
+            if (maxPage == 0)
+            {
+                maxPage = 1;
+            }
 
-			if (dg.CurrentPageIndex >= maxPage)
-			{
-				dg.CurrentPageIndex = maxPage - 1;
-			}
-           
-			//如果是DataGridTable,设置全部记录数
-			if (dg.GetType().FullName.Equals("YingNet.Common.DataGridTable")) 
-			{
-				((DataGridTable)dg).MaxRecord = dv.Count;
-			}
+            if (dg.CurrentPageIndex >= maxPage)
+            {
+                dg.CurrentPageIndex = maxPage - 1;
+            }
 
-			dg.DataSource = dv;
+            //如果是DataGridTable,设置全部记录数
+            if (dg.GetType().FullName.Equals("YingNet.Common.DataGridTable"))
+            {
+                ((DataGridTable)dg).MaxRecord = dv.Count;
+            }
 
-			return;
-		}
+            dg.DataSource = dv;
+
+            return;
+        }
 
         #region 数据库相关
         private string m_filter = null;
         /// <summary>
         /// 设置 and 过滤条件
         /// </summary>
-        public string Filter {
-            get {
-                if ((m_filter == null) || (m_filter.Equals(""))) {
+        public string Filter
+        {
+            get
+            {
+                if ((m_filter == null) || (m_filter.Equals("")))
+                {
                     return null;
-                } else {
+                }
+                else
+                {
                     return m_filter;
                 }
             }
-            set {
-                if (value == null) {//置null
+            set
+            {
+                if (value == null)
+                {//置null
                     m_filter = null;
-                } else if (!value.Equals("")) {
-                    if((m_filter == null) || (m_filter.Equals(""))) {
+                }
+                else if (!value.Equals(""))
+                {
+                    if ((m_filter == null) || (m_filter.Equals("")))
+                    {
                         m_filter = value;
-                    } else {
+                    }
+                    else
+                    {
                         m_filter += " and " + value;
                     }
                 }
@@ -106,14 +125,22 @@ namespace YingNet.Common {
         /// <summary>
         /// 设置 or 过滤条件
         /// </summary>
-        public string OrFilter {
-            set {
-                if (value == null) {//置null
+        public string OrFilter
+        {
+            set
+            {
+                if (value == null)
+                {//置null
                     m_filter = null;
-                } else if (!value.Equals("")) {
-                    if((m_filter == null) || (m_filter.Equals(""))) {
+                }
+                else if (!value.Equals(""))
+                {
+                    if ((m_filter == null) || (m_filter.Equals("")))
+                    {
                         m_filter = value;
-                    } else {
+                    }
+                    else
+                    {
                         m_filter += " or " + value;
                     }
                 }
@@ -123,14 +150,22 @@ namespace YingNet.Common {
         /// <summary>
         /// 设置原始过滤条件
         /// </summary>
-        public string RawFilter {
-            set {
-                if (value == null) {//置null
+        public string RawFilter
+        {
+            set
+            {
+                if (value == null)
+                {//置null
                     m_filter = null;
-                } else if (!value.Equals("")) {
-                    if((m_filter == null) || (m_filter.Equals(""))) {
+                }
+                else if (!value.Equals(""))
+                {
+                    if ((m_filter == null) || (m_filter.Equals("")))
+                    {
                         m_filter = value;
-                    } else {
+                    }
+                    else
+                    {
                         m_filter += " " + value;
                     }
                 }
@@ -141,15 +176,21 @@ namespace YingNet.Common {
         /// <summary>
         /// 设置 group 条件
         /// </summary>
-        public string Group {
-            get {
-                if ((m_group == null) || (m_group.Equals(""))) {
+        public string Group
+        {
+            get
+            {
+                if ((m_group == null) || (m_group.Equals("")))
+                {
                     return null;
-                } else {
+                }
+                else
+                {
                     return m_group;
                 }
             }
-            set {
+            set
+            {
                 m_group = value;
             }
         }
@@ -158,15 +199,21 @@ namespace YingNet.Common {
         /// <summary>
         /// 排序条件
         /// </summary>
-        public string Order {
-            get {
-                if ((m_order == null) || (m_order.Equals(""))) {
+        public string Order
+        {
+            get
+            {
+                if ((m_order == null) || (m_order.Equals("")))
+                {
                     return null;
-                } else {
+                }
+                else
+                {
                     return m_order;
                 }
             }
-            set {
+            set
+            {
                 m_order = value;
             }
         }
@@ -175,24 +222,30 @@ namespace YingNet.Common {
         /// <summary>
         /// 数据库字段列表
         /// </summary>
-        public string DBFieldList { 
-            get {
-                return m_dbFieldList; 
+        public string DBFieldList
+        {
+            get
+            {
+                return m_dbFieldList;
             }
-            set {
+            set
+            {
                 m_dbFieldList = value;
             }
         }
-        
+
         private string m_dbTable = null;
         /// <summary>
         /// 数据库表名
         /// </summary>
-        public string DBTable { 
-            get {
-                return m_dbTable; 
+        public string DBTable
+        {
+            get
+            {
+                return m_dbTable;
             }
-            set {
+            set
+            {
                 m_dbTable = value;
             }
         }
@@ -201,27 +254,31 @@ namespace YingNet.Common {
         /// 返回数据列表
         /// </summary>
         /// <returns></returns>
-        protected DataTable CommonGetList () {
+        protected DataTable CommonGetList()
+        {
             string sql = "select " + DBFieldList + " from " + DBTable;
             //有过滤条件
-            if (Filter != null) {
+            if (Filter != null)
+            {
                 sql += " where " + Filter;
             }
             //分组条件
-            if (Group != null) {
+            if (Group != null)
+            {
                 sql += " group by " + Group;
             }
             //排序条件
-            if (Order != null) {
+            if (Order != null)
+            {
                 sql += " order by " + Order;
             }
-            
+
             DBAccess dbAccess = new DBAccess();
             DataTable result = dbAccess.RunSqlString(sql, DBTable);
 
             //关闭数据库连接
             dbAccess.Close();
-            
+
             return result;
         }
         #endregion
@@ -231,11 +288,14 @@ namespace YingNet.Common {
         /// <summary>
         /// 错误代码
         /// </summary>
-        public int Code { 
-            get {
-                return m_code; 
+        public int Code
+        {
+            get
+            {
+                return m_code;
             }
-            set {
+            set
+            {
                 m_code = value;
             }
         }
@@ -244,11 +304,14 @@ namespace YingNet.Common {
         /// <summary>
         /// 消息
         /// </summary>
-        public string Msg { 
-            get {
-                return m_msg; 
+        public string Msg
+        {
+            get
+            {
+                return m_msg;
             }
-            set {
+            set
+            {
                 m_msg = value;
             }
         }

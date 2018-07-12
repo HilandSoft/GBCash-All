@@ -12,7 +12,6 @@ namespace YingNet.Common
 	/// </summary>
 	public class Cipher
 	{
-		
 		/// <summary>
 		/// 密匙长度取8位
 		/// </summary>
