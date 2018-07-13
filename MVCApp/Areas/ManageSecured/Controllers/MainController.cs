@@ -6,7 +6,7 @@ using HiLand.General.BLL;
 using HiLand.General.Entity;
 using HiLand.Utility.Data;
 
-namespace MVCApp.Areas.ManageSecured.Controllers
+namespace Lina.Areas.ManageSecured.Controllers
 {
     //[UserAuthorize]
     public class MainController : Controller

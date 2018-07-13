@@ -1,7 +1,7 @@
 ﻿using HiLand.Framework.BusinessCore;
 using HiLand.Framework.FoundationLayer;
 
-namespace Web.Models
+namespace Lina.Web.Models
 {
     public class BusinessUserExt : BusinessUser
     {

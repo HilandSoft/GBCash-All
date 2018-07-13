@@ -6,9 +6,9 @@ using System.Web;
 using System.Web.Mvc;
 using HiLand.Utility.Setting;
 
-namespace MVCApp.Areas.ManageSecured.Controllers
+namespace Lina.Areas.ManageSecured.Controllers
 {
-    public class HomeController : Controller
+    public class TestController : Controller
     {
         public ActionResult Index()
         {

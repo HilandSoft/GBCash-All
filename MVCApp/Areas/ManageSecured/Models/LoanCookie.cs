@@ -1,6 +1,6 @@
 ﻿using HiLand.Utility.Web;
 
-namespace GBFinance.Web.Models
+namespace Lina.Web.Models
 {
     /// <summary>
     /// 此cookie在客户的贷款流程启动时生成，流程结束时销毁；在流程过程中保持连接状态。(请使用此类的派生类)

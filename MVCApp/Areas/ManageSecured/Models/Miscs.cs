@@ -8,7 +8,7 @@ using HiLand.Utility.Setting;
 using HiLand.Utility.Web;
 using HiLand.Utility4.MVC;
 
-namespace GBFinance.Web.Models
+namespace Lina.Web.Models
 {
     public class Miscs
     {

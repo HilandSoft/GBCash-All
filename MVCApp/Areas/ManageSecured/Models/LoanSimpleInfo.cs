@@ -2,7 +2,7 @@
 using HiLand.General;
 using HiLand.Utility.Enums;
 
-namespace GBFinance.Web.Models
+namespace Lina.Web.Models
 {
     /// <summary>
     /// 关于贷款的最概要的信息

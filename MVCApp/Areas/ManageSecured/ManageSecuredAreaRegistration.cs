@@ -17,7 +17,8 @@ namespace MVCApp.Areas.ManageSecured
             context.MapRoute(
                 "ManageSecured_default",
                 "ManageSecured/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+                new string[] { "Lina.Areas.Manage.Controllers" }
             );
         }
     }

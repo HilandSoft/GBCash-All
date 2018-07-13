@@ -7,7 +7,7 @@ using HiLand.Framework.Membership;
 using HiLand.Utility.Entity;
 using HiLand.Utility.Enums;
 
-namespace MVCApp.Areas.ManageSecured.Controllers
+namespace Lina.Areas.ManageSecured.Controllers
 {
     public class AccountController : Controller
     {

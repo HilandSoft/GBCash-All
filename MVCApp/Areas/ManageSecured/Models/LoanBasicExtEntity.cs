@@ -1,7 +1,7 @@
 ﻿using System;
 using HiLand.General.Entity;
 
-namespace Web.Models
+namespace Lina.Web.Models
 {
     public class LoanBasicExtEntity : LoanBasicEntity
     {

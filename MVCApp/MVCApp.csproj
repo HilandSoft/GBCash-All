@@ -191,7 +191,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\ManageSecured\Controllers\AccountController.cs" />
     <Compile Include="Areas\ManageSecured\Controllers\BaseLoanController.cs" />
-    <Compile Include="Areas\ManageSecured\Controllers\HomeController.cs" />
+    <Compile Include="Areas\ManageSecured\Controllers\TestController.cs" />
     <Compile Include="Areas\ManageSecured\Controllers\MainController.cs" />
     <Compile Include="Areas\ManageSecured\Controllers\SecuredController.cs" />
     <Compile Include="Areas\ManageSecured\Controllers\UnSecuredController.cs" />
@@ -2076,7 +2076,7 @@
     <Content Include="obj\Release\TransformWebConfig\assist\Web.config" />
     <Content Include="obj\Release\TransformWebConfig\original\Web.config" />
     <Content Include="obj\Release\TransformWebConfig\transformed\Web.config" />
-    <Content Include="Areas\ManageSecured\Views\Home\Index.cshtml" />
+    <Content Include="Areas\ManageSecured\Views\Test\Index.cshtml" />
     <Content Include="Areas\ManageSecured\Views\Account\ChangePassword.cshtml" />
     <Content Include="Areas\ManageSecured\Views\Account\Index.cshtml" />
     <Content Include="Areas\ManageSecured\Views\Main\Index.cshtml" />
