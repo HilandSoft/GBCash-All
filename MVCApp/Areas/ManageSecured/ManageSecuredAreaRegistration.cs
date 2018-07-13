@@ -18,7 +18,7 @@ namespace MVCApp.Areas.ManageSecured
                 "ManageSecured_default",
                 "ManageSecured/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional },
-                new string[] { "Lina.Areas.Manage.Controllers" }
+                new string[] { "Lina.Areas.ManageSecured.Controllers" }
             );
         }
     }
