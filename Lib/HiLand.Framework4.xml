@@ -4,23 +4,6 @@
         <name>HiLand.Framework4</name>
     </assembly>
     <members>
-        <member name="T:HiLand.Framework4.Permission.Attributes.PermissionAuthorizeAttribute">
-            <summary>
-            用于自定义权限（比如根据管理员分配的权限）进行登录认证的场景
-            </summary>
-        </member>
-        <member name="M:HiLand.Framework4.Permission.Attributes.PermissionAuthorizeAttribute.#ctor(HiLand.Framework4.Permission.Attributes.PermissionAuthorizeModes)">
-            <summary>
-            权限验证构造函数
-            </summary>
-            <param name="permissionAuthorizeMode">验证模式类型</param>
-        </member>
-        <member name="M:HiLand.Framework4.Permission.Attributes.PermissionAuthorizeAttribute.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
-            <summary>
-            具体验证方法
-            </summary>
-            <param name="filterContext"></param>
-        </member>
         <member name="T:HiLand.Framework4.Permission.Attributes.PermissionAuthorizeModes">
             <summary>
             验证模式类型
@@ -40,6 +23,18 @@
             <summary>
             跳过验证
             </summary>
+        </member>
+        <member name="T:HiLand.Framework4.Permission.Attributes.SimpleAuthorizeAttribute">
+            <summary>
+            简单的登录授权判断
+            （通过检查HttpContext.Current.User.Identity.Name属性，判断用户是否为登录用户）
+            </summary>
+        </member>
+        <member name="M:HiLand.Framework4.Permission.Attributes.SimpleAuthorizeAttribute.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            
+            </summary>
+            <param name="filterContext"></param>
         </member>
         <member name="T:HiLand.Framework4.Permission.Attributes.UserAuthorizeAttribute">
             <summary>
@@ -71,50 +66,6 @@
             <summary>
             超连接控件
             </summary>
-        </member>
-        <member name="T:HiLand.Framework4.Permission.Controls.OperateControl`1">
-            <summary>
-            与MVC中Area/Controller/Action对应操作的控件基类
-            主要包括通过点击等方式触发客户端与服务器端进行交互的控件
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:HiLand.Framework4.Permission.Controls.OperateControl`1.Area(System.String)">
-            <summary>
-            MVC中Area的名称
-            </summary>
-        </member>
-        <member name="M:HiLand.Framework4.Permission.Controls.OperateControl`1.Controller(System.String)">
-            <summary>
-            MVC中控制器名称
-            </summary>
-        </member>
-        <member name="M:HiLand.Framework4.Permission.Controls.OperateControl`1.Action(System.String)">
-            <summary>
-            MVC中Action名称
-            </summary>
-        </member>
-        <member name="M:HiLand.Framework4.Permission.Controls.OperateControl`1.ACA(System.String,System.String,System.String)">
-            <summary>
-            对Action,Controller,Area进行统一赋值
-            </summary>
-            <param name="area"></param>
-            <param name="controller"></param>
-            <param name="action"></param>
-            <returns></returns>
-        </member>
-        <member name="M:HiLand.Framework4.Permission.Controls.OperateControl`1.IsUsePermission(System.Boolean)">
-            <summary>
-            是否在控件上进行权限控制(缺省值为false)
-            </summary>
-            <param name="value"></param>
-            <returns></returns>
-        </member>
-        <member name="P:HiLand.Framework4.Permission.Controls.OperateControl`1.HasPermission">
-            <summary>
-            当前用户是否有操作此ACA的权限
-            </summary>
-            <returns></returns>
         </member>
         <member name="M:HiLand.Framework4.Permission.Controls.AControl.Href(System.String)">
             <summary>
@@ -160,6 +111,50 @@
             <param name="name"></param>
             <returns></returns>
         </member>
+        <member name="T:HiLand.Framework4.Permission.Controls.OperateControl`1">
+            <summary>
+            与MVC中Area/Controller/Action对应操作的控件基类
+            主要包括通过点击等方式触发客户端与服务器端进行交互的控件
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:HiLand.Framework4.Permission.Controls.OperateControl`1.Area(System.String)">
+            <summary>
+            MVC中Area的名称
+            </summary>
+        </member>
+        <member name="M:HiLand.Framework4.Permission.Controls.OperateControl`1.Controller(System.String)">
+            <summary>
+            MVC中控制器名称
+            </summary>
+        </member>
+        <member name="M:HiLand.Framework4.Permission.Controls.OperateControl`1.Action(System.String)">
+            <summary>
+            MVC中Action名称
+            </summary>
+        </member>
+        <member name="M:HiLand.Framework4.Permission.Controls.OperateControl`1.ACA(System.String,System.String,System.String)">
+            <summary>
+            对Action,Controller,Area进行统一赋值
+            </summary>
+            <param name="area"></param>
+            <param name="controller"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiLand.Framework4.Permission.Controls.OperateControl`1.IsUsePermission(System.Boolean)">
+            <summary>
+            是否在控件上进行权限控制(缺省值为false)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HiLand.Framework4.Permission.Controls.OperateControl`1.HasPermission">
+            <summary>
+            当前用户是否有操作此ACA的权限
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:HiLand.Framework4.Permission.Controls.SubmitControl">
             <summary>
             提交控件
@@ -194,6 +189,7 @@
             </summary>
             <param name="areaName"></param>
             <param name="controllerName"></param>
+            <param name="config"></param>
             <returns></returns>
             <remarks>
             通过areaName, controllerName获取其对应的子模块配置项是否存在

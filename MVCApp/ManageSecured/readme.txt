@@ -1,1 +1,1 @@
-﻿本目录下的Web.config供Area/ManageSecured使用
+﻿本目录下的Web.config供Areas/ManageSecured使用

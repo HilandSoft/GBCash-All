@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using GBFinance.BLL;
 using GBFinance.Entity;
+using GBFinance.Web.Models;
 using HiLand.Framework.BusinessCore;
 using HiLand.Framework.BusinessCore.BLL;
 using HiLand.General;
@@ -15,15 +16,15 @@ using HiLand.Utility.Finance;
 using HiLand.Utility.Paging;
 using HiLand.Utility.Web;
 using HiLand.Utility4.MVC.Data;
-using Lina.Web.Models;
+using Web.Models;
 using Webdiyer.WebControls.Mvc;
 
-namespace Lina.Areas.ManageSecured.Controllers
+namespace GBFinance.Web.Areas.Manage.Controllers
 {
     /// <summary>
     /// 本类不向View公开，为SecuredLoan和UnSecuredLoan的基类，仅仅为子类提供公用方法。
     /// </summary>
-    public class BaseLoanController : Controller//GBFinance.Web.Controllers.BaseLoanController
+    public class BaseLoanController: GBFinance.Web.Controllers.BaseLoanController
     {
         public ActionResult UserNote(Guid? userID)
         {

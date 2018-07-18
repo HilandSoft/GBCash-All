@@ -2,9 +2,9 @@
 using HiLand.Framework4.Permission.Attributes;
 using HiLand.General;
 
-namespace Lina.Areas.ManageSecured.Controllers
+namespace GBFinance.Web.Areas.Manage.Controllers
 {
-    [UserAuthorize]
+    [SimpleAuthorize]
     public class SecuredController : BaseLoanController
     {
         //

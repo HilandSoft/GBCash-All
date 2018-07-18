@@ -6845,7 +6845,12 @@
         </member>
         <member name="P:HiLand.Utility.Setting.Config.ConnectionString">
             <summary>
-            获取缺省的数据库连接字符串
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:HiLand.Utility.Setting.Config.CacheConnectionStrings">
+            <summary>
+            是否要缓存数据库连接
             </summary>
         </member>
         <member name="M:HiLand.Utility.Setting.Config.GetConnectionString(System.String)">
@@ -6854,6 +6859,11 @@
             </summary>
             <param name="connectionStringName">连接字符串名称</param>
             <returns></returns>
+        </member>
+        <member name="P:HiLand.Utility.Setting.Config.CacheAppSettings">
+            <summary>
+            是否要缓存配置项
+            </summary>
         </member>
         <member name="M:HiLand.Utility.Setting.Config.GetAppSetting(System.String)">
             <summary>
@@ -6919,7 +6929,7 @@
         </member>
         <member name="M:HiLand.Utility.Setting.Config.GetSection``1(System.String)">
             <summary>
-            获取配置节信息
+            获取配置节信息（因为同一个应用内调用的次数不多，暂时不做缓存处理）
             </summary>
             <typeparam name="T">配置节对应的数据类型</typeparam>
             <param name="sectionName">配置节的名称</param>

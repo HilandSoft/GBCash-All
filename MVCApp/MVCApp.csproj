@@ -74,9 +74,6 @@
     <Reference Include="Microsoft.Web.UI.WebControls">
       <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
     </Reference>
-    <Reference Include="MvcPager">
-      <HintPath>..\Lib\MvcPager.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -132,6 +129,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Webdiyer.MvcPager, Version=3.0.2015.802, Culture=neutral, PublicKeyToken=f6872c5a09aed72c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Webdiyer.MvcPager.3.0.1.1\lib\Webdiyer.MvcPager.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -196,19 +196,19 @@
     <Compile Include="Areas\ManageSecured\Controllers\SecuredController.cs" />
     <Compile Include="Areas\ManageSecured\Controllers\UnSecuredController.cs" />
     <Compile Include="Areas\ManageSecured\ManageSecuredAreaRegistration.cs" />
-    <Compile Include="Areas\ManageSecured\Models\AdminLoanCookie.cs" />
-    <Compile Include="Areas\ManageSecured\Models\BusinessUserExt.cs" />
-    <Compile Include="Areas\ManageSecured\Models\LoanBasicExtEntity.cs" />
-    <Compile Include="Areas\ManageSecured\Models\LoanCookie.cs" />
-    <Compile Include="Areas\ManageSecured\Models\LoanSimpleInfo.cs" />
-    <Compile Include="Areas\ManageSecured\Models\Miscs.cs" />
-    <Compile Include="Areas\ManageSecured\Models\SecuredLoanCookie.cs" />
-    <Compile Include="Areas\ManageSecured\Models\UnSecuredLoanCookie.cs" />
     <Compile Include="Calculator.aspx.cs">
       <DependentUpon>Calculator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseLoanController.cs" />
+    <Compile Include="Controllers\FilesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SecuredController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\UnSecuredController.cs" />
+    <Compile Include="Controllers\UserControlController.cs" />
+    <Compile Include="Control\HtmlHelperEx.cs" />
     <Compile Include="gbe.aspx.cs">
       <DependentUpon>gbe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -791,6 +791,21 @@
       <DependentUpon>top6.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AdminLoanCookie.cs" />
+    <Compile Include="Models\AdminSecuredLoanCookie.cs" />
+    <Compile Include="Models\AdminUnSecuredLoanCookie.cs" />
+    <Compile Include="Models\BusinessUserExt.cs" />
+    <Compile Include="Models\CodeUtils.cs" />
+    <Compile Include="Models\LoanBasicExtEntity.cs" />
+    <Compile Include="Models\LoanBasicSetting.cs" />
+    <Compile Include="Models\LoanCookie.cs" />
+    <Compile Include="Models\LoanSimpleInfo.cs" />
+    <Compile Include="Models\ManageAuthorizeAttribute.cs" />
+    <Compile Include="Models\Miscs.cs" />
+    <Compile Include="Models\SecuredLoanCookie.cs" />
+    <Compile Include="Models\UnSecuredLoanCookie.cs" />
+    <Compile Include="Models\UserCookie.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -886,6 +901,13 @@
     </Compile>
     <Compile Include="UserPassChange.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1901,6 +1923,19 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Areas\ManageSecured\Views\web.config" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\ContactUs.aspx" />
+    <Content Include="Views\Home\CostsAndFees.aspx" />
+    <Content Include="Views\Home\Faqs.aspx" />
+    <Content Include="Views\Home\HowItWorks.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\PayrollFinance.aspx" />
+    <Content Include="Views\Home\PrivacyStatement.aspx" />
+    <Content Include="Views\Home\SecuredLoans.aspx" />
+    <Content Include="Views\Home\SecuredLoansCalculator.aspx" />
+    <Content Include="Views\Home\UnsecuredLoans.aspx" />
+    <Content Include="Views\Home\UnsecuredLoansCalculator.aspx" />
+    <Content Include="Views\UserControl\ContactExpress.ascx" />
     <Content Include="后台原型\assets\css\bootstrap.css" />
     <Content Include="后台原型\assets\css\bootstrap.min.css" />
     <Content Include="后台原型\assets\css\demo.css" />
@@ -2093,8 +2128,8 @@
     <Content Include="Areas\ManageSecured\Views\Shared\_ManageLayout.cshtml" />
     <Content Include="Areas\ManageSecured\Views\UnSecuredLoan\Index.cshtml" />
     <Content Include="Areas\ManageSecured\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Web.config" />
     <Content Include="ManageSecured\Web.config" />
+    <Content Include="App_Code\GBFViewHelper.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -2176,9 +2211,66 @@
     <Content Include="后台原型\assets\vendor\linearicons\fonts\Linearicons-Free.woff2" />
     <Content Include="后台原型\tpez_3_np.zip" />
     <Content Include="后台原型\找网站模板就上【模板之家】cssMoban.com.url" />
+    <Content Include="Views\Secured\AboutTheSecurities.cshtml" />
+    <Content Include="Views\Secured\ApplicationSummary.cshtml" />
+    <Content Include="Views\Secured\AssetStatement.cshtml" />
+    <Content Include="Views\Secured\Index.cshtml" />
+    <Content Include="Views\Secured\UAboutTheSecuritiesDetails.cshtml" />
+    <Content Include="Views\Secured\UAboutTheSecuritiesList.cshtml" />
+    <Content Include="Views\Secured\UAboutTheSecuritiesWrapper.cshtml" />
+    <Content Include="Views\Secured\UApplicationSummary.cshtml" />
+    <Content Include="Views\Secured\UAssetStatementDetails.cshtml" />
+    <Content Include="Views\Secured\UAssetStatementList.cshtml" />
+    <Content Include="Views\Secured\UAssetStatementWrapper.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\AboutTheApplicants.cshtml" />
+    <Content Include="Views\Shared\AboutYourBusiness.cshtml" />
+    <Content Include="Views\Shared\BusinessBankDetails.cshtml" />
+    <Content Include="Views\Shared\FinalStep.cshtml" />
+    <Content Include="Views\Shared\InitialLoanInformation.cshtml" />
+    <Content Include="Views\Shared\LiabilityStatement.cshtml" />
+    <Content Include="Views\Shared\PreQualification.cshtml" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Shared\SubmitApplication.cshtml" />
+    <Content Include="Views\Shared\Test.cshtml" />
+    <Content Include="Views\Shared\UAboutYourBusiness.cshtml" />
+    <Content Include="Views\Shared\UApplicantDetail.cshtml" />
+    <Content Include="Views\Shared\UApplicantList.cshtml" />
+    <Content Include="Views\Shared\UBusinessBankDetails.cshtml" />
+    <Content Include="Views\Shared\UInitialLoanInformation.cshtml" />
+    <Content Include="Views\Shared\ULiabilityStatementDetails.cshtml" />
+    <Content Include="Views\Shared\ULiabilityStatementList.cshtml" />
+    <Content Include="Views\Shared\ULiabilityStatementWrapper.cshtml" />
+    <Content Include="Views\Shared\USubmitApplication.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Views\Shared\_SecuredProgressLayout.cshtml" />
+    <Content Include="Views\Shared\_UnSecuredProgressLayout.cshtml" />
+    <Content Include="Views\Test\blltest.cshtml" />
+    <Content Include="Views\Test\ClearCache.cshtml" />
+    <Content Include="Views\Test\ControlTest.cshtml" />
+    <Content Include="Views\Test\CookieTest.cshtml" />
+    <Content Include="Views\Test\DataBaseTest.cshtml" />
+    <Content Include="Views\Test\DisplayControllerName.cshtml" />
+    <Content Include="Views\Test\LoanScheduleTest.cshtml" />
+    <Content Include="Views\Test\TimeZoneTest.cshtml" />
+    <Content Include="Views\Test\ValidateTest.cshtml" />
+    <Content Include="Views\Test\ValidateTestResult.cshtml" />
+    <Content Include="Views\Test\ValidateTestWrapper.cshtml" />
+    <Content Include="Views\Unsecured\ApplicationSummary.cshtml" />
+    <Content Include="Views\Unsecured\AssetStatement.cshtml" />
+    <Content Include="Views\Unsecured\Index.cshtml" />
+    <Content Include="Views\Unsecured\UApplicationSummary.cshtml" />
+    <Content Include="Views\Unsecured\UAssetStatementDetails.cshtml" />
+    <Content Include="Views\Unsecured\UAssetStatementList.cshtml" />
+    <Content Include="Views\Unsecured\UAssetStatementWrapper.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\ManageSecured\Models\" />
     <Folder Include="jslib\calendar\" />
     <Folder Include="Long\aspnet_client\system_web\2_0_50727\" />
     <Folder Include="Long\Member\images\_svn\prop-base\" />
@@ -2187,7 +2279,7 @@
     <Folder Include="Long\Member\images\_svn\tmp\prop-base\" />
     <Folder Include="Long\Member\images\_svn\tmp\props\" />
     <Folder Include="Long\Member\images\_svn\tmp\text-base\" />
-    <Folder Include="Models\" />
+    <Folder Include="MVCContent\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\Release\ProfileTransformWebConfig\transformed\Views\" />
     <Folder Include="obj\Release\TempPE\" />

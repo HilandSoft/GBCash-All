@@ -6,9 +6,9 @@ using HiLand.General.BLL;
 using HiLand.General.Entity;
 using HiLand.Utility.Data;
 
-namespace Lina.Areas.ManageSecured.Controllers
+namespace GBFinance.Web.Areas.Manage.Controllers
 {
-    //[UserAuthorize]
+    [SimpleAuthorize]
     public class MainController : Controller
     {
         public ActionResult Index()
