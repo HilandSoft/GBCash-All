@@ -1806,6 +1806,18 @@
     <Content Include="Member\top5.ascx" />
     <Content Include="Member\top6.ascx" />
     <Content Include="Memory.txt" />
+    <Content Include="MVCContent\adminStyle.css" />
+    <Content Include="MVCContent\datePicker.css" />
+    <Content Include="MVCContent\general.css" />
+    <Content Include="MVCContent\ie-css3.htc" />
+    <Content Include="MVCContent\invalid.css" />
+    <Content Include="MVCContent\jQuery.tools.dateinput.css" />
+    <Content Include="MVCContent\notificationStyle.css" />
+    <Content Include="MVCContent\PIE.htc" />
+    <Content Include="MVCContent\reset.css" />
+    <Content Include="MVCContent\Site.css" />
+    <Content Include="MVCContent\slideshow.swf" />
+    <Content Include="MVCContent\style.css" />
     <Content Include="newcu2.htm" />
     <Content Include="newcu3.htm" />
     <Content Include="newcu3.html" />
@@ -2130,6 +2142,8 @@
     <Content Include="Areas\ManageSecured\Views\_ViewStart.cshtml" />
     <Content Include="ManageSecured\Web.config" />
     <Content Include="App_Code\GBFViewHelper.cshtml" />
+    <Content Include="Areas\ManageSecured\Views\Shared\_ManageLayout2.cshtml" />
+    <Content Include="Areas\ManageSecured\Views\Main\NewApplyTip.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -2279,7 +2293,6 @@
     <Folder Include="Long\Member\images\_svn\tmp\prop-base\" />
     <Folder Include="Long\Member\images\_svn\tmp\props\" />
     <Folder Include="Long\Member\images\_svn\tmp\text-base\" />
-    <Folder Include="MVCContent\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\Release\ProfileTransformWebConfig\transformed\Views\" />
     <Folder Include="obj\Release\TempPE\" />

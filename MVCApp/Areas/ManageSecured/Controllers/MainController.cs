@@ -16,6 +16,10 @@ namespace GBFinance.Web.Areas.Manage.Controllers
             return View();
         }
 
+        public ActionResult NewApplyTip() {
+            return View();
+        }
+
         /// <summary>
         /// 最新贷款提醒
         /// </summary>
@@ -23,7 +27,7 @@ namespace GBFinance.Web.Areas.Manage.Controllers
         public ActionResult LastLoanTip()
         {
             string orderClause = "LoanID DESC";
-            string whereClause = string.Format(" ReadDate is null OR ReadDate= '{0}' ", DateTimeHelper.Min); //SqlWhereClauseBuilder.Create().AppendCondition<DateTime>("ReadDate", DateTimeHelper.Min,CompareModes.NotEquals).GetClause().CluaseString;
+            string whereClause = string.Format(" ReadDate is null OR ReadDate= '{0}' ", DateTimeHelper.Min); 
             List<LoanBasicEntity> entityList = LoanBasicBLL.Instance.GetList(whereClause, orderClause);
             return View(entityList);
         }

@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections;
+    using System.Web;
     using System.Web.UI;
     using YingNet.Common;
 
@@ -20,6 +21,11 @@
 
         public BaseLib(Page page)
         {
+            this.page = page;
+        }
+
+        public BaseLib() {
+            Page page = HttpContext.Current.Handler as Page;
             this.page = page;
         }
 

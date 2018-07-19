@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Web;
+using HiLand.General.BLL;
+using HiLand.General.Entity;
+using HiLand.Utility.Data;
 
 namespace Lina.WebApp.Manage.Secured.API
 {
@@ -15,18 +16,15 @@ namespace Lina.WebApp.Manage.Secured.API
         {
             string tipCount = "";
 
-            //string commandString = "select COUNT(1) from info";
-            //string tipCount= SqlHelperEx.Instance.ExecuteScalar(commandString).ToString();
+            string orderClause = "LoanID DESC";
+            string whereClause = string.Format(" ReadDate is null OR ReadDate= '{0}' ", DateTimeHelper.Min);
+            List<LoanBasicEntity> entityList = LoanBasicBLL.Instance.GetList(whereClause, orderClause);
 
-
-            //DataTable list = InfoBN.GetQueryValid(1);
-            //if (list != null)
-            //{
-            //    int unDealedInfoCount4GBCash = list.Rows.Count;
-            //    tipCount = unDealedInfoCount4GBCash.ToString();
-            //}
-
-            tipCount = "3";
+            if (entityList != null)
+            {
+                int unDealedInfoCount4GBCash = entityList.Count;
+                tipCount = unDealedInfoCount4GBCash.ToString();
+            }
 
             context.Response.ContentType = "text/plain";
             context.Response.Write(tipCount);

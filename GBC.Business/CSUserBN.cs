@@ -2,6 +2,7 @@
 {
     using System;
     using System.Data;
+    using System.Web;
     using System.Web.UI;
     using YingNet.WeiXing.DB;
     using YingNet.WeiXing.DB.Data;
@@ -10,6 +11,10 @@
     {
         public CSUserBN(Page page) : base(page)
         {
+        }
+
+        public CSUserBN() : base() {
+           
         }
 
         public bool Add(CSUserDT dt)

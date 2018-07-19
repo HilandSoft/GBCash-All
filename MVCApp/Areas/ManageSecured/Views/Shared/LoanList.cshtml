@@ -30,7 +30,7 @@
                 <option value="CustomerNo" selected="selected">Customer No.</option>
             }
             else
-            { 
+            {
                 <option value="CustomerNo">Customer No.</option>
             }
             @if (queryName == "FirstName")
@@ -38,7 +38,7 @@
                 <option value="FirstName" selected="selected">First Name</option>
             }
             else
-            { 
+            {
                 <option value="FirstName">First Name</option>
             }
             @if (queryName == "LastName")
@@ -46,7 +46,7 @@
                 <option value="LastName" selected="selected">Last Name</option>
             }
             else
-            { 
+            {
                 <option value="LastName">Last Name</option>
             }
             @if (queryName == "DateOfBirth")
@@ -54,7 +54,7 @@
                 <option value="DateOfBirth" selected="selected">Date of Birth</option>
             }
             else
-            { 
+            {
                 <option value="DateOfBirth">Date of Birth</option>
             }
             @if (queryName == "Approved")
@@ -62,7 +62,7 @@
                 <option value="Approved" selected="selected">Approved</option>
             }
             else
-            { 
+            {
                 <option value="Approved">Approved</option>
             }
             @if (queryName == "Rejected")
@@ -70,7 +70,7 @@
                 <option value="Rejected" selected="selected">Rejected</option>
             }
             else
-            { 
+            {
                 <option value="Rejected">Rejected</option>
             }
             @if (queryName == "Deleted")
@@ -78,14 +78,14 @@
                 <option value="Deleted" selected="selected">Deleted</option>
             }
             else
-            { 
+            {
                 <option value="Deleted">Deleted</option>
             }
         </select>
         <input name="queryConditionValue" id="queryConditionValue" value="@queryValue" />
         <input type="button" id="btnQuery" value="Query" />
     }
-    <table width="98%" class="grid">
+    <table class="table table-hover table-striped">
         <tr>
             <th style="width: 170px">
                 Operate
@@ -155,49 +155,60 @@
                     userFollowupHistory = userFollowupHistory.Substring(0, 10) + "...";
                 }
             }
-            
+
             <tr>
                 <td>
                     @if (entity.LoanStatus == HiLand.General.LoanStatuses.Deleted)
-                    { 
-                        <a href="#" class="recoverLoan"  loanGuid="@entity.LoanGuid">Recover</a>
+                    {
+                        <a href="#" class="recoverLoan" loanGuid="@entity.LoanGuid">Recover</a>
                     }
                     else
                     {
                         @Html.Link("Details", @Url.Action("LoanDetails", new { loanGuid = entity.LoanGuid }), null)
                         @Html.Link("Schedule", @Url.Action("ScheduleList", new { loanGuid = entity.LoanGuid }), null)
-                        <a href="#" class="deleteLoan"  loanGuid="@entity.LoanGuid">Delete</a>
+                        <a href="#" class="deleteLoan" loanGuid="@entity.LoanGuid">Delete</a>
                     }
                 </td>
-                <td>@entity.UserIndexID
-                </td>
-                <td>@entity.LoanAmount.ToString()
-                </td>
-                <td>@entity.UserFirstName
-                </td>
-                <td>@entity.UserMiddleName
-                </td>
-                <td>@entity.UserLastName
-                </td>
-                <td>@birthdayString
-                </td>
-                <td>@entity.UserEmail
-                </td>
-                <td>@entity.UserRegisterDate.ToString(Miscs.DateTimeFormating)
+                <td>
+                    @entity.UserIndexID
                 </td>
                 <td>
-                    <a href="#"  class="modalInput loanStatus" rel="#LoanStatusDisplayDIV" loanGuid="@entity.LoanGuid" >
-                        @entity.LoanStatus.ToString()</a>
+                    @entity.LoanAmount.ToString()
                 </td>
                 <td>
-                    <a href="#"  class="modalInput userNote" rel="#UserNoteDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userNoteTip">
-                        @userNote</a>
+                    @entity.UserFirstName
                 </td>
                 <td>
-                    <a href="#"  class="modalInput userFollowUpHistory" rel="#UserFollowUpHistoryDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userFollowupHistoryTip">
-                        @userFollowupHistory</a>
+                    @entity.UserMiddleName
                 </td>
-            </tr>   
+                <td>
+                    @entity.UserLastName
+                </td>
+                <td>
+                    @birthdayString
+                </td>
+                <td>
+                    @entity.UserEmail
+                </td>
+                <td>
+                    @entity.UserRegisterDate.ToString(Miscs.DateTimeFormating)
+                </td>
+                <td>
+                    <a href="#" class="modalInput loanStatus" rel="#LoanStatusDisplayDIV" loanGuid="@entity.LoanGuid">
+                        @entity.LoanStatus.ToString()
+                    </a>
+                </td>
+                <td>
+                    <a href="#" class="modalInput userNote" rel="#UserNoteDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userNoteTip">
+                        @userNote
+                    </a>
+                </td>
+                <td>
+                    <a href="#" class="modalInput userFollowUpHistory" rel="#UserFollowUpHistoryDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userFollowupHistoryTip">
+                        @userFollowupHistory
+                    </a>
+                </td>
+            </tr>
         }
     </table>
     <div class="modal modalFix" id="UserNoteDisplayDIV">
@@ -206,6 +217,12 @@
     </div>
     <div class="modal modalFix" id="LoanStatusDisplayDIV">
     </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar-nav a").removeClass();
+            $("#nav_a_loanlist").addClass("active");
+        });
+    </script>
     @Html.Pager(Model, new PagerOptions() { PageIndexParameterName = "id", ShowDisabledPagerItems = false, AlwaysShowFirstLastPageNumber = true })
     <script type="text/javascript">
         $(document).ready(function () {
@@ -268,4 +285,6 @@
 
         });
     </script>
+
+
 </div>

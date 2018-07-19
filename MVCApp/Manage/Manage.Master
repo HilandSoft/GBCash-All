@@ -59,7 +59,7 @@
                             </a>
                             <ul class="dropdown-menu notifications">
                                 <li><a href="NewApplyTip.aspx" class="notification-item"><span class="dot bg-success"></span>GBCash<span class="badge bg-danger" style="right: 28px" id="spnTipGBCash"><asp:Literal ID="litNewApllyCount4GBCash" runat="server" Text="0"></asp:Literal></span></a></li>
-                                <li><a href="Secured/NewApplyTip.aspx" class="notification-item"><span class="dot bg-warning"></span>Secured<span class="badge bg-danger" style="right: 28px"  id="spnTipSecured"><asp:Literal ID="litNewApllyCount4Secured" runat="server" Text="0"></asp:Literal></span></a></li>
+                                <li><a href="../ManageSecured/Main/NewApplyTip" class="notification-item"><span class="dot bg-warning"></span>Secured<span class="badge bg-danger" style="right: 28px"  id="spnTipSecured"><asp:Literal ID="litNewApllyCount4Secured" runat="server" Text="0"></asp:Literal></span></a></li>
                                 <li><a href="Pawn/NewApplyTip.aspx" class="notification-item"><span class="dot bg-danger"></span>Pawn<span class="badge bg-danger" style="right: 28px"  id="spnTipPawn"><asp:Literal ID="litNewApllyCount4Pawn" runat="server" Text="0"></asp:Literal></span></a></li>
                             </ul>
                         </li>
@@ -79,8 +79,8 @@
                                 <i class="fa fa-rocket"></i><span>GBCash</span><i class="icon-submenu lnr lnr-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu notifications">
-                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Secured</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>Pawn</a></li>
+                                <li><a href="../ManageSecured/Main/Index" class="notification-item"><span class="dot bg-warning"></span>Secured</a></li>
+                                <li><a href="Pawn/Index.aspx" class="notification-item"><span class="dot bg-danger"></span>Pawn</a></li>
                             </ul>
                         </li>
                     </ul>

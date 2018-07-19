@@ -2,12 +2,12 @@
     ViewBag.Title = "Index";
 }
 
-<h3 class="page-title">Welcome</h3>
-
+<h3 class="page-title">New Apply Tip</h3>
+@{Html.RenderAction("LastLoanTip");}
 <script type="text/javascript">
     $(document).ready(function () {
         $("#sidebar-nav a").removeClass();
-        $("#nav_a_index").addClass("active");
+        $("#nav_a_newapplytip").addClass("active");
     });
 </script>
 
