@@ -87,40 +87,35 @@
     }
     <table class="table table-hover table-striped">
         <tr>
-            <th style="width: 170px">
+            <th >
                 Operate
             </th>
-            <th style="width: 40px">
+            <th >
                 Custom No.
             </th>
-            <th style="width: 50px">
+            <th>
                 Loan Amount
             </th>
-            <th style="width: 70px">
-                First Name
+            <th>
+                Name
+            F/M/L
             </th>
-            <th style="width: 40px">
-                Middle Name
-            </th>
-            <th style="width: 70px">
-                Last Name
-            </th>
-            <th style="width: 70px">
+            <th>
                 Date of Birth
             </th>
-            <th style="width: 70px">
+            <th>
                 Email
             </th>
-            <th style="width: 70px">
+            <th>
                 Regtime
             </th>
-            <th style="width: 80px">
+            <th>
                 Loan Status
             </th>
-            <th style="width: 70px">
+            <th>
                 Note
             </th>
-            <th style="width: 70px">
+            <th>
                 FollowUp History
             </th>
         </tr>
@@ -164,8 +159,8 @@
                     }
                     else
                     {
-                        @Html.Link("Details", @Url.Action("LoanDetails", new { loanGuid = entity.LoanGuid }), null)
-                        @Html.Link("Schedule", @Url.Action("ScheduleList", new { loanGuid = entity.LoanGuid }), null)
+                        @Html.Link("Details", @Url.Action("LoanDetails", new { loanGuid = entity.LoanGuid }), null) <br/>
+                        @Html.Link("Schedule", @Url.Action("ScheduleList", new { loanGuid = entity.LoanGuid }), null)<br />
                         <a href="#" class="deleteLoan" loanGuid="@entity.LoanGuid">Delete</a>
                     }
                 </td>
@@ -177,11 +172,9 @@
                 </td>
                 <td>
                     @entity.UserFirstName
-                </td>
-                <td>
+               <br/>
                     @entity.UserMiddleName
-                </td>
-                <td>
+               <br />
                     @entity.UserLastName
                 </td>
                 <td>

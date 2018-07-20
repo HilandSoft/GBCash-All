@@ -48,7 +48,7 @@
     </table>
 </div>
 <script type="text/javascript">
-    $(".knownA").live("click", function () {
+    $(".knownA").on("click", function () {
         var itemGuid = $(this).attr("itemGuid");
         var url = '@Url.Action("UpdateLoanReadInfo")';
         $.post(url, { loanGuid: itemGuid }, function (data) {
