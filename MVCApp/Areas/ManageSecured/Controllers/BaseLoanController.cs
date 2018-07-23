@@ -55,7 +55,8 @@ namespace GBFinance.Web.Areas.Manage.Controllers
                 }
             }
 
-            return Json(statusInfo);
+            return RedirectToAction("SecuredLoanList");
+            //return Json(statusInfo);
         }
 
         public ActionResult UserFollowUpHistory(Guid? userID)
@@ -87,7 +88,7 @@ namespace GBFinance.Web.Areas.Manage.Controllers
                 }
             }
 
-            return Json(statusInfo);
+            return RedirectToAction("SecuredLoanList");//return Json(statusInfo);
         }
 
         public ActionResult LoanStatus(Guid? loanID)
@@ -114,7 +115,7 @@ namespace GBFinance.Web.Areas.Manage.Controllers
                 statusInfo.IsSuccessful = LoanBasicBLL.Instance.Update(loanEntity);
             }
 
-            return Json(statusInfo);
+            return RedirectToAction("SecuredLoanList"); //return Json(statusInfo);
         }
 
         /// <summary>

@@ -1935,6 +1935,37 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Areas\ManageSecured\Views\web.config" />
+    <Content Include="Scripts\customActions.js" />
+    <Content Include="Scripts\date.js" />
+    <Content Include="Scripts\facebox.js" />
+    <Content Include="Scripts\GoogleAnalytics.js" />
+    <None Include="Scripts\jquery-1.4.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.datePicker.min-2.1.2.js" />
+    <Content Include="Scripts\jQuery.effect.notifacation.js" />
+    <Content Include="Scripts\jQuery.effect.TitleContent.js" />
+    <Content Include="Scripts\jQuery.form.2.84.js" />
+    <Content Include="Scripts\jQuery.gbfSubmit.js" />
+    <Content Include="Scripts\jQuery.hiland.general.js" />
+    <Content Include="Scripts\jQuery.tools.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.wysiwyg.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\simpla.jquery.configuration.js" />
+    <Content Include="Scripts\swfobject.js" />
+    <Content Include="Scripts\tablesaw.jquery.js" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\ContactUs.aspx" />
     <Content Include="Views\Home\CostsAndFees.aspx" />

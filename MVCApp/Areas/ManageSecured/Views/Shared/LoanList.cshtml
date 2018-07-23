@@ -13,13 +13,13 @@
     string queryValue = this.GetPassedParam<PagedList<LoanBasicExtEntity>>("queryValue");
 }
 <style type="text/css">
-    .modalFix
-    {
+    .modalFix {
         width: 650px;
     }
 </style>
 <h2>
-    Secured Loan List</h2>
+    Secured Loan List
+</h2>
 <div id="ItemListDIV">
     @using (Html.BeginForm())
     {
@@ -87,10 +87,10 @@
     }
     <table class="table table-hover table-striped">
         <tr>
-            <th >
+            <th>
                 Operate
             </th>
-            <th >
+            <th>
                 Custom No.
             </th>
             <th>
@@ -98,7 +98,7 @@
             </th>
             <th>
                 Name
-            F/M/L
+                F/M/L
             </th>
             <th>
                 Date of Birth
@@ -159,7 +159,7 @@
                     }
                     else
                     {
-                        @Html.Link("Details", @Url.Action("LoanDetails", new { loanGuid = entity.LoanGuid }), null) <br/>
+                        @Html.Link("Details", @Url.Action("LoanDetails", new { loanGuid = entity.LoanGuid }), null) <br />
                         @Html.Link("Schedule", @Url.Action("ScheduleList", new { loanGuid = entity.LoanGuid }), null)<br />
                         <a href="#" class="deleteLoan" loanGuid="@entity.LoanGuid">Delete</a>
                     }
@@ -172,9 +172,9 @@
                 </td>
                 <td>
                     @entity.UserFirstName
-               <br/>
+                    <br />
                     @entity.UserMiddleName
-               <br />
+                    <br />
                     @entity.UserLastName
                 </td>
                 <td>
@@ -187,17 +187,17 @@
                     @entity.UserRegisterDate.ToString(Miscs.DateTimeFormating)
                 </td>
                 <td>
-                    <a href="#" class="modalInput loanStatus" rel="#LoanStatusDisplayDIV" loanGuid="@entity.LoanGuid">
+                    <a href="@Url.Action("LoanStatus",new {loanID= entity.LoanGuid})" class="modalInput loanStatus" rel="#LoanStatusDisplayDIV" loanGuid="@entity.LoanGuid">
                         @entity.LoanStatus.ToString()
                     </a>
                 </td>
                 <td>
-                    <a href="#" class="modalInput userNote" rel="#UserNoteDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userNoteTip">
+                    <a href="@Url.Action("UserNote", new {userID= entity.LoanOwnerKey})" class="modalInput userNote" rel="#UserNoteDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userNoteTip">
                         @userNote
                     </a>
                 </td>
                 <td>
-                    <a href="#" class="modalInput userFollowUpHistory" rel="#UserFollowUpHistoryDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userFollowupHistoryTip">
+                    <a href="@Url.Action("UserFollowUpHistory",new {userID= entity.LoanOwnerKey})" class="modalInput userFollowUpHistory" rel="#UserFollowUpHistoryDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userFollowupHistoryTip">
                         @userFollowupHistory
                     </a>
                 </td>
@@ -217,24 +217,16 @@
         });
     </script>
     @Html.Pager(Model, new PagerOptions() { PageIndexParameterName = "id", ShowDisabledPagerItems = false, AlwaysShowFirstLastPageNumber = true })
+    
     <script type="text/javascript">
         $(document).ready(function () {
-            $(".modalInput").overlay({
-                mask: {
-                    color: '#ebecff',
-                    loadSpeed: 200,
-                    opacity: 0.9
-                },
-                closeOnClick: false
-            });
-
-            $("a.userNote").click(function () {
+            @*$("a.userNote").click(function () {
                 var targetID = $(this).attr("userGuid");
                 var url = '@Url.Action("UserNote")' + '?userID=' + targetID;
                 $("#UserNoteDisplayDIV").load(url);
-            });
+            });*@
 
-            $("a.userFollowUpHistory").click(function () {
+            @*$("a.userFollowUpHistory").click(function () {
                 var targetID = $(this).attr("userGuid");
                 var url = '@Url.Action("UserFollowUpHistory")' + '?userID=' + targetID;
                 $("#UserFollowUpHistoryDisplayDIV").load(url);
@@ -244,7 +236,7 @@
                 var targetID = $(this).attr("loanGuid");
                 var url = '@Url.Action("LoanStatus")' + '?loanID=' + targetID;
                 $("#LoanStatusDisplayDIV").load(url);
-            });
+            });*@
 
             $("a.deleteLoan").click(function () {
                 var result = confirm("need delete this record?");
@@ -276,8 +268,16 @@
                 window.location = url;
             });
 
+            //$(".modalInput").overlay({
+            //    mask: {
+            //        color: '#ebecff',
+            //        loadSpeed: 200,
+            //        opacity: 0.9
+            //    },
+            //    closeOnClick: false
+            //});
+
         });
     </script>
-
 
 </div>
