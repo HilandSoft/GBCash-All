@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using GBFinance.Web.Models;
 using HiLand.Utility.Data;
 using HiLand.Utility.Finance;
+using HiLand.Utility.Setting;
 
 namespace GBFinance.Web.Controllers
 {
@@ -10,7 +11,7 @@ namespace GBFinance.Web.Controllers
     {
         public ActionResult Index()
         {
-            return Redirect(Request.ApplicationPath + "/default.htm");
+            return Redirect(Config.GetAppSetting("gbcashDomain") + "default.htm");
             //PassLoanSetting();
             //return View();
         }

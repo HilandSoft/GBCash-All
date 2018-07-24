@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApplication</RootNamespace>
-    <AssemblyName>WebApplication</AssemblyName>
+    <RootNamespace>Lina.WebApp</RootNamespace>
+    <AssemblyName>Lina.WebApp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
@@ -1770,7 +1770,6 @@
     <Content Include="后台原型\typography.html" />
     <Content Include="后台原型\说明.txt" />
     <Content Include=".cleanme" />
-    <Content Include="About-Us\GBCash-All.lnk" />
     <Content Include="API\Configs.ashx" />
     <Content Include="App_Code\GBFViewHelper.cshtml" />
     <Content Include="Areas\ManageSecured\Views\Account\ChangePassword.cshtml" />
