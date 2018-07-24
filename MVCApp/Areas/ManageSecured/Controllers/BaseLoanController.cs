@@ -24,7 +24,7 @@ namespace GBFinance.Web.Areas.Manage.Controllers
     /// <summary>
     /// 本类不向View公开，为SecuredLoan和UnSecuredLoan的基类，仅仅为子类提供公用方法。
     /// </summary>
-    public class BaseLoanController: GBFinance.Web.Controllers.BaseLoanController
+    public class BaseLoanController : GBFinance.Web.Controllers.BaseLoanController
     {
         public ActionResult UserNote(Guid? userID)
         {
@@ -55,8 +55,7 @@ namespace GBFinance.Web.Areas.Manage.Controllers
                 }
             }
 
-            return RedirectToAction("SecuredLoanList");
-            //return Json(statusInfo);
+            return Json(statusInfo);
         }
 
         public ActionResult UserFollowUpHistory(Guid? userID)
@@ -88,7 +87,7 @@ namespace GBFinance.Web.Areas.Manage.Controllers
                 }
             }
 
-            return RedirectToAction("SecuredLoanList");//return Json(statusInfo);
+            return Json(statusInfo);
         }
 
         public ActionResult LoanStatus(Guid? loanID)
@@ -115,7 +114,7 @@ namespace GBFinance.Web.Areas.Manage.Controllers
                 statusInfo.IsSuccessful = LoanBasicBLL.Instance.Update(loanEntity);
             }
 
-            return RedirectToAction("SecuredLoanList"); //return Json(statusInfo);
+            return Json(statusInfo);
         }
 
         /// <summary>

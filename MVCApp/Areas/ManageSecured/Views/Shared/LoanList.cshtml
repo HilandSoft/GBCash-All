@@ -13,13 +13,13 @@
     string queryValue = this.GetPassedParam<PagedList<LoanBasicExtEntity>>("queryValue");
 }
 <style type="text/css">
-    .modalFix {
+    .modalFix
+    {
         width: 650px;
     }
 </style>
 <h2>
-    Secured Loan List
-</h2>
+    Secured Loan List</h2>
 <div id="ItemListDIV">
     @using (Html.BeginForm())
     {
@@ -30,7 +30,7 @@
                 <option value="CustomerNo" selected="selected">Customer No.</option>
             }
             else
-            {
+            { 
                 <option value="CustomerNo">Customer No.</option>
             }
             @if (queryName == "FirstName")
@@ -38,7 +38,7 @@
                 <option value="FirstName" selected="selected">First Name</option>
             }
             else
-            {
+            { 
                 <option value="FirstName">First Name</option>
             }
             @if (queryName == "LastName")
@@ -46,7 +46,7 @@
                 <option value="LastName" selected="selected">Last Name</option>
             }
             else
-            {
+            { 
                 <option value="LastName">Last Name</option>
             }
             @if (queryName == "DateOfBirth")
@@ -54,7 +54,7 @@
                 <option value="DateOfBirth" selected="selected">Date of Birth</option>
             }
             else
-            {
+            { 
                 <option value="DateOfBirth">Date of Birth</option>
             }
             @if (queryName == "Approved")
@@ -62,7 +62,7 @@
                 <option value="Approved" selected="selected">Approved</option>
             }
             else
-            {
+            { 
                 <option value="Approved">Approved</option>
             }
             @if (queryName == "Rejected")
@@ -70,7 +70,7 @@
                 <option value="Rejected" selected="selected">Rejected</option>
             }
             else
-            {
+            { 
                 <option value="Rejected">Rejected</option>
             }
             @if (queryName == "Deleted")
@@ -78,44 +78,49 @@
                 <option value="Deleted" selected="selected">Deleted</option>
             }
             else
-            {
+            { 
                 <option value="Deleted">Deleted</option>
             }
         </select>
         <input name="queryConditionValue" id="queryConditionValue" value="@queryValue" />
         <input type="button" id="btnQuery" value="Query" />
     }
-    <table class="table table-hover table-striped">
+    <table width="98%" class="grid">
         <tr>
-            <th>
+            <th style="width: 170px">
                 Operate
             </th>
-            <th>
+            <th style="width: 40px">
                 Custom No.
             </th>
-            <th>
+            <th style="width: 50px">
                 Loan Amount
             </th>
-            <th>
-                Name
-                F/M/L
+            <th style="width: 70px">
+                First Name
             </th>
-            <th>
+            <th style="width: 40px">
+                Middle Name
+            </th>
+            <th style="width: 70px">
+                Last Name
+            </th>
+            <th style="width: 70px">
                 Date of Birth
             </th>
-            <th>
+            <th style="width: 70px">
                 Email
             </th>
-            <th>
+            <th style="width: 70px">
                 Regtime
             </th>
-            <th>
+            <th style="width: 80px">
                 Loan Status
             </th>
-            <th>
+            <th style="width: 70px">
                 Note
             </th>
-            <th>
+            <th style="width: 70px">
                 FollowUp History
             </th>
         </tr>
@@ -150,58 +155,49 @@
                     userFollowupHistory = userFollowupHistory.Substring(0, 10) + "...";
                 }
             }
-
+            
             <tr>
                 <td>
                     @if (entity.LoanStatus == HiLand.General.LoanStatuses.Deleted)
-                    {
-                        <a href="#" class="recoverLoan" loanGuid="@entity.LoanGuid">Recover</a>
+                    { 
+                        <a href="#" class="recoverLoan"  loanGuid="@entity.LoanGuid">Recover</a>
                     }
                     else
                     {
-                        @Html.Link("Details", @Url.Action("LoanDetails", new { loanGuid = entity.LoanGuid }), null) <br />
-                        @Html.Link("Schedule", @Url.Action("ScheduleList", new { loanGuid = entity.LoanGuid }), null)<br />
-                        <a href="#" class="deleteLoan" loanGuid="@entity.LoanGuid">Delete</a>
+                        @Html.Link("Details", @Url.Action("LoanDetails", new { loanGuid = entity.LoanGuid }), null)
+                        @Html.Link("Schedule", @Url.Action("ScheduleList", new { loanGuid = entity.LoanGuid }), null)
+                        <a href="#" class="deleteLoan"  loanGuid="@entity.LoanGuid">Delete</a>
                     }
                 </td>
-                <td>
-                    @entity.UserIndexID
+                <td>@entity.UserIndexID
+                </td>
+                <td>@entity.LoanAmount.ToString()
+                </td>
+                <td>@entity.UserFirstName
+                </td>
+                <td>@entity.UserMiddleName
+                </td>
+                <td>@entity.UserLastName
+                </td>
+                <td>@birthdayString
+                </td>
+                <td>@entity.UserEmail
+                </td>
+                <td>@entity.UserRegisterDate.ToString(Miscs.DateTimeFormating)
                 </td>
                 <td>
-                    @entity.LoanAmount.ToString()
+                    <a href="#"  class="modalInput loanStatus" rel="#LoanStatusDisplayDIV" loanGuid="@entity.LoanGuid" >
+                        @entity.LoanStatus.ToString()</a>
                 </td>
                 <td>
-                    @entity.UserFirstName
-                    <br />
-                    @entity.UserMiddleName
-                    <br />
-                    @entity.UserLastName
+                    <a href="#"  class="modalInput userNote" rel="#UserNoteDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userNoteTip">
+                        @userNote</a>
                 </td>
                 <td>
-                    @birthdayString
+                    <a href="#"  class="modalInput userFollowUpHistory" rel="#UserFollowUpHistoryDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userFollowupHistoryTip">
+                        @userFollowupHistory</a>
                 </td>
-                <td>
-                    @entity.UserEmail
-                </td>
-                <td>
-                    @entity.UserRegisterDate.ToString(Miscs.DateTimeFormating)
-                </td>
-                <td>
-                    <a href="@Url.Action("LoanStatus",new {loanID= entity.LoanGuid})" class="modalInput loanStatus" rel="#LoanStatusDisplayDIV" loanGuid="@entity.LoanGuid">
-                        @entity.LoanStatus.ToString()
-                    </a>
-                </td>
-                <td>
-                    <a href="@Url.Action("UserNote", new {userID= entity.LoanOwnerKey})" class="modalInput userNote" rel="#UserNoteDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userNoteTip">
-                        @userNote
-                    </a>
-                </td>
-                <td>
-                    <a href="@Url.Action("UserFollowUpHistory",new {userID= entity.LoanOwnerKey})" class="modalInput userFollowUpHistory" rel="#UserFollowUpHistoryDisplayDIV" userGuid="@entity.LoanOwnerKey" title="@userFollowupHistoryTip">
-                        @userFollowupHistory
-                    </a>
-                </td>
-            </tr>
+            </tr>   
         }
     </table>
     <div class="modal modalFix" id="UserNoteDisplayDIV">
@@ -210,23 +206,25 @@
     </div>
     <div class="modal modalFix" id="LoanStatusDisplayDIV">
     </div>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#sidebar-nav a").removeClass();
-            $("#nav_a_loanlist").addClass("active");
-        });
-    </script>
     @Html.Pager(Model, new PagerOptions() { PageIndexParameterName = "id", ShowDisabledPagerItems = false, AlwaysShowFirstLastPageNumber = true })
-    
     <script type="text/javascript">
         $(document).ready(function () {
-            @*$("a.userNote").click(function () {
+            $(".modalInput").overlay({
+                mask: {
+                    color: '#ebecff',
+                    loadSpeed: 200,
+                    opacity: 0.9
+                },
+                closeOnClick: false
+            });
+
+            $("a.userNote").click(function () {
                 var targetID = $(this).attr("userGuid");
                 var url = '@Url.Action("UserNote")' + '?userID=' + targetID;
                 $("#UserNoteDisplayDIV").load(url);
-            });*@
+            });
 
-            @*$("a.userFollowUpHistory").click(function () {
+            $("a.userFollowUpHistory").click(function () {
                 var targetID = $(this).attr("userGuid");
                 var url = '@Url.Action("UserFollowUpHistory")' + '?userID=' + targetID;
                 $("#UserFollowUpHistoryDisplayDIV").load(url);
@@ -236,7 +234,7 @@
                 var targetID = $(this).attr("loanGuid");
                 var url = '@Url.Action("LoanStatus")' + '?loanID=' + targetID;
                 $("#LoanStatusDisplayDIV").load(url);
-            });*@
+            });
 
             $("a.deleteLoan").click(function () {
                 var result = confirm("need delete this record?");
@@ -268,16 +266,6 @@
                 window.location = url;
             });
 
-            //$(".modalInput").overlay({
-            //    mask: {
-            //        color: '#ebecff',
-            //        loadSpeed: 200,
-            //        opacity: 0.9
-            //    },
-            //    closeOnClick: false
-            //});
-
         });
     </script>
-
 </div>

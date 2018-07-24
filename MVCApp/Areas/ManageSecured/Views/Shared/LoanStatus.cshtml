@@ -3,6 +3,8 @@
 @model LoanBasicEntity
 @{
     ViewBag.Title = "Loan Status";
+    this.Layout = null;
+
 }
 <div id="formContainer">
     @using (Html.BeginForm())
@@ -54,13 +56,13 @@
             }
         </select>
         <input  type="hidden" name="userID" value="@Model.LoanGuid"/>
-        <input type="submit" id="submitButton" value="Save" />
+        <input type="button" id="submitButton" value="Save" />
     }
 </div>
-@*<script type="text/javascript">
+<script type="text/javascript">
     $(document).ready(function () {
         $("#submitButton").click(function () {
             submitAndRedirect("#formContainer form", '@Url.Action("SecuredLoanList")');
         });
     });
-</script>*@
+</script>

@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "User Note";
+    this.Layout = null;
 }
 @using Web.Models
 @model BusinessUserExt
@@ -8,16 +9,16 @@
 { 
     <textarea cols="20" rows="10" name="note">@Model.Note</textarea>
     <input  type="hidden" name="userID" value="@Model.UserGuid"/>
-    <input type="submit" id="submitButton" value="Save" />
+    <input type="button" id="submitButton" value="Save" />
 }
 </div>
 
 <script type="text/javascript">
-    @*$(document).ready(function () {
+    $(document).ready(function () {
         $("#submitButton").click(function () {
             submitAndRedirect("#formContainer form", '@Url.Action("SecuredLoanList")');
         });
-    });*@
+    });
 </script>
 
 

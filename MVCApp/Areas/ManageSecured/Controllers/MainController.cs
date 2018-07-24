@@ -27,7 +27,7 @@ namespace GBFinance.Web.Areas.Manage.Controllers
         public ActionResult LastLoanTip()
         {
             string orderClause = "LoanID DESC";
-            string whereClause = string.Format(" ReadDate is null OR ReadDate= '{0}' ", DateTimeHelper.Min); 
+            string whereClause = string.Format(" ReadDate is null OR ReadDate= '{0}' ", DateTimeHelper.Min); //SqlWhereClauseBuilder.Create().AppendCondition<DateTime>("ReadDate", DateTimeHelper.Min,CompareModes.NotEquals).GetClause().CluaseString;
             List<LoanBasicEntity> entityList = LoanBasicBLL.Instance.GetList(whereClause, orderClause);
             return View(entityList);
         }
