@@ -10,6 +10,7 @@ namespace GBFinance.Web.Areas.Manage.Controllers
         //
         // GET: /Manage/SecuredLoan/
 
+        [HttpGet]
         public ActionResult Index(int id = 1)
         {
             return RedirectToAction("SecuredLoanList");
